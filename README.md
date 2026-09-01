@@ -1,16 +1,26 @@
-## Hi there 👋
+# Hi, I'm Rachit Ratnam Mudaliar 👋
 
-<!--
-**rachitratnammudaliar/rachitratnammudaliar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Software Systems student at **Kauno Kolegija** (Kaunas, Lithuania) focused on **Generative AI**, **Prompt Engineering**, **Reverse Engineering**, and **Systems Troubleshooting**.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🚀 About Me
+- 🎓 **Studies:** Professional Bachelor of Computing, Software Systems @ Kauno Kolegija
+- 📍 **Location:** Kaunas, Lithuania
+- 🧠 **Core Competencies:** Generative AI Architecture, Advanced Prompt Engineering, Reverse Engineering, System Troubleshooting & Diagnostics
+- 🌐 **Portfolio:** [rachitratnammudaliar.github.io](https://rachitratnammudaliar.github.io)
+- ✉️ **Contact:** [rachit.work@protonmail.com](mailto:rachit.work@protonmail.com)
+
+---
+
+### 🛠️ Technical Focus & Expertise
+- **AI & Systems:** Generative AI, LLM System Prompts, Prompt Optimization
+- **Engineering:** Reverse Engineering, System Diagnostics & Root-Cause Troubleshooting
+- **Developer Stack:** Python, Web Technologies, Git, Linux, Cloud Workspaces
+
+---
+
+### 📬 Connect With Me
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rachitratnammudaliar)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rachitratnammudaliar)
+[![Email](https://img.shields.io/badge/ProtonMail-6D4AFF?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:rachit.work@protonmail.com)
