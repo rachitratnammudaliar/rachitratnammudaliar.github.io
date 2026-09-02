@@ -1,5303 +1,4860 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="system">
 
 <head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="description"
+        content="Rachit Ratnam Mudaliar — Software Systems student, AI enthusiast, systems explorer and technology creator."
+    >
+
+    <meta
+        name="author"
+        content="Rachit Ratnam Mudaliar"
+    >
 
-<meta charset="UTF-8">
+    <meta
+        name="theme-color"
+        content="#f6f8ff"
+    >
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
+    <title>
+        Rachit Ratnam Mudaliar — Software Systems Student
+    </title>
 
-<title>
-    Rachit Ratnam Mudaliar | Software Systems • AI
-</title>
+    <style>
 
-<meta
-    name="description"
-    content="Rachit Ratnam Mudaliar — Software Systems student exploring Generative AI, Prompt Engineering, Reverse Engineering, System Diagnostics and intelligent systems."
->
+        /* =========================================================
+           RACHIT RATNAM MUDALIAR
+           PERSONAL WEBSITE
+           
+           SINGLE FILE EDITION
+           HTML + CSS + JAVASCRIPT
+           
+           Designed for:
+           Smartphone
+           Tablet
+           Laptop
+           Desktop
+           Ultrawide
+           Television
+           
+           ========================================================= */
 
-<meta
-    name="theme-color"
-    content="#f4f7ff"
->
 
-<style>
+        /* =========================================================
+           01. RESET
+           ========================================================= */
 
-/* =========================================================
-   RACHIT RATNAM MUDALIAR
-   PASTEL LIQUID GLASS PORTFOLIO
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-   ONE FILE
-   HTML + CSS + JAVASCRIPT
-   ========================================================= */
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
 
-/* =========================================================
-   ROOT
-   ========================================================= */
 
-:root {
+        body {
+            min-height: 100vh;
 
-    /* Background */
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
 
-    --background:
-        #f5f7ff;
+            color: var(--text);
 
-    --background-2:
-        #eef4ff;
+            background:
+                var(--page-background);
 
+            overflow-x: hidden;
 
-    /* Main text */
+            transition:
+                background 0.5s ease,
+                color 0.5s ease;
+        }
 
-    --text:
-        #172033;
 
-    --text-strong:
-        #111827;
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    --text-soft:
-        #475569;
 
-    --muted:
-        #64748b;
+        button,
+        a {
+            font: inherit;
+        }
 
-    --muted-light:
-        #94a3b8;
 
+        button {
+            border: 0;
+            cursor: pointer;
+        }
 
-    /* Pastel colors */
 
-    --lavender:
-        #c4b5fd;
+        a {
+            color: inherit;
+        }
 
-    --violet:
-        #a78bfa;
 
-    --periwinkle:
-        #a5b4fc;
+        ::selection {
+            background: rgba(139, 92, 246, 0.25);
+            color: var(--text);
+        }
 
-    --sky:
-        #93c5fd;
 
-    --cyan:
-        #a5f3fc;
+        /* =========================================================
+           02. THEME SYSTEM
+           ========================================================= */
 
-    --mint:
-        #a7f3d0;
+        :root {
 
-    --green:
-        #86efac;
+            --white: #ffffff;
 
-    --peach:
-        #fed7aa;
+            --page-background:
+                linear-gradient(
+                    135deg,
+                    #f9fbff 0%,
+                    #f5f3ff 32%,
+                    #eefcff 65%,
+                    #fff8fb 100%
+                );
 
-    --pink:
-        #fbcfe8;
+            --text: #202333;
 
+            --text-strong: #111321;
 
-    /* Accent */
+            --muted: #697083;
 
-    --accent:
-        #7c5ce8;
+            --subtle: #8991a5;
 
-    --accent-dark:
-        #6444d4;
+            --glass:
+                rgba(255, 255, 255, 0.58);
 
+            --glass-strong:
+                rgba(255, 255, 255, 0.76);
 
-    /* Glass */
+            --glass-soft:
+                rgba(255, 255, 255, 0.38);
 
-    --glass:
-        rgba(255,255,255,0.58);
+            --glass-border:
+                rgba(255, 255, 255, 0.72);
 
-    --glass-strong:
-        rgba(255,255,255,0.72);
+            --shadow:
+                rgba(72, 69, 120, 0.13);
 
-    --glass-hover:
-        rgba(255,255,255,0.78);
+            --shadow-strong:
+                rgba(72, 69, 120, 0.20);
 
-    --glass-border:
-        rgba(255,255,255,0.86);
+            --purple:
+                #8b6cff;
 
-    --glass-border-dark:
-        rgba(148,163,184,0.20);
+            --purple-soft:
+                #dcd4ff;
 
+            --blue:
+                #68c9ff;
 
-    /* Shadows */
+            --cyan:
+                #73e1dc;
 
-    --shadow:
-        0 25px 70px rgba(71,85,105,0.13);
+            --pink:
+                #ff9fca;
 
-    --shadow-small:
-        0 12px 35px rgba(71,85,105,0.10);
+            --peach:
+                #ffc59d;
 
+            --yellow:
+                #ffe89a;
 
-    /* Radius */
+            --green:
+                #a9e8bb;
 
-    --radius-xl:
-        32px;
+            --danger:
+                #ff8f9d;
 
-    --radius-lg:
-        24px;
+            --nav-background:
+                rgba(255, 255, 255, 0.68);
 
-    --radius-md:
-        17px;
+            --button-background:
+                rgba(255, 255, 255, 0.66);
 
-    --radius-sm:
-        12px;
+            --card-highlight:
+                rgba(255, 255, 255, 0.85);
 
+            --radius-xl:
+                34px;
 
-    /* Layout */
+            --radius-lg:
+                26px;
 
-    --max-width:
-        1240px;
+            --radius-md:
+                20px;
 
-}
+            --radius-sm:
+                14px;
 
+            --blur:
+                28px;
 
-/* =========================================================
-   RESET
-   ========================================================= */
+            --transition:
+                0.35s cubic-bezier(.2,.8,.2,1);
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html {
+        @media (prefers-color-scheme: dark) {
 
-    scroll-behavior:
-        smooth;
+            :root {
 
-    scroll-padding-top:
-        100px;
+                --system-dark-background:
+                    #171821;
+            }
+        }
 
-}
 
-body {
+        html[data-theme="dark"] {
 
-    min-height:
-        100vh;
+            --page-background:
+                linear-gradient(
+                    135deg,
+                    #1b1d29 0%,
+                    #202036 35%,
+                    #172c35 70%,
+                    #2b202d 100%
+                );
 
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+            --text:
+                #f4f5fb;
 
-    color:
-        var(--text);
+            --text-strong:
+                #ffffff;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f9fbff 0%,
-            #eef3ff 45%,
-            #f1fffb 100%
-        );
+            --muted:
+                #b0b5c5;
 
-    overflow-x:
-        hidden;
+            --subtle:
+                #858b9f;
 
-    -webkit-font-smoothing:
-        antialiased;
+            --glass:
+                rgba(39, 41, 57, 0.58);
 
-    text-rendering:
-        optimizeLegibility;
+            --glass-strong:
+                rgba(46, 49, 68, 0.76);
 
-}
+            --glass-soft:
+                rgba(255, 255, 255, 0.06);
 
+            --glass-border:
+                rgba(255, 255, 255, 0.13);
 
-/* =========================================================
-   BACKGROUND
-   ========================================================= */
+            --shadow:
+                rgba(0, 0, 0, 0.24);
 
-.background {
+            --shadow-strong:
+                rgba(0, 0, 0, 0.38);
 
-    position:
-        fixed;
+            --nav-background:
+                rgba(31, 33, 46, 0.76);
 
-    inset:
-        0;
+            --button-background:
+                rgba(255, 255, 255, 0.08);
 
-    overflow:
-        hidden;
+            --card-highlight:
+                rgba(255, 255, 255, 0.12);
 
-    pointer-events:
-        none;
+            --purple:
+                #a996ff;
 
-    z-index:
-        -10;
+            --blue:
+                #74d2ff;
 
-}
+            --cyan:
+                #76eee5;
 
+            --pink:
+                #ff9fce;
 
-/* =========================================================
-   AURORA
-   ========================================================= */
+            --peach:
+                #ffc09e;
 
-.aurora {
+            --yellow:
+                #ffe598;
 
-    position:
-        absolute;
+            --green:
+                #a5e5b8;
+        }
 
-    border-radius:
-        50%;
 
-    filter:
-        blur(90px);
+        /* =========================================================
+           03. SYSTEM DARK MODE
+           ========================================================= */
 
-    opacity:
-        0.55;
+        html[data-theme="system"] {
 
-    animation:
-        auroraFloat
-        18s
-        ease-in-out
-        infinite
-        alternate;
+            color-scheme: light dark;
+        }
 
-}
 
+        @media (prefers-color-scheme: dark) {
 
-.aurora-1 {
+            html[data-theme="system"] {
 
-    width:
-        560px;
+                --page-background:
+                    linear-gradient(
+                        135deg,
+                        #1b1d29 0%,
+                        #202036 35%,
+                        #172c35 70%,
+                        #2b202d 100%
+                    );
 
-    height:
-        560px;
+                --text:
+                    #f4f5fb;
 
-    left:
-        -230px;
+                --text-strong:
+                    #ffffff;
 
-    top:
-        -220px;
+                --muted:
+                    #b0b5c5;
 
-    background:
-        #c4b5fd;
+                --subtle:
+                    #858b9f;
 
-}
+                --glass:
+                    rgba(39, 41, 57, 0.58);
 
+                --glass-strong:
+                    rgba(46, 49, 68, 0.76);
 
-.aurora-2 {
+                --glass-soft:
+                    rgba(255, 255, 255, 0.06);
 
-    width:
-        520px;
+                --glass-border:
+                    rgba(255, 255, 255, 0.13);
 
-    height:
-        520px;
+                --shadow:
+                    rgba(0, 0, 0, 0.24);
 
-    right:
-        -210px;
+                --shadow-strong:
+                    rgba(0, 0, 0, 0.38);
 
-    top:
-        18%;
+                --nav-background:
+                    rgba(31, 33, 46, 0.76);
 
-    background:
-        #a5f3fc;
+                --button-background:
+                    rgba(255, 255, 255, 0.08);
 
-    animation-delay:
-        -6s;
+                --card-highlight:
+                    rgba(255, 255, 255, 0.12);
 
-}
+                --purple:
+                    #a996ff;
 
+                --blue:
+                    #74d2ff;
 
-.aurora-3 {
+                --cyan:
+                    #76eee5;
 
-    width:
-        450px;
+                --pink:
+                    #ff9fce;
 
-    height:
-        450px;
+                --peach:
+                    #ffc09e;
 
-    left:
-        30%;
+                --yellow:
+                    #ffe598;
 
-    bottom:
-        -250px;
+                --green:
+                    #a5e5b8;
+            }
+        }
 
-    background:
-        #fbcfe8;
 
-    opacity:
-        0.45;
+        /* =========================================================
+           04. AMBIENT BACKGROUND
+           ========================================================= */
 
-    animation-delay:
-        -11s;
+        .background {
+            position: fixed;
 
-}
+            inset: 0;
 
+            z-index: -10;
 
-.aurora-4 {
+            overflow: hidden;
 
-    width:
-        330px;
+            pointer-events: none;
+        }
 
-    height:
-        330px;
 
-    right:
-        25%;
+        .gradient-layer {
+            position: absolute;
 
-    bottom:
-        15%;
+            inset: -20%;
 
-    background:
-        #a7f3d0;
+            background:
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(172, 151, 255, 0.42),
+                    transparent 27%
+                ),
 
-    opacity:
-        0.25;
+                radial-gradient(
+                    circle at 80% 15%,
+                    rgba(112, 218, 255, 0.35),
+                    transparent 28%
+                ),
 
-    animation-delay:
-        -4s;
+                radial-gradient(
+                    circle at 75% 85%,
+                    rgba(255, 169, 211, 0.35),
+                    transparent 25%
+                ),
 
-}
+                radial-gradient(
+                    circle at 15% 80%,
+                    rgba(255, 214, 156, 0.28),
+                    transparent 24%
+                );
 
+            filter:
+                blur(30px);
 
-@keyframes auroraFloat {
+            animation:
+                backgroundMove 18s ease-in-out infinite alternate;
+        }
 
-    from {
 
-        transform:
-            translate3d(
-                -20px,
-                -15px,
-                0
-            )
-            scale(1);
+        @keyframes backgroundMove {
 
-    }
+            0% {
+                transform:
+                    translate3d(-1%, -1%, 0)
+                    scale(1);
+            }
 
-    to {
+            50% {
+                transform:
+                    translate3d(2%, -2%, 0)
+                    scale(1.04);
+            }
 
-        transform:
-            translate3d(
-                35px,
-                30px,
-                0
-            )
-            scale(1.12);
+            100% {
+                transform:
+                    translate3d(-2%, 2%, 0)
+                    scale(1.02);
+            }
+        }
 
-    }
 
-}
+        .orb {
+            position: absolute;
 
+            width: 180px;
+            height: 180px;
 
-/* =========================================================
-   BACKGROUND GRID
-   ========================================================= */
+            border-radius: 50%;
 
-.background-grid {
+            filter:
+                blur(12px);
 
-    position:
-        absolute;
+            opacity: 0.42;
 
-    inset:
-        0;
+            animation:
+                orbFloat 16s ease-in-out infinite;
+        }
 
-    opacity:
-        0.22;
 
-    background-image:
+        .orb.one {
+            top: 10%;
+            left: 4%;
 
-        linear-gradient(
-            rgba(99,102,241,0.045)
-            1px,
-            transparent
-            1px
-        ),
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--purple),
+                    var(--pink)
+                );
+        }
 
-        linear-gradient(
-            90deg,
-            rgba(99,102,241,0.045)
-            1px,
-            transparent
-            1px
-        );
 
-    background-size:
-        70px 70px;
+        .orb.two {
+            top: 40%;
+            right: 3%;
 
-    mask-image:
-        radial-gradient(
-            ellipse at center,
-            black 10%,
-            transparent 78%
-        );
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--blue),
+                    var(--cyan)
+                );
 
-}
+            animation-delay: -4s;
+        }
 
 
-/* =========================================================
-   CURSOR LIGHT
-   ========================================================= */
+        .orb.three {
+            bottom: 5%;
+            left: 30%;
 
-.cursor-light {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--peach),
+                    var(--yellow)
+                );
 
-    position:
-        fixed;
+            animation-delay: -8s;
+        }
 
-    width:
-        360px;
 
-    height:
-        360px;
+        @keyframes orbFloat {
 
-    border-radius:
-        50%;
+            0%,
+            100% {
+                transform:
+                    translate3d(0,0,0)
+                    scale(1);
+            }
 
-    pointer-events:
-        none;
+            50% {
+                transform:
+                    translate3d(40px,-35px,0)
+                    scale(1.12);
+            }
+        }
 
-    transform:
-        translate(-50%, -50%);
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(167,139,250,0.14),
-            rgba(147,197,253,0.07)
-            30%,
-            transparent 70%
-        );
+        /* =========================================================
+           05. NOISE / GLASS OVERLAY
+           ========================================================= */
 
-    opacity:
-        0;
+        body::before {
 
-    z-index:
-        -1;
+            content: "";
 
-}
+            position: fixed;
 
+            inset: 0;
 
-/* =========================================================
-   GLASS
-   ========================================================= */
+            z-index: -5;
 
-.glass {
+            pointer-events: none;
 
-    position:
-        relative;
+            opacity: 0.045;
 
-    overflow:
-        hidden;
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+        }
 
-    background:
 
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.74),
-            rgba(255,255,255,0.42)
-        );
+        /* =========================================================
+           06. LAYOUT
+           ========================================================= */
 
-    border:
-        1px solid
-        var(--glass-border);
+        .site-shell {
 
-    box-shadow:
-
-        var(--shadow),
-
-        inset
-        0 1px 0
-        rgba(255,255,255,0.95),
-
-        inset
-        0 -1px 0
-        rgba(148,163,184,0.08);
-
-    backdrop-filter:
-        blur(28px)
-        saturate(150%);
-
-    -webkit-backdrop-filter:
-        blur(28px)
-        saturate(150%);
-
-}
-
-
-/* Glass reflection */
-
-.glass::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    pointer-events:
-        none;
-
-    background:
-
-        linear-gradient(
-            120deg,
-            rgba(255,255,255,0.72),
-            transparent 22%,
-            transparent 72%,
-            rgba(255,255,255,0.25)
-        );
-
-    opacity:
-        0.55;
-
-}
-
-
-/* Moving shine */
-
-.glass::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        -150%;
-
-    left:
-        -80%;
-
-    width:
-        45%;
-
-    height:
-        300%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,0.35),
-            transparent
-        );
-
-    transform:
-        rotate(25deg);
-
-    opacity:
-        0;
-
-    pointer-events:
-        none;
-
-    transition:
-        opacity
-        0.3s ease;
-
-}
-
-
-.glass:hover::after {
-
-    opacity:
-        1;
-
-    animation:
-        glassShine
-        1.2s
-        ease;
-
-}
-
-
-@keyframes glassShine {
-
-    from {
-        left:
-            -80%;
-    }
-
-    to {
-        left:
-            150%;
-    }
-
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-.nav-shell {
-
-    position:
-        fixed;
-
-    top:
-        16px;
-
-    left:
-        50%;
-
-    transform:
-        translateX(-50%);
-
-    width:
-        min(
-            calc(100% - 28px),
-            1080px
-        );
-
-    z-index:
-        1000;
-
-}
-
-
-.nav {
-
-    min-height:
-        62px;
-
-    padding:
-        8px 10px 8px 20px;
-
-    border-radius:
-        21px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    transition:
-        0.3s ease;
-
-}
-
-
-.nav.scrolled {
-
-    background:
-        rgba(255,255,255,0.78);
-
-    box-shadow:
-        0 15px 45px
-        rgba(71,85,105,0.16);
-
-}
-
-
-.logo {
-
-    text-decoration:
-        none;
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        14px;
-
-    font-weight:
-        850;
-
-    letter-spacing:
-        1.8px;
-
-}
-
-
-.logo span {
-
-    color:
-        var(--accent);
-
-}
-
-
-.nav-links {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        3px;
-
-}
-
-
-.nav-links a {
-
-    text-decoration:
-        none;
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    font-weight:
-        550;
-
-    padding:
-        10px 12px;
-
-    border-radius:
-        12px;
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.nav-links a:hover {
-
-    color:
-        var(--text-strong);
-
-    background:
-        rgba(255,255,255,0.58);
-
-}
-
-
-.nav-contact {
-
-    color:
-        white !important;
-
-    background:
-        linear-gradient(
-            135deg,
-            #8b6ce8,
-            #6d5bd0
-        ) !important;
-
-    box-shadow:
-        0 8px 20px
-        rgba(124,92,232,0.22);
-
-}
-
-
-.menu-button {
-
-    display:
-        none;
-
-    width:
-        42px;
-
-    height:
-        42px;
-
-    border:
-        1px solid
-        rgba(148,163,184,0.18);
-
-    border-radius:
-        13px;
-
-    background:
-        rgba(255,255,255,0.5);
-
-    color:
-        var(--text);
-
-    cursor:
-        pointer;
-
-    font-size:
-        18px;
-
-}
-
-
-/* =========================================================
-   MAIN
-   ========================================================= */
-
-main {
-
-    width:
-        min(
-            calc(100% - 34px),
-            var(--max-width)
-        );
-
-    margin:
-        0 auto;
-
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-
-    min-height:
-        100vh;
-
-    min-height:
-        100svh;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    position:
-        relative;
-
-    padding:
-        130px 0 90px;
-
-}
-
-
-.hero-content {
-
-    width:
-        100%;
-
-    text-align:
-        center;
-
-}
-
-
-/* Floating badge */
-
-.hero-badge {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        9px;
-
-    padding:
-        9px 14px;
-
-    border-radius:
-        999px;
-
-    color:
-        #475569;
-
-    font-size:
-        11px;
-
-    font-weight:
-        600;
-
-    background:
-        rgba(255,255,255,0.57);
-
-    border:
-        1px solid
-        rgba(255,255,255,0.9);
-
-    box-shadow:
-        0 10px 30px
-        rgba(100,116,139,0.09);
-
-    margin-bottom:
-        30px;
-
-    animation:
-        fadeUp
-        0.8s
-        ease
-        both;
-
-}
-
-
-.live-dot {
-
-    width:
-        7px;
-
-    height:
-        7px;
-
-    border-radius:
-        50%;
-
-    background:
-        #22c55e;
-
-    box-shadow:
-        0 0 12px
-        rgba(34,197,94,0.55);
-
-    animation:
-        pulse
-        2s
-        ease
-        infinite;
-
-}
-
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform:
-            scale(1);
-
-        opacity:
-            1;
-    }
-
-    50% {
-        transform:
-            scale(0.72);
-
-        opacity:
-            0.55;
-    }
-
-}
-
-
-/* Hero title */
-
-.hero-title {
-
-    font-size:
-        clamp(
-            52px,
-            8.5vw,
-            116px
-        );
-
-    line-height:
-        0.92;
-
-    letter-spacing:
-        -0.075em;
-
-    font-weight:
-        850;
-
-    color:
-        var(--text-strong);
-
-    margin-bottom:
-        28px;
-
-    animation:
-        fadeUp
-        0.8s
-        0.08s
-        ease
-        both;
-
-}
-
-
-.hero-title .gradient {
-
-    background:
-        linear-gradient(
-            110deg,
-            #7c5ce8,
-            #818cf8 35%,
-            #38bdf8 68%,
-            #14b8a6
-        );
-
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
-
-    color:
-        transparent;
-
-}
-
-
-.hero-description {
-
-    max-width:
-        700px;
-
-    margin:
-        0 auto 32px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        clamp(
-            14px,
-            2vw,
-            18px
-        );
-
-    line-height:
-        1.75;
-
-    animation:
-        fadeUp
-        0.8s
-        0.18s
-        ease
-        both;
-
-}
-
-
-.hero-description strong {
-
-    color:
-        var(--text-soft);
-
-}
-
-
-/* Hero buttons */
-
-.hero-buttons {
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        10px;
-
-    animation:
-        fadeUp
-        0.8s
-        0.28s
-        ease
-        both;
-
-}
-
-
-.button {
-
-    min-height:
-        49px;
-
-    padding:
-        0 20px;
-
-    border-radius:
-        15px;
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    gap:
-        9px;
-
-    text-decoration:
-        none;
-
-    font-size:
-        13px;
-
-    font-weight:
-        700;
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.button:hover {
-
-    transform:
-        translateY(-3px);
-
-}
-
-
-.button-primary {
-
-    color:
-        white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #8b6ce8,
-            #6d5bd0
-        );
-
-    box-shadow:
-        0 12px 32px
-        rgba(124,92,232,0.25);
-
-}
-
-
-.button-primary:hover {
-
-    box-shadow:
-        0 17px 40px
-        rgba(124,92,232,0.32);
-
-}
-
-
-.button-secondary {
-
-    color:
-        var(--text-soft);
-
-    background:
-        rgba(255,255,255,0.52);
-
-    border:
-        1px solid
-        rgba(255,255,255,0.9);
-
-    box-shadow:
-        var(--shadow-small);
-
-}
-
-
-.button-secondary:hover {
-
-    color:
-        var(--text-strong);
-
-    background:
-        rgba(255,255,255,0.78);
-
-}
-
-
-/* Hero floating decorations */
-
-.hero-decoration {
-
-    position:
-        absolute;
-
-    border-radius:
-        50%;
-
-    pointer-events:
-        none;
-
-}
-
-
-.hero-decoration.one {
-
-    width:
-        90px;
-
-    height:
-        90px;
-
-    top:
-        27%;
-
-    left:
-        7%;
-
-    background:
-        rgba(196,181,253,0.35);
-
-    filter:
-        blur(1px);
-
-}
-
-
-.hero-decoration.two {
-
-    width:
-        65px;
-
-    height:
-        65px;
-
-    right:
-        10%;
-
-    bottom:
-        25%;
-
-    background:
-        rgba(165,243,252,0.38);
-
-}
-
-
-.scroll-hint {
-
-    position:
-        absolute;
-
-    bottom:
-        30px;
-
-    left:
-        50%;
-
-    transform:
-        translateX(-50%);
-
-    color:
-        #94a3b8;
-
-    font-size:
-        9px;
-
-    letter-spacing:
-        2px;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.scroll-hint span {
-
-    display:
-        block;
-
-    width:
-        1px;
-
-    height:
-        32px;
-
-    margin:
-        9px auto 0;
-
-    background:
-        linear-gradient(
-            #94a3b8,
-            transparent
-        );
-
-}
-
-
-/* =========================================================
-   SECTION
-   ========================================================= */
-
-section {
-
-    padding:
-        105px 0;
-
-}
-
-
-.section-heading {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        end;
-
-    gap:
-        30px;
-
-    margin-bottom:
-        35px;
-
-}
-
-
-.section-label {
-
-    color:
-        #7c5ce8;
-
-    font-size:
-        10px;
-
-    font-weight:
-        750;
-
-    letter-spacing:
-        2.4px;
-
-    text-transform:
-        uppercase;
-
-    margin-bottom:
-        10px;
-
-}
-
-
-.section-title {
-
-    font-size:
-        clamp(
-            31px,
-            5vw,
-            55px
-        );
-
-    line-height:
-        1;
-
-    letter-spacing:
-        -0.055em;
-
-    color:
-        var(--text-strong);
-
-}
-
-
-.section-description {
-
-    max-width:
-        410px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        13px;
-
-    line-height:
-        1.7;
-
-}
-
-
-/* =========================================================
-   ABOUT
-   ========================================================= */
-
-.about-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1.3fr
-        0.7fr;
-
-    gap:
-        16px;
-
-}
-
-
-.about-card {
-
-    padding:
-        34px;
-
-    border-radius:
-        var(--radius-xl);
-
-    min-height:
-        350px;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    justify-content:
-        space-between;
-
-}
-
-
-.about-card h3 {
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        clamp(
-            25px,
-            3vw,
-            34px
-        );
-
-    letter-spacing:
-        -0.04em;
-
-    line-height:
-        1.15;
-
-    margin-bottom:
-        18px;
-
-}
-
-
-.about-card p {
-
-    max-width:
-        680px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        14px;
-
-    line-height:
-        1.85;
-
-}
-
-
-.about-card strong {
-
-    color:
-        var(--text-soft);
-
-}
-
-
-/* Identity */
-
-.identity {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        13px;
-
-}
-
-
-.identity-image {
-
-    width:
-        54px;
-
-    height:
-        54px;
-
-    border-radius:
-        50%;
-
-    object-fit:
-        cover;
-
-    border:
-        2px solid
-        rgba(124,92,232,0.38);
-
-    box-shadow:
-        0 8px 25px
-        rgba(124,92,232,0.14);
-
-}
-
-
-.identity-name {
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        12px;
-
-    font-weight:
-        750;
-
-}
-
-
-.identity-alias {
-
-    color:
-        var(--muted);
-
-    font-size:
-        10px;
-
-    margin-top:
-        4px;
-
-}
-
-
-/* =========================================================
-   SYSTEM CARD
-   ========================================================= */
-
-.system-card {
-
-    padding:
-        30px;
-
-    border-radius:
-        var(--radius-xl);
-
-}
-
-
-.system-header {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    padding-bottom:
-        20px;
-
-    border-bottom:
-        1px solid
-        rgba(148,163,184,0.12);
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.system-header-title {
-
-    color:
-        var(--muted);
-
-    font-size:
-        10px;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        1.5px;
-
-}
-
-
-.system-version {
-
-    color:
-        #94a3b8;
-
-    font-size:
-        9px;
-
-}
-
-
-.system-list {
-
-    display:
-        grid;
-
-    gap:
-        5px;
-
-}
-
-
-.system-item {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    padding:
-        13px 0;
-
-    border-bottom:
-        1px solid
-        rgba(148,163,184,0.09);
-
-}
-
-
-.system-item:last-child {
-
-    border-bottom:
-        0;
-
-}
-
-
-.system-item-label {
-
-    color:
-        var(--muted);
-
-    font-size:
-        10px;
-
-}
-
-
-.system-value {
-
-    color:
-        var(--text-soft);
-
-    font-size:
-        10px;
-
-    font-weight:
-        650;
-
-}
-
-
-.system-online {
-
-    color:
-        #16a34a;
-
-    font-size:
-        10px;
-
-    font-weight:
-        750;
-
-}
-
-
-/* =========================================================
-   EXPERTISE
-   ========================================================= */
-
-.skills-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(5, 1fr);
-
-    gap:
-        12px;
-
-}
-
-
-.skill-card {
-
-    min-height:
-        215px;
-
-    padding:
-        23px;
-
-    border-radius:
-        var(--radius-lg);
-
-    transition:
-        0.35s ease;
-
-}
-
-
-.skill-card:hover {
-
-    background:
-        rgba(255,255,255,0.78);
-
-    border-color:
-        rgba(124,92,232,0.25);
-
-}
-
-
-.skill-number {
-
-    color:
-        #a8b1c0;
-
-    font-size:
-        9px;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        1px;
-
-}
-
-
-.skill-icon {
-
-    width:
-        46px;
-
-    height:
-        46px;
-
-    margin:
-        22px 0 18px;
-
-    border-radius:
-        14px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    font-size:
-        20px;
-
-    color:
-        #5b4bb7;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(196,181,253,0.45),
-            rgba(165,243,252,0.35)
-        );
-
-    border:
-        1px solid
-        rgba(255,255,255,0.75);
-
-}
-
-
-.skill-card:nth-child(2)
-.skill-icon {
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(147,197,253,0.48),
-            rgba(165,243,252,0.35)
-        );
-
-}
-
-
-.skill-card:nth-child(3)
-.skill-icon {
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(254,215,170,0.5),
-            rgba(251,207,232,0.4)
-        );
-
-}
-
-
-.skill-card:nth-child(4)
-.skill-icon {
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(167,243,208,0.5),
-            rgba(165,243,252,0.35)
-        );
-
-}
-
-
-.skill-card:nth-child(5)
-.skill-icon {
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(251,207,232,0.5),
-            rgba(196,181,253,0.35)
-        );
-
-}
-
-
-.skill-card h3 {
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        14px;
-
-    letter-spacing:
-        -0.02em;
-
-    margin-bottom:
-        7px;
-
-}
-
-
-.skill-card p {
-
-    color:
-        var(--muted);
-
-    font-size:
-        10.5px;
-
-    line-height:
-        1.65;
-
-}
-
-
-/* =========================================================
-   MARQUEE
-   ========================================================= */
-
-.focus-strip {
-
-    width:
-        100%;
-
-    overflow:
-        hidden;
-
-    padding:
-        18px 0;
-
-    border-top:
-        1px solid
-        rgba(148,163,184,0.1);
-
-    border-bottom:
-        1px solid
-        rgba(148,163,184,0.1);
-
-}
-
-
-.marquee {
-
-    display:
-        flex;
-
-    width:
-        max-content;
-
-    animation:
-        marquee
-        30s
-        linear
-        infinite;
-
-}
-
-
-.marquee span {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        35px;
-
-    margin-right:
-        35px;
-
-    white-space:
-        nowrap;
-
-    color:
-        #94a3b8;
-
-    font-size:
-        10px;
-
-    font-weight:
-        750;
-
-    letter-spacing:
-        2px;
-
-}
-
-
-.marquee b {
-
-    color:
-        #a78bfa;
-
-}
-
-
-@keyframes marquee {
-
-    from {
-        transform:
-            translateX(0);
-    }
-
-    to {
-        transform:
-            translateX(-50%);
-    }
-
-}
-
-
-/* =========================================================
-   PROJECTS
-   ========================================================= */
-
-.projects-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap:
-        16px;
-
-}
-
-
-.project-card {
-
-    min-height:
-        335px;
-
-    padding:
-        30px;
-
-    border-radius:
-        var(--radius-xl);
-
-    text-decoration:
-        none;
-
-    color:
-        inherit;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    justify-content:
-        space-between;
-
-    transition:
-        0.35s ease;
-
-}
-
-
-.project-card:hover {
-
-    background:
-        rgba(255,255,255,0.78);
-
-    border-color:
-        rgba(124,92,232,0.23);
-
-}
-
-
-.project-feature {
-
-    grid-column:
-        span 2;
-
-    min-height:
-        285px;
-
-    background:
-
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(165,243,252,0.35),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 15% 80%,
-            rgba(196,181,253,0.32),
-            transparent 30%
-        ),
-
-        rgba(255,255,255,0.57);
-
-}
-
-
-.project-top {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-}
-
-
-.project-number {
-
-    color:
-        #94a3b8;
-
-    font-size:
-        9px;
-
-    font-weight:
-        750;
-
-    letter-spacing:
-        1.5px;
-
-}
-
-
-.project-arrow {
-
-    width:
-        39px;
-
-    height:
-        39px;
-
-    border-radius:
-        50%;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    color:
-        var(--text-soft);
-
-    background:
-        rgba(255,255,255,0.5);
-
-    border:
-        1px solid
-        rgba(255,255,255,0.8);
-
-    transition:
-        0.3s ease;
-
-}
-
-
-.project-card:hover
-.project-arrow {
-
-    color:
-        white;
-
-    background:
-        var(--accent);
-
-    transform:
-        rotate(45deg);
-
-}
-
-
-.project-card h3 {
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        28px;
-
-    letter-spacing:
-        -0.045em;
-
-    margin-bottom:
-        10px;
-
-}
-
-
-.project-card p {
-
-    max-width:
-        620px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.75;
-
-}
-
-
-.project-tags {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        7px;
-
-    margin-top:
-        20px;
-
-}
-
-
-.project-tags span {
-
-    padding:
-        6px 9px;
-
-    border-radius:
-        7px;
-
-    color:
-        #6653ad;
-
-    background:
-        rgba(196,181,253,0.16);
-
-    border:
-        1px solid
-        rgba(167,139,250,0.18);
-
-    font-size:
-        8px;
-
-    font-weight:
-        750;
-
-    letter-spacing:
-        0.5px;
-
-}
-
-
-/* =========================================================
-   CONNECT
-   ========================================================= */
-
-.connect-card {
-
-    padding:
-        36px;
-
-    border-radius:
-        var(--radius-xl);
-
-    display:
-        grid;
-
-    grid-template-columns:
-        0.8fr
-        1.2fr;
-
-    gap:
-        35px;
-
-    align-items:
-        center;
-
-}
-
-
-.connect-title {
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        clamp(
-            34px,
-            5vw,
-            52px
-        );
-
-    line-height:
-        0.98;
-
-    letter-spacing:
-        -0.055em;
-
-}
-
-
-.connect-title span {
-
-    background:
-        linear-gradient(
-            100deg,
-            #8b6ce8,
-            #38bdf8
-        );
-
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
-
-    color:
-        transparent;
-
-}
-
-
-.connect-description {
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.7;
-
-    margin-top:
-        15px;
-
-    max-width:
-        390px;
-
-}
-
-
-.social-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        9px;
-
-}
-
-
-.social {
-
-    min-height:
-        90px;
-
-    padding:
-        14px;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    justify-content:
-        space-between;
-
-    text-decoration:
-        none;
-
-    color:
-        var(--text-soft);
-
-    background:
-        rgba(255,255,255,0.42);
-
-    border:
-        1px solid
-        rgba(255,255,255,0.76);
-
-    border-radius:
-        15px;
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.social:hover {
-
-    color:
-        var(--text-strong);
-
-    background:
-        rgba(255,255,255,0.75);
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(71,85,105,0.09);
-
-}
-
-
-.social-icon {
-
-    font-size:
-        17px;
-
-}
-
-
-.social-name {
-
-    font-size:
-        10px;
-
-    font-weight:
-        700;
-
-}
-
-
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
-.contact-card {
-
-    padding:
-        90px 30px;
-
-    text-align:
-        center;
-
-    border-radius:
-        var(--radius-xl);
-
-    background:
-
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(196,181,253,0.35),
-            transparent 45%
-        ),
-
-        rgba(255,255,255,0.55);
-
-}
-
-
-.contact-card h2 {
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        clamp(
-            36px,
-            6vw,
-            70px
-        );
-
-    line-height:
-        0.96;
-
-    letter-spacing:
-        -0.06em;
-
-    margin-bottom:
-        18px;
-
-}
-
-
-.contact-card p {
-
-    color:
-        var(--muted);
-
-    font-size:
-        13px;
-
-    margin-bottom:
-        28px;
-
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-
-    padding:
-        35px 0 45px;
-
-}
-
-
-.footer-inner {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    gap:
-        20px;
-
-}
-
-
-.footer-left {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    gap:
-        5px;
-
-}
-
-
-.footer-name {
-
-    color:
-        var(--text-soft);
-
-    font-size:
-        11px;
-
-    font-weight:
-        700;
-
-}
-
-
-.footer-sub {
-
-    color:
-        #94a3b8;
-
-    font-size:
-        9px;
-
-}
-
-
-.footer-right {
-
-    color:
-        #94a3b8;
-
-    font-size:
-        9px;
-
-    text-align:
-        right;
-
-    line-height:
-        1.7;
-
-}
-
-
-/* =========================================================
-   REVEAL
-   ========================================================= */
-
-.reveal {
-
-    opacity:
-        0;
-
-    transform:
-        translateY(30px);
-
-    transition:
-        opacity
-        0.8s
-        ease,
-
-        transform
-        0.8s
-        ease;
-
-}
-
-
-.reveal.visible {
-
-    opacity:
-        1;
-
-    transform:
-        translateY(0);
-
-}
-
-
-/* =========================================================
-   COMMAND PALETTE
-   ========================================================= */
-
-.command-overlay {
-
-    position:
-        fixed;
-
-    inset:
-        0;
-
-    z-index:
-        3000;
-
-    display:
-        flex;
-
-    align-items:
-        flex-start;
-
-    justify-content:
-        center;
-
-    padding-top:
-        14vh;
-
-    background:
-        rgba(226,232,240,0.45);
-
-    backdrop-filter:
-        blur(14px);
-
-    -webkit-backdrop-filter:
-        blur(14px);
-
-    opacity:
-        0;
-
-    visibility:
-        hidden;
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.command-overlay.open {
-
-    opacity:
-        1;
-
-    visibility:
-        visible;
-
-}
-
-
-.command-box {
-
-    width:
-        min(
-            calc(100% - 30px),
-            570px
-        );
-
-    border-radius:
-        22px;
-
-    overflow:
-        hidden;
-
-    transform:
-        translateY(-15px)
-        scale(0.98);
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.command-overlay.open
-.command-box {
-
-    transform:
-        translateY(0)
-        scale(1);
-
-}
-
-
-.command-input-wrap {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        10px;
-
-    padding:
-        17px;
-
-    border-bottom:
-        1px solid
-        rgba(148,163,184,0.13);
-
-}
-
-
-.command-search {
-
-    color:
-        #94a3b8;
-
-    font-size:
-        18px;
-
-}
-
-
-#commandInput {
-
-    width:
-        100%;
-
-    border:
-        0;
-
-    outline:
-        0;
-
-    background:
-        transparent;
-
-    color:
-        var(--text-strong);
-
-    font-size:
-        14px;
-
-}
-
-
-#commandInput::placeholder {
-
-    color:
-        #94a3b8;
-
-}
-
-
-.command-esc {
-
-    color:
-        #94a3b8;
-
-    font-size:
-        9px;
-
-}
-
-
-.command-list {
-
-    padding:
-        8px;
-
-}
-
-
-.command-item {
-
-    width:
-        100%;
-
-    padding:
-        13px;
-
-    border:
-        0;
-
-    border-radius:
-        11px;
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    background:
-        transparent;
-
-    color:
-        var(--text-soft);
-
-    cursor:
-        pointer;
-
-    text-align:
-        left;
-
-    font-size:
-        12px;
-
-    transition:
-        0.2s ease;
-
-}
-
-
-.command-item:hover {
-
-    background:
-        rgba(255,255,255,0.65);
-
-    color:
-        var(--text-strong);
-
-}
-
-
-.command-number {
-
-    color:
-        #a8b1c0;
-
-    font-size:
-        9px;
-
-}
-
-
-/* =========================================================
-   MOBILE NAV
-   ========================================================= */
-
-@media (max-width: 850px) {
-
-    .nav-links {
-
-        position:
-            absolute;
-
-        top:
-            72px;
-
-        left:
-            0;
-
-        right:
-            0;
-
-        padding:
-            9px;
-
-        display:
-            none;
-
-        flex-direction:
-            column;
-
-        align-items:
-            stretch;
-
-        border-radius:
-            18px;
-
-        background:
-            rgba(255,255,255,0.82);
-
-        border:
-            1px solid
-            rgba(255,255,255,0.92);
-
-        box-shadow:
-            0 20px 50px
-            rgba(71,85,105,0.15);
-
-        backdrop-filter:
-            blur(25px);
-
-        -webkit-backdrop-filter:
-            blur(25px);
-
-    }
-
-
-    .nav-links.open {
-
-        display:
-            flex;
-
-    }
-
-
-    .nav-links a {
-
-        padding:
-            13px;
-
-    }
-
-
-    .menu-button {
-
-        display:
-            block;
-
-    }
-
-
-    .about-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .skills-grid {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-    }
-
-
-    .connect-card {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (min-width: 601px)
-       and (max-width: 1000px) {
-
-    .skills-grid {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-    }
-
-
-    .hero-title {
-
-        font-size:
-            clamp(
-                60px,
-                10vw,
-                90px
+            width: min(
+                1500px,
+                calc(100% - 36px)
             );
 
-    }
+            margin: 0 auto;
 
-}
+            position: relative;
+        }
 
 
-/* =========================================================
-   PHONE
-   ========================================================= */
+        .section {
 
-@media (max-width: 600px) {
+            padding:
+                100px 0;
+        }
 
-    html {
 
-        scroll-padding-top:
-            85px;
+        .glass {
 
-    }
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--glass-strong),
+                    var(--glass)
+                );
 
+            border:
+                1px solid var(--glass-border);
 
-    main {
+            box-shadow:
+                0 25px 80px var(--shadow),
+                inset 0 1px 0 var(--card-highlight);
 
-        width:
-            calc(100% - 22px);
+            backdrop-filter:
+                blur(var(--blur))
+                saturate(150%);
 
-    }
+            -webkit-backdrop-filter:
+                blur(var(--blur))
+                saturate(150%);
+        }
 
 
-    .nav-shell {
+        /* =========================================================
+           07. TOP NAVIGATION
+           ========================================================= */
 
-        width:
-            calc(100% - 20px);
+        .nav-wrap {
 
-        top:
-            9px;
+            position: fixed;
 
-    }
+            top: 18px;
+            left: 0;
+            right: 0;
 
+            z-index: 1000;
 
-    .nav {
+            display: flex;
 
-        min-height:
-            58px;
+            justify-content: center;
 
-        padding-left:
-            15px;
+            pointer-events: none;
+        }
 
-        border-radius:
-            17px;
 
-    }
+        .navbar {
 
+            width:
+                min(
+                    1100px,
+                    calc(100% - 28px)
+                );
 
-    .hero {
+            min-height: 66px;
 
-        padding:
-            120px 0 90px;
+            padding:
+                8px 10px 8px 18px;
 
-    }
+            border-radius:
+                22px;
 
+            display: flex;
 
-    .hero-title {
+            align-items: center;
 
-        font-size:
-            clamp(
-                46px,
-                15vw,
-                72px
-            );
+            justify-content: space-between;
 
-    }
+            gap: 15px;
 
+            pointer-events: auto;
+        }
 
-    .hero-description {
 
-        font-size:
-            13.5px;
+        .brand {
 
-    }
+            display: flex;
 
+            align-items: center;
 
-    .hero-decoration {
+            gap: 11px;
 
-        display:
-            none;
+            text-decoration: none;
 
-    }
+            min-width: 0;
+        }
 
 
-    .scroll-hint {
+        .brand-mark {
 
-        display:
-            none;
+            width: 38px;
+            height: 38px;
 
-    }
+            flex-shrink: 0;
 
+            display: grid;
 
-    section {
+            place-items: center;
 
-        padding:
-            75px 0;
+            border-radius: 13px;
 
-    }
+            color: white;
 
+            font-size: 14px;
 
-    .section-heading {
+            font-weight: 800;
 
-        display:
-            block;
+            background:
+                linear-gradient(
+                    135deg,
+                    #8f75ff,
+                    #63d8ff
+                );
 
-    }
+            box-shadow:
+                0 8px 25px
+                rgba(125, 105, 255, 0.25);
+        }
 
 
-    .section-description {
+        .brand-text {
 
-        margin-top:
-            15px;
+            display: flex;
 
-    }
+            flex-direction: column;
 
+            min-width: 0;
+        }
 
-    .about-card {
 
-        padding:
-            25px;
+        .brand-name {
 
-        min-height:
-            325px;
+            font-size: 13px;
 
-    }
+            font-weight: 800;
 
+            white-space: nowrap;
 
-    .system-card {
+            overflow: hidden;
 
-        padding:
-            25px;
+            text-overflow: ellipsis;
+        }
 
-    }
 
+        .brand-label {
 
-    .skills-grid {
+            color: var(--muted);
 
-        grid-template-columns:
-            repeat(2, 1fr);
+            font-size: 9px;
 
-        gap:
-            9px;
+            letter-spacing: 0.7px;
 
-    }
+            text-transform: uppercase;
+        }
 
 
-    .skill-card {
+        .nav-links {
 
-        min-height:
-            190px;
+            display: flex;
 
-        padding:
-            18px;
+            align-items: center;
 
-    }
+            gap: 4px;
+        }
 
 
-    .skill-icon {
+        .nav-link {
 
-        width:
-            42px;
+            position: relative;
 
-        height:
-            42px;
+            padding:
+                10px 13px;
 
-        margin-top:
-            18px;
+            border-radius: 12px;
 
-    }
+            color: var(--muted);
 
+            text-decoration: none;
 
-    .projects-grid {
+            font-size: 12px;
 
-        grid-template-columns:
-            1fr;
+            font-weight: 600;
 
-    }
+            transition:
+                var(--transition);
+        }
 
 
-    .project-feature {
+        .nav-link:hover,
+        .nav-link.active {
 
-        grid-column:
-            span 1;
+            color: var(--text-strong);
 
-    }
+            background:
+                var(--button-background);
+        }
 
 
-    .project-card {
+        .nav-controls {
 
-        min-height:
-            305px;
+            display: flex;
 
-        padding:
-            24px;
+            align-items: center;
 
-    }
+            gap: 7px;
+        }
 
 
-    .project-card h3 {
+        .theme-button {
 
-        font-size:
-            24px;
+            width: 40px;
+            height: 40px;
 
-    }
+            display: grid;
 
+            place-items: center;
 
-    .connect-card {
+            border-radius: 13px;
 
-        padding:
-            25px;
+            color: var(--text);
 
-    }
+            background:
+                var(--button-background);
 
+            border:
+                1px solid var(--glass-border);
 
-    .social-grid {
+            transition:
+                var(--transition);
+        }
 
-        grid-template-columns:
-            repeat(2, 1fr);
 
-    }
+        .theme-button:hover {
 
+            transform:
+                translateY(-2px)
+                rotate(5deg);
 
-    .contact-card {
+            box-shadow:
+                0 10px 25px var(--shadow);
+        }
 
-        padding:
-            65px 20px;
 
-    }
+        .menu-button {
 
+            display: none;
 
-    .footer-inner {
+            width: 40px;
+            height: 40px;
 
-        flex-direction:
-            column;
+            place-items: center;
 
-        align-items:
-            flex-start;
+            border-radius: 13px;
 
-    }
+            color: var(--text);
 
+            background:
+                var(--button-background);
 
-    .footer-right {
+            border:
+                1px solid var(--glass-border);
+        }
 
-        text-align:
-            left;
 
-    }
+        /* =========================================================
+           08. HERO
+           ========================================================= */
 
+        .hero {
 
-    .cursor-light {
+            min-height:
+                100svh;
 
-        display:
-            none;
+            display: grid;
 
-    }
+            align-items: center;
 
-}
+            padding-top:
+                110px;
 
+            padding-bottom:
+                70px;
+        }
 
-/* =========================================================
-   SMALL PHONE
-   ========================================================= */
 
-@media (max-width: 380px) {
+        .hero-grid {
 
-    .skills-grid {
+            display: grid;
 
-        grid-template-columns:
-            1fr;
+            grid-template-columns:
+                1.25fr
+                0.75fr;
 
-    }
+            gap:
+                60px;
 
+            align-items: center;
+        }
 
-    .social-grid {
 
-        grid-template-columns:
-            1fr;
+        .eyebrow {
 
-    }
+            display: inline-flex;
 
+            align-items: center;
 
-    .hero-title {
+            gap: 8px;
 
-        font-size:
-            44px;
+            padding:
+                8px 13px;
 
-    }
+            margin-bottom:
+                22px;
 
-}
+            border-radius:
+                999px;
 
+            color:
+                var(--muted);
 
-/* =========================================================
-   LARGE DESKTOP / 4K TV
-   ========================================================= */
+            font-size:
+                11px;
 
-@media (min-width: 1800px) {
+            font-weight:
+                700;
 
-    :root {
+            letter-spacing:
+                0.5px;
 
-        --max-width:
-            1450px;
+            background:
+                var(--glass);
 
-    }
+            border:
+                1px solid var(--glass-border);
 
+            box-shadow:
+                0 10px 30px var(--shadow);
+        }
 
-    main {
 
-        width:
-            min(
-                calc(100% - 100px),
-                1450px
-            );
+        .status-dot {
 
-    }
+            width: 7px;
+            height: 7px;
 
+            border-radius: 50%;
 
-    .nav-shell {
+            background:
+                #66d993;
 
-        width:
-            min(
-                calc(100% - 100px),
-                1200px
-            );
+            box-shadow:
+                0 0 0 5px
+                rgba(102,217,147,0.12);
 
-    }
+            animation:
+                pulse 2s infinite;
+        }
 
 
-    .hero-title {
+        @keyframes pulse {
 
-        font-size:
-            clamp(
-                90px,
-                7vw,
-                145px
-            );
+            0%,
+            100% {
+                opacity: 1;
+            }
 
-    }
+            50% {
+                opacity: 0.45;
+            }
+        }
 
 
-    .hero-description {
+        .hero h1 {
 
-        max-width:
-            850px;
+            max-width:
+                900px;
 
-        font-size:
-            20px;
+            font-size:
+                clamp(
+                    48px,
+                    7vw,
+                    105px
+                );
 
-    }
+            line-height:
+                0.96;
 
+            letter-spacing:
+                -5px;
 
-    section {
+            font-weight:
+                850;
 
-        padding:
-            145px 0;
+            color:
+                var(--text-strong);
+        }
 
-    }
 
+        .gradient-text {
 
-    .skill-card {
+            background:
+                linear-gradient(
+                    100deg,
+                    #8066ff,
+                    #48c8ff 42%,
+                    #ff83bd 80%
+                );
 
-        min-height:
-            245px;
+            -webkit-background-clip:
+                text;
 
-    }
+            background-clip:
+                text;
 
+            color:
+                transparent;
+        }
 
-    .project-card {
 
-        min-height:
-            390px;
+        .hero-description {
 
-    }
+            max-width:
+                720px;
 
-}
+            margin-top:
+                28px;
 
+            color:
+                var(--muted);
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+            font-size:
+                clamp(
+                    15px,
+                    1.5vw,
+                    19px
+                );
 
-@media (prefers-reduced-motion: reduce) {
+            line-height:
+                1.8;
+        }
 
-    *,
-    *::before,
-    *::after {
 
-        animation-duration:
-            0.01ms !important;
+        .hero-actions {
 
-        animation-iteration-count:
-            1 !important;
+            display: flex;
 
-        transition-duration:
-            0.01ms !important;
+            flex-wrap: wrap;
 
-        scroll-behavior:
-            auto !important;
+            gap:
+                12px;
 
-    }
+            margin-top:
+                32px;
+        }
 
 
-    .marquee {
+        .button {
 
-        animation:
-            none;
+            display: inline-flex;
 
-    }
+            align-items: center;
 
-}
+            justify-content: center;
 
+            gap: 9px;
 
-/* =========================================================
-   SAFE AREA
-   ========================================================= */
+            min-height:
+                48px;
 
-@supports (padding: env(safe-area-inset-bottom)) {
+            padding:
+                0 19px;
 
-    body {
+            border-radius:
+                15px;
 
-        padding-bottom:
-            env(safe-area-inset-bottom);
+            text-decoration: none;
 
-    }
+            font-size:
+                12px;
 
-}
+            font-weight:
+                750;
 
-</style>
+            transition:
+                var(--transition);
+        }
 
+
+        .button-primary {
+
+            color:
+                white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #896dff,
+                    #62cfff
+                );
+
+            box-shadow:
+                0 15px 35px
+                rgba(112, 103, 255, 0.25);
+        }
+
+
+        .button-primary:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(112, 103, 255, 0.32);
+        }
+
+
+        .button-secondary {
+
+            color:
+                var(--text);
+
+            background:
+                var(--button-background);
+
+            border:
+                1px solid var(--glass-border);
+
+            box-shadow:
+                0 10px 30px var(--shadow);
+        }
+
+
+        .button-secondary:hover {
+
+            transform:
+                translateY(-4px);
+
+            background:
+                var(--glass-strong);
+        }
+
+
+        /* =========================================================
+           09. HERO PROFILE GLASS
+           ========================================================= */
+
+        .hero-profile {
+
+            position: relative;
+
+            padding:
+                25px;
+
+            border-radius:
+                var(--radius-xl);
+
+            transform:
+                perspective(1200px)
+                rotateY(-3deg);
+
+            transition:
+                transform 0.5s ease;
+        }
+
+
+        .hero-profile:hover {
+
+            transform:
+                perspective(1200px)
+                rotateY(0deg)
+                translateY(-5px);
+        }
+
+
+        .profile-image-wrap {
+
+            position: relative;
+
+            width:
+                min(
+                    290px,
+                    70vw
+                );
+
+            aspect-ratio:
+                1;
+
+            margin:
+                0 auto 25px;
+        }
+
+
+        .profile-image-wrap::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset:
+                -12px;
+
+            border-radius:
+                50%;
+
+            background:
+                conic-gradient(
+                    from 0deg,
+                    #8d73ff,
+                    #67d7ff,
+                    #ff9fc9,
+                    #ffd697,
+                    #8d73ff
+                );
+
+            filter:
+                blur(2px);
+
+            animation:
+                spin 10s linear infinite;
+        }
+
+
+        @keyframes spin {
+
+            to {
+                transform:
+                    rotate(360deg);
+            }
+        }
+
+
+        .profile-image {
+
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit:
+                cover;
+
+            border-radius:
+                50%;
+
+            border:
+                7px solid
+                var(--glass-strong);
+
+            box-shadow:
+                0 25px 70px
+                var(--shadow-strong);
+
+            background:
+                #e7e9f3;
+        }
+
+
+        .profile-badge {
+
+            position: absolute;
+
+            right: -5px;
+            bottom: 15px;
+
+            padding:
+                9px 13px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            color:
+                var(--text);
+
+            background:
+                var(--glass-strong);
+
+            border:
+                1px solid var(--glass-border);
+
+            box-shadow:
+                0 12px 30px var(--shadow);
+        }
+
+
+        .profile-name {
+
+            text-align:
+                center;
+
+            font-size:
+                25px;
+
+            font-weight:
+                850;
+
+            color:
+                var(--text-strong);
+        }
+
+
+        .profile-alias {
+
+            text-align:
+                center;
+
+            margin-top:
+                7px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+        }
+
+
+        .profile-stats {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                8px;
+
+            margin-top:
+                25px;
+        }
+
+
+        .stat {
+
+            padding:
+                15px 8px;
+
+            text-align:
+                center;
+
+            border-radius:
+                16px;
+
+            background:
+                var(--glass-soft);
+
+            border:
+                1px solid var(--glass-border);
+        }
+
+
+        .stat-number {
+
+            display:
+                block;
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                18px;
+
+            font-weight:
+                850;
+        }
+
+
+        .stat-label {
+
+            display:
+                block;
+
+            margin-top:
+                4px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                9px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.5px;
+        }
+
+
+        /* =========================================================
+           10. SECTION HEADINGS
+           ========================================================= */
+
+        .section-heading {
+
+            margin-bottom:
+                45px;
+        }
+
+
+        .section-kicker {
+
+            color:
+                var(--purple);
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .section-title {
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                clamp(
+                    30px,
+                    4vw,
+                    55px
+                );
+
+            line-height:
+                1;
+
+            letter-spacing:
+                -2px;
+        }
+
+
+        .section-description {
+
+            max-width:
+                650px;
+
+            margin-top:
+                15px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =========================================================
+           11. ABOUT
+           ========================================================= */
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                20px;
+        }
+
+
+        .about-card {
+
+            padding:
+                30px;
+
+            border-radius:
+                var(--radius-lg);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .about-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 35px 90px var(--shadow-strong);
+        }
+
+
+        .about-card h3 {
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                20px;
+
+            margin-bottom:
+                14px;
+        }
+
+
+        .about-card p {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.8;
+
+            font-size:
+                14px;
+        }
+
+
+        .about-highlight {
+
+            margin-top:
+                18px;
+
+            padding:
+                15px;
+
+            border-radius:
+                16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,108,255,0.09),
+                    rgba(105,211,255,0.09)
+                );
+
+            border:
+                1px solid
+                rgba(139,108,255,0.12);
+
+            color:
+                var(--text);
+
+            font-size:
+                12px;
+
+            line-height:
+                1.6;
+        }
+
+
+        /* =========================================================
+           12. SKILLS
+           ========================================================= */
+
+        .skills-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap:
+                13px;
+        }
+
+
+        .skill-card {
+
+            min-height:
+                160px;
+
+            padding:
+                23px;
+
+            border-radius:
+                22px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+
+            transition:
+                var(--transition);
+
+            overflow:
+                hidden;
+
+            position:
+                relative;
+        }
+
+
+        .skill-card::before {
+
+            content: "";
+
+            position:
+                absolute;
+
+            width:
+                110px;
+
+            height:
+                110px;
+
+            right:
+                -50px;
+
+            bottom:
+                -50px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--skill-color);
+
+            filter:
+                blur(25px);
+
+            opacity:
+                0.25;
+        }
+
+
+        .skill-card:hover {
+
+            transform:
+                translateY(-7px)
+                scale(1.015);
+
+            box-shadow:
+                0 25px 55px var(--shadow);
+        }
+
+
+        .skill-icon {
+
+            width:
+                43px;
+
+            height:
+                43px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                14px;
+
+            color:
+                var(--skill-color);
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--skill-color) 12%,
+                    transparent
+                );
+
+            border:
+                1px solid
+                color-mix(
+                    in srgb,
+                    var(--skill-color) 20%,
+                    transparent
+                );
+
+            font-size:
+                18px;
+        }
+
+
+        .skill-card h3 {
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                14px;
+        }
+
+
+        .skill-card p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                10px;
+
+            line-height:
+                1.5;
+        }
+
+
+        .skill-purple {
+            --skill-color: #8b6cff;
+        }
+
+        .skill-blue {
+            --skill-color: #55bfff;
+        }
+
+        .skill-pink {
+            --skill-color: #ff8fbd;
+        }
+
+        .skill-green {
+            --skill-color: #61cf91;
+        }
+
+        .skill-orange {
+            --skill-color: #ffad67;
+        }
+
+
+        /* =========================================================
+           13. PROJECTS
+           ========================================================= */
+
+        .projects-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                18px;
+        }
+
+
+        .project-card {
+
+            min-height:
+                280px;
+
+            padding:
+                26px;
+
+            border-radius:
+                var(--radius-lg);
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .project-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 35px 90px var(--shadow-strong);
+        }
+
+
+        .project-glow {
+
+            position:
+                absolute;
+
+            width:
+                160px;
+
+            height:
+                160px;
+
+            top:
+                -70px;
+
+            right:
+                -50px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--project-color);
+
+            opacity:
+                0.17;
+
+            filter:
+                blur(20px);
+        }
+
+
+        .project-number {
+
+            color:
+                var(--project-color);
+
+            font-size:
+                10px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                1px;
+        }
+
+
+        .project-card h3 {
+
+            margin-top:
+                18px;
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                21px;
+        }
+
+
+        .project-card p {
+
+            margin-top:
+                11px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+        }
+
+
+        .project-tags {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                6px;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                20px;
+        }
+
+
+        .project-tag {
+
+            padding:
+                6px 9px;
+
+            border-radius:
+                8px;
+
+            background:
+                var(--glass-soft);
+
+            border:
+                1px solid var(--glass-border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+        }
+
+
+        .project-purple {
+            --project-color: #9178ff;
+        }
+
+        .project-blue {
+            --project-color: #64cfff;
+        }
+
+        .project-pink {
+            --project-color: #ff9ec8;
+        }
+
+
+        /* =========================================================
+           14. SOCIALS
+           ========================================================= */
+
+        .social-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(6, 1fr);
+
+            gap:
+                10px;
+        }
+
+
+        .social-card {
+
+            min-height:
+                115px;
+
+            padding:
+                18px;
+
+            border-radius:
+                19px;
+
+            text-decoration:
+                none;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .social-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                var(--glass-strong);
+
+            box-shadow:
+                0 20px 45px var(--shadow);
+        }
+
+
+        .social-icon {
+
+            font-size:
+                21px;
+        }
+
+
+        .social-name {
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                12px;
+
+            font-weight:
+                750;
+        }
+
+
+        .social-handle {
+
+            color:
+                var(--muted);
+
+            font-size:
+                9px;
+
+            margin-top:
+                3px;
+        }
+
+
+        /* =========================================================
+           15. CONTACT
+           ========================================================= */
+
+        .contact {
+
+            padding:
+                55px;
+
+            border-radius:
+                var(--radius-xl);
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+        }
+
+
+        .contact::before {
+
+            content: "";
+
+            position:
+                absolute;
+
+            width:
+                320px;
+
+            height:
+                320px;
+
+            right:
+                -100px;
+
+            top:
+                -150px;
+
+            border-radius:
+                50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(141,115,255,0.3),
+                    rgba(100,208,255,0.25)
+                );
+
+            filter:
+                blur(25px);
+        }
+
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr auto;
+
+            gap:
+                30px;
+
+            align-items:
+                center;
+        }
+
+
+        .contact h2 {
+
+            color:
+                var(--text-strong);
+
+            font-size:
+                clamp(
+                    30px,
+                    4vw,
+                    54px
+                );
+
+            letter-spacing:
+                -2px;
+        }
+
+
+        .contact p {
+
+            max-width:
+                600px;
+
+            margin-top:
+                13px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.7;
+        }
+
+
+        .contact-actions {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                9px;
+        }
+
+
+        /* =========================================================
+           16. FOOTER
+           ========================================================= */
+
+        footer {
+
+            padding:
+                40px 0 50px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                10px;
+        }
+
+
+        .footer-inner {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+        }
+
+
+        .footer-clock {
+
+            font-variant-numeric:
+                tabular-nums;
+        }
+
+
+        /* =========================================================
+           17. FLOATING THEME PANEL
+           ========================================================= */
+
+        .theme-panel {
+
+            position:
+                fixed;
+
+            right:
+                20px;
+
+            bottom:
+                20px;
+
+            z-index:
+                900;
+
+            width:
+                205px;
+
+            padding:
+                13px;
+
+            border-radius:
+                19px;
+
+            opacity:
+                0;
+
+            visibility:
+                hidden;
+
+            transform:
+                translateY(15px)
+                scale(0.96);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .theme-panel.open {
+
+            opacity:
+                1;
+
+            visibility:
+                visible;
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+
+        .theme-panel-title {
+
+            color:
+                var(--muted);
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1px;
+
+            text-transform:
+                uppercase;
+
+            padding:
+                5px 7px 10px;
+        }
+
+
+        .theme-option {
+
+            width:
+                100%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                9px;
+
+            border-radius:
+                10px;
+
+            color:
+                var(--muted);
+
+            background:
+                transparent;
+
+            text-align:
+                left;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .theme-option:hover,
+        .theme-option.selected {
+
+            color:
+                var(--text);
+
+            background:
+                var(--button-background);
+        }
+
+
+        .theme-option-icon {
+
+            width:
+                28px;
+
+            height:
+                28px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                8px;
+
+            background:
+                var(--glass-soft);
+        }
+
+
+        .theme-option span:last-child {
+
+            font-size:
+                10px;
+
+            font-weight:
+                650;
+        }
+
+
+        /* =========================================================
+           18. BACK TO TOP
+           ========================================================= */
+
+        .back-top {
+
+            position:
+                fixed;
+
+            right:
+                20px;
+
+            bottom:
+                20px;
+
+            z-index:
+                850;
+
+            width:
+                43px;
+
+            height:
+                43px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                14px;
+
+            color:
+                var(--text);
+
+            background:
+                var(--glass-strong);
+
+            border:
+                1px solid var(--glass-border);
+
+            box-shadow:
+                0 12px 30px var(--shadow);
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transform:
+                translateY(10px);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .back-top.visible {
+
+            opacity:
+                1;
+
+            pointer-events:
+                auto;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =========================================================
+           19. SCROLL REVEAL
+           ========================================================= */
+
+        .reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+
+        .reveal.visible {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =========================================================
+           20. CURSOR LIGHT
+           ========================================================= */
+
+        .cursor-light {
+
+            position:
+                fixed;
+
+            width:
+                260px;
+
+            height:
+                260px;
+
+            border-radius:
+                50%;
+
+            pointer-events:
+                none;
+
+            z-index:
+                -1;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(150,130,255,0.10),
+                    transparent 65%
+                );
+
+            transform:
+                translate(-50%, -50%);
+
+            transition:
+                opacity 0.3s ease;
+        }
+
+
+        /* =========================================================
+           21. RESPONSIVE — TABLET
+           ========================================================= */
+
+        @media (max-width: 1050px) {
+
+            .hero-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                text-align:
+                    center;
+            }
+
+
+            .hero-description {
+
+                margin-left:
+                    auto;
+
+                margin-right:
+                    auto;
+            }
+
+
+            .hero-actions {
+
+                justify-content:
+                    center;
+            }
+
+
+            .hero-profile {
+
+                max-width:
+                    500px;
+
+                width:
+                    100%;
+
+                margin:
+                    0 auto;
+
+                transform:
+                    none;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .social-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+        }
+
+
+        /* =========================================================
+           22. TABLET / SMALL LAPTOP
+           ========================================================= */
+
+        @media (max-width: 760px) {
+
+            .site-shell {
+
+                width:
+                    min(
+                        100% - 24px,
+                        620px
+                    );
+            }
+
+
+            .nav-links {
+
+                display:
+                    none;
+
+                position:
+                    absolute;
+
+                top:
+                    calc(100% + 8px);
+
+                left:
+                    0;
+
+                right:
+                    0;
+
+                padding:
+                    10px;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    stretch;
+
+                border-radius:
+                    18px;
+
+                background:
+                    var(--nav-background);
+
+                border:
+                    1px solid var(--glass-border);
+
+                backdrop-filter:
+                    blur(25px);
+            }
+
+
+            .nav-links.open {
+
+                display:
+                    flex;
+            }
+
+
+            .nav-link {
+
+                text-align:
+                    center;
+
+                padding:
+                    12px;
+            }
+
+
+            .menu-button {
+
+                display:
+                    grid;
+            }
+
+
+            .brand-label {
+
+                display:
+                    none;
+            }
+
+
+            .hero {
+
+                padding-top:
+                    120px;
+            }
+
+
+            .hero h1 {
+
+                letter-spacing:
+                    -2.5px;
+            }
+
+
+            .about-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .social-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .contact {
+
+                padding:
+                    35px 25px;
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .contact-actions {
+
+                flex-direction:
+                    row;
+
+                flex-wrap:
+                    wrap;
+            }
+
+
+            .footer-inner {
+
+                flex-direction:
+                    column;
+
+                text-align:
+                    center;
+            }
+        }
+
+
+        /* =========================================================
+           23. SMARTPHONE
+           ========================================================= */
+
+        @media (max-width: 480px) {
+
+            .site-shell {
+
+                width:
+                    calc(100% - 20px);
+            }
+
+
+            .navbar {
+
+                width:
+                    calc(100% - 18px);
+
+                top:
+                    10px;
+            }
+
+
+            .brand-name {
+
+                max-width:
+                    140px;
+            }
+
+
+            .hero {
+
+                padding-top:
+                    105px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(
+                        42px,
+                        14vw,
+                        64px
+                    );
+
+                letter-spacing:
+                    -2.5px;
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    14px;
+            }
+
+
+            .hero-actions {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .button {
+
+                width:
+                    100%;
+            }
+
+
+            .hero-profile {
+
+                padding:
+                    20px;
+            }
+
+
+            .profile-image-wrap {
+
+                width:
+                    210px;
+            }
+
+
+            .profile-stats {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .section {
+
+                padding:
+                    75px 0;
+            }
+
+
+            .section-title {
+
+                font-size:
+                    34px;
+
+                letter-spacing:
+                    -1.5px;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap:
+                    8px;
+            }
+
+
+            .skill-card {
+
+                min-height:
+                    145px;
+
+                padding:
+                    17px;
+            }
+
+
+            .skill-card h3 {
+
+                font-size:
+                    12px;
+            }
+
+
+            .social-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .contact-actions {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .theme-panel {
+
+                right:
+                    12px;
+
+                bottom:
+                    12px;
+            }
+        }
+
+
+        /* =========================================================
+           24. LARGE DESKTOP
+           ========================================================= */
+
+        @media (min-width: 1600px) {
+
+            .site-shell {
+
+                width:
+                    min(
+                        1500px,
+                        calc(100% - 100px)
+                    );
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    105px;
+            }
+
+
+            .section {
+
+                padding:
+                    130px 0;
+            }
+        }
+
+
+        /* =========================================================
+           25. TELEVISION / VERY LARGE DISPLAY
+           ========================================================= */
+
+        @media (min-width: 2200px) {
+
+            body {
+
+                font-size:
+                    18px;
+            }
+
+
+            .site-shell {
+
+                width:
+                    min(
+                        1900px,
+                        calc(100% - 160px)
+                    );
+            }
+
+
+            .navbar {
+
+                max-width:
+                    1500px;
+
+                min-height:
+                    80px;
+
+                border-radius:
+                    28px;
+            }
+
+
+            .brand-mark {
+
+                width:
+                    50px;
+
+                height:
+                    50px;
+
+                border-radius:
+                    17px;
+
+                font-size:
+                    18px;
+            }
+
+
+            .brand-name {
+
+                font-size:
+                    17px;
+            }
+
+
+            .brand-label {
+
+                font-size:
+                    11px;
+            }
+
+
+            .nav-link {
+
+                font-size:
+                    15px;
+
+                padding:
+                    13px 18px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    125px;
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    21px;
+            }
+
+
+            .section-title {
+
+                font-size:
+                    68px;
+            }
+
+
+            .section-description {
+
+                font-size:
+                    17px;
+            }
+
+
+            .about-card {
+
+                padding:
+                    42px;
+            }
+
+
+            .about-card p {
+
+                font-size:
+                    17px;
+            }
+
+
+            .skill-card {
+
+                min-height:
+                    210px;
+
+                padding:
+                    30px;
+            }
+
+
+            .skill-card h3 {
+
+                font-size:
+                    17px;
+            }
+
+
+            .skill-card p {
+
+                font-size:
+                    13px;
+            }
+
+
+            .project-card {
+
+                min-height:
+                    350px;
+
+                padding:
+                    35px;
+            }
+
+
+            .project-card h3 {
+
+                font-size:
+                    28px;
+            }
+
+
+            .project-card p {
+
+                font-size:
+                    15px;
+            }
+        }
+
+
+        /* =========================================================
+           26. ACCESSIBILITY
+           ========================================================= */
+
+        :focus-visible {
+
+            outline:
+                3px solid
+                rgba(119, 102, 255, 0.55);
+
+            outline-offset:
+                3px;
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+                scroll-behavior:
+                    auto !important;
+            }
+        }
+
+
+    </style>
 </head>
 
 
 <body>
 
 
-<!-- =======================================================
-     BACKGROUND
-     ======================================================= -->
+    <!-- =========================================================
+         BACKGROUND
+         ========================================================= -->
 
-<div class="background">
+    <div class="background" aria-hidden="true">
 
-    <div class="aurora aurora-1"></div>
+        <div class="gradient-layer"></div>
 
-    <div class="aurora aurora-2"></div>
+        <div class="orb one"></div>
 
-    <div class="aurora aurora-3"></div>
+        <div class="orb two"></div>
 
-    <div class="aurora aurora-4"></div>
+        <div class="orb three"></div>
 
-    <div class="background-grid"></div>
-
-</div>
+    </div>
 
 
-<div
-    class="cursor-light"
-    id="cursorLight">
-</div>
+    <div
+        class="cursor-light"
+        id="cursorLight"
+        aria-hidden="true">
+    </div>
 
 
-<!-- =======================================================
-     NAVIGATION
-     ======================================================= -->
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
 
-<div class="nav-shell">
+    <div class="nav-wrap">
 
-    <nav
-        class="nav glass"
-        id="navbar">
-
-        <a
-            href="#top"
-            class="logo">
-
-            RACHIT<span>.</span>
-
-        </a>
-
-
-        <div
-            class="nav-links"
-            id="navLinks">
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#expertise">
-                Expertise
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#connect">
-                Connect
-            </a>
+        <nav
+            class="navbar glass"
+            aria-label="Main navigation">
 
             <a
-                href="#contact"
-                class="nav-contact">
+                href="#home"
+                class="brand">
 
-                Contact
+                <div class="brand-mark">
+                    RR
+                </div>
+
+                <div class="brand-text">
+
+                    <span class="brand-name">
+                        Rachit Ratnam
+                    </span>
+
+                    <span class="brand-label">
+                        Software Systems • AI
+                    </span>
+
+                </div>
 
             </a>
 
+
+            <div
+                class="nav-links"
+                id="navLinks">
+
+                <a
+                    class="nav-link active"
+                    href="#home">
+                    Home
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#about">
+                    About
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#skills">
+                    Skills
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#projects">
+                    Projects
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="#connect">
+                    Connect
+                </a>
+
+            </div>
+
+
+            <div class="nav-controls">
+
+                <button
+                    class="theme-button"
+                    id="themeButton"
+                    aria-label="Open appearance settings"
+                    title="Appearance">
+
+                    ✨
+
+                </button>
+
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================================
+         THEME PANEL
+         ========================================================= -->
+
+    <div
+        class="theme-panel glass"
+        id="themePanel">
+
+        <div class="theme-panel-title">
+            Appearance
         </div>
 
 
         <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation">
+            class="theme-option"
+            data-theme-choice="system">
 
-            ☰
+            <span class="theme-option-icon">
+                🖥️
+            </span>
+
+            <span>
+                Follow system
+            </span>
 
         </button>
 
-    </nav>
 
-</div>
+        <button
+            class="theme-option"
+            data-theme-choice="light">
 
-
-<!-- =======================================================
-     COMMAND PALETTE
-     ======================================================= -->
-
-<div
-    class="command-overlay"
-    id="commandOverlay">
-
-
-    <div
-        class="command-box glass">
-
-
-        <div class="command-input-wrap">
-
-            <span class="command-search">
-                ⌕
+            <span class="theme-option-icon">
+                ☀️
             </span>
 
-
-            <input
-                type="text"
-                id="commandInput"
-                placeholder="Search portfolio..."
-                autocomplete="off"
-            >
-
-
-            <span class="command-esc">
-                ESC
+            <span>
+                Bright lights
             </span>
 
-        </div>
+        </button>
 
 
-        <div class="command-list">
+        <button
+            class="theme-option"
+            data-theme-choice="dark">
 
-
-            <button
-                class="command-item"
-                data-target="#about">
-
-                <span>
-                    About Rachit
-                </span>
-
-                <span class="command-number">
-                    01
-                </span>
-
-            </button>
-
-
-            <button
-                class="command-item"
-                data-target="#expertise">
-
-                <span>
-                    Explore Expertise
-                </span>
-
-                <span class="command-number">
-                    02
-                </span>
-
-            </button>
-
-
-            <button
-                class="command-item"
-                data-target="#projects">
-
-                <span>
-                    View Projects
-                </span>
-
-                <span class="command-number">
-                    03
-                </span>
-
-            </button>
-
-
-            <button
-                class="command-item"
-                data-target="#connect">
-
-                <span>
-                    Social Connections
-                </span>
-
-                <span class="command-number">
-                    04
-                </span>
-
-            </button>
-
-
-            <button
-                class="command-item"
-                data-target="#contact">
-
-                <span>
-                    Contact
-                </span>
-
-                <span class="command-number">
-                    05
-                </span>
-
-            </button>
-
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =======================================================
-     MAIN
-     ======================================================= -->
-
-<main id="top">
-
-
-<!-- =======================================================
-     HERO
-     ======================================================= -->
-
-<section class="hero">
-
-
-    <div class="hero-decoration one"></div>
-
-    <div class="hero-decoration two"></div>
-
-
-    <div class="hero-content">
-
-
-        <div class="hero-badge">
-
-            <span class="live-dot"></span>
-
-            Currently exploring intelligent systems
-
-        </div>
-
-
-        <h1 class="hero-title">
-
-            Rachit
-
-            <br>
-
-            <span class="gradient">
-                Ratnam
+            <span class="theme-option-icon">
+                🌙
             </span>
 
-        </h1>
+            <span>
+                Dim the lights
+            </span>
 
-
-        <p class="hero-description">
-
-            Software Systems student exploring the intersection of
-
-            <strong>
-                Generative AI
-            </strong>,
-
-            intelligent systems,
-
-            <strong>
-                reverse engineering
-            </strong>
-
-            and system diagnostics.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-
-            <a
-                href="#about"
-                class="button button-primary">
-
-                Explore Portfolio
-
-                <span>
-                    ↓
-                </span>
-
-            </a>
-
-
-            <a
-                href="mailto:rachit.work@protonmail.com"
-                class="button button-secondary">
-
-                Get In Touch
-
-                <span>
-                    ↗
-                </span>
-
-            </a>
-
-
-        </div>
+        </button>
 
     </div>
 
 
-    <div class="scroll-hint">
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
 
-        Scroll
+    <main>
 
-        <span></span>
 
-    </div>
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
 
+        <section
+            class="hero"
+            id="home">
 
-</section>
+            <div class="site-shell">
 
+                <div class="hero-grid">
 
-<!-- =======================================================
-     FOCUS STRIP
-     ======================================================= -->
 
-<div class="focus-strip">
+                    <div class="hero-content reveal">
 
+                        <div class="eyebrow">
 
-    <div class="marquee">
+                            <span class="status-dot"></span>
 
+                            Exploring systems, AI & technology
 
-        <span>
-            GENERATIVE AI
-            <b>✦</b>
-        </span>
+                        </div>
 
 
-        <span>
-            PROMPT ENGINEERING
-            <b>✦</b>
-        </span>
+                        <h1>
 
+                            Hello, I'm
 
-        <span>
-            REVERSE ENGINEERING
-            <b>✦</b>
-        </span>
+                            <span class="gradient-text">
+                                Rachit.
+                            </span>
 
+                        </h1>
 
-        <span>
-            SYSTEM DIAGNOSTICS
-            <b>✦</b>
-        </span>
 
+                        <p class="hero-description">
 
-        <span>
-            SOFTWARE SYSTEMS
-            <b>✦</b>
-        </span>
+                            I'm <strong>Rachit Ratnam Mudaliar</strong> —
+                            casually known as Rachit Ratnam or Rachit Mudaliar.
+                            A Software Systems student who enjoys understanding
+                            how technology works beneath the surface.
 
+                            I explore Generative AI, Prompt Engineering,
+                            Reverse Engineering, System Diagnostics and
+                            interesting software systems.
 
-        <span>
-            GENERATIVE AI
-            <b>✦</b>
-        </span>
+                        </p>
 
 
-        <span>
-            PROMPT ENGINEERING
-            <b>✦</b>
-        </span>
+                        <div class="hero-actions">
 
+                            <a
+                                href="#about"
+                                class="button button-primary">
 
-        <span>
-            REVERSE ENGINEERING
-            <b>✦</b>
-        </span>
+                                Explore my world
+                                <span>↓</span>
 
+                            </a>
 
-        <span>
-            SYSTEM DIAGNOSTICS
-            <b>✦</b>
-        </span>
 
+                            <a
+                                href="https://github.com/rachitratnammudaliar"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-secondary">
 
-        <span>
-            SOFTWARE SYSTEMS
-            <b>✦</b>
-        </span>
+                                View GitHub
+                                <span>↗</span>
 
+                            </a>
 
-    </div>
+                        </div>
 
-</div>
+                    </div>
 
 
-<!-- =======================================================
-     ABOUT
-     ======================================================= -->
+                    <!-- PROFILE -->
 
-<section
-    id="about"
-    class="reveal">
+                    <div class="hero-profile glass reveal">
 
+                        <div class="profile-image-wrap">
 
-    <div class="section-heading">
+                            <img
+                                class="profile-image"
+                                src="file_00000000cdd8821187205670d2649ead(1).png"
+                                alt="Portrait of Rachit Ratnam Mudaliar"
+                                loading="eager"
+                            >
 
+                            <div class="profile-badge">
+                                🇱🇹 Kaunas, Lithuania
+                            </div>
 
-        <div>
+                        </div>
 
-            <div class="section-label">
-                01 — About
-            </div>
 
-            <h2 class="section-title">
-                Curious by default.
-            </h2>
+                        <div class="profile-name">
+                            Rachit Ratnam Mudaliar
+                        </div>
 
-        </div>
 
+                        <div class="profile-alias">
+                            Rachit Ratnam • Rachit Mudaliar
+                        </div>
 
-        <p class="section-description">
 
-            I enjoy understanding what happens beneath
-            the surface of software and intelligent systems.
+                        <div class="profile-stats">
 
-        </p>
+                            <div class="stat">
 
+                                <span class="stat-number">
+                                    AI
+                                </span>
 
-    </div>
+                                <span class="stat-label">
+                                    Focus
+                                </span>
 
+                            </div>
 
-    <div class="about-grid">
 
+                            <div class="stat">
 
-        <article
-            class="about-card glass tilt">
+                                <span class="stat-number">
+                                    SYS
+                                </span>
 
+                                <span class="stat-label">
+                                    Systems
+                                </span>
 
-            <div>
+                            </div>
 
 
-                <h3>
+                            <div class="stat">
 
-                    Understanding systems
-                    from the inside out.
+                                <span class="stat-number">
+                                    DEV
+                                </span>
 
-                </h3>
+                                <span class="stat-label">
+                                    Builder
+                                </span>
 
+                            </div>
 
-                <p>
+                        </div>
 
-                    I'm
-                    <strong>
-                        Rachit Ratnam Mudaliar
-                    </strong>,
+                    </div>
 
-                    casually known as
-                    <strong>
-                        Rachit Ratnam
-                    </strong>
-                    or
-                    <strong>
-                        Rachit Mudaliar
-                    </strong>.
-
-                    <br><br>
-
-                    I'm a Software Systems student at
-                    <strong>
-                        Kauno Kolegija
-                    </strong>,
-
-                    interested in how software,
-                    artificial intelligence and complex
-                    systems work beneath the interface.
-
-                    <br><br>
-
-                    My curiosity moves between Generative AI,
-                    Prompt Engineering, Reverse Engineering,
-                    System Diagnostics and the broader world
-                    of software systems.
-
-                </p>
-
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="identity">
+
+        <!-- =====================================================
+             ABOUT
+             ===================================================== -->
+
+        <section
+            class="section"
+            id="about">
+
+            <div class="site-shell">
 
 
-                <img
-                    class="identity-image"
-                    src="file_00000000cdd8821187205670d2649ead(1).png"
-                    alt="Rachit Ratnam Mudaliar"
-                >
+                <div class="section-heading reveal">
 
+                    <div class="section-kicker">
+                        01 — About
+                    </div>
+
+                    <h2 class="section-title">
+                        Curious by nature.
+                        <br>
+                        Technical by choice.
+                    </h2>
+
+                    <p class="section-description">
+
+                        I like taking things apart — sometimes literally,
+                        sometimes digitally — just to understand what makes
+                        them work.
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+
+                    <article class="about-card glass reveal">
+
+                        <h3>
+                            The person behind the screen
+                        </h3>
+
+                        <p>
+
+                            My full name is
+                            <strong>
+                                Rachit Ratnam Mudaliar
+                            </strong>.
+
+                            I'm casually known as
+                            <strong>
+                                Rachit Ratnam
+                            </strong>
+                            or
+                            <strong>
+                                Rachit Mudaliar
+                            </strong>.
+
+                            I'm currently studying Software Systems at
+                            <strong>
+                                Kauno Kolegija
+                            </strong>
+                            in Lithuania.
+
+                        </p>
+
+
+                        <div class="about-highlight">
+
+                            🎯 My general philosophy:
+
+                            understand first,
+                            experiment second,
+                            build third,
+                            improve forever.
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="about-card glass reveal">
+
+                        <h3>
+                            What keeps me interested
+                        </h3>
+
+                        <p>
+
+                            Generative AI fascinates me because it sits at
+                            the intersection of software, language and
+                            human creativity.
+
+                            I'm also interested in reverse engineering,
+                            diagnostics and understanding systems from
+                            the inside out.
+
+                        </p>
+
+
+                        <div class="about-highlight">
+
+                            🧠 I enjoy finding the question behind the
+                            question — and then figuring out how the system
+                            actually works.
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SKILLS
+             ===================================================== -->
+
+        <section
+            class="section"
+            id="skills">
+
+            <div class="site-shell">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="section-kicker">
+                        02 — Areas of interest
+                    </div>
+
+                    <h2 class="section-title">
+                        Things I like
+                        <br>
+                        exploring.
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <article
+                        class="skill-card glass skill-purple reveal">
+
+                        <div class="skill-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Generative AI
+                            </h3>
+
+                            <p>
+                                Exploring models, capabilities,
+                                workflows and practical AI systems.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="skill-card glass skill-blue reveal">
+
+                        <div class="skill-icon">
+                            ✎
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Prompt Engineering
+                            </h3>
+
+                            <p>
+                                Designing instructions and interaction
+                                patterns for better AI results.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="skill-card glass skill-pink reveal">
+
+                        <div class="skill-icon">
+                            ◈
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Reverse Engineering
+                            </h3>
+
+                            <p>
+                                Understanding how software and systems
+                                behave beneath the surface.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="skill-card glass skill-green reveal">
+
+                        <div class="skill-icon">
+                            ⚙
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                System Diagnostics
+                            </h3>
+
+                            <p>
+                                Investigating problems, behavior,
+                                performance and system architecture.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="skill-card glass skill-orange reveal">
+
+                        <div class="skill-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Software Systems
+                            </h3>
+
+                            <p>
+                                Learning how software components connect,
+                                communicate and operate.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJECTS
+             ===================================================== -->
+
+        <section
+            class="section"
+            id="projects">
+
+            <div class="site-shell">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="section-kicker">
+                        03 — Projects
+                    </div>
+
+                    <h2 class="section-title">
+                        Building things.
+                        <br>
+                        Breaking things.
+                    </h2>
+
+                    <p class="section-description">
+
+                        This section is designed to grow with me.
+                        Projects can be added here as I build them.
+
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <article
+                        class="project-card glass project-purple reveal">
+
+                        <div class="project-glow"></div>
+
+                        <span class="project-number">
+                            PROJECT 01
+                        </span>
+
+                        <h3>
+                            AI Experiments
+                        </h3>
+
+                        <p>
+
+                            Experiments involving Generative AI,
+                            prompting, automation and human-AI
+                            interaction.
+
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                AI
+                            </span>
+
+                            <span class="project-tag">
+                                LLM
+                            </span>
+
+                            <span class="project-tag">
+                                Experiments
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="project-card glass project-blue reveal">
+
+                        <div class="project-glow"></div>
+
+                        <span class="project-number">
+                            PROJECT 02
+                        </span>
+
+                        <h3>
+                            Systems Lab
+                        </h3>
+
+                        <p>
+
+                            A space for experiments involving operating
+                            systems, software behavior, diagnostics and
+                            system exploration.
+
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Systems
+                            </span>
+
+                            <span class="project-tag">
+                                Diagnostics
+                            </span>
+
+                            <span class="project-tag">
+                                Research
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="project-card glass project-pink reveal">
+
+                        <div class="project-glow"></div>
+
+                        <span class="project-number">
+                            PROJECT 03
+                        </span>
+
+                        <h3>
+                            More Coming
+                        </h3>
+
+                        <p>
+
+                            The portfolio will evolve as new ideas,
+                            experiments and projects become real.
+
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span class="project-tag">
+                                Future
+                            </span>
+
+                            <span class="project-tag">
+                                Build
+                            </span>
+
+                            <span class="project-tag">
+                                Explore
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONNECT
+             ===================================================== -->
+
+        <section
+            class="section"
+            id="connect">
+
+            <div class="site-shell">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="section-kicker">
+                        04 — Connect
+                    </div>
+
+                    <h2 class="section-title">
+                        Find me
+                        <br>
+                        around the internet.
+                    </h2>
+
+                </div>
+
+
+                <div class="social-grid">
+
+
+                    <a
+                        class="social-card glass reveal"
+                        href="https://linkedin.com/in/rachitratnammudaliar"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span class="social-icon">
+                            💼
+                        </span>
+
+                        <div>
+
+                            <div class="social-name">
+                                LinkedIn
+                            </div>
+
+                            <div class="social-handle">
+                                Professional
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="social-card glass reveal"
+                        href="https://github.com/rachitratnammudaliar"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span class="social-icon">
+                            💻
+                        </span>
+
+                        <div>
+
+                            <div class="social-name">
+                                GitHub
+                            </div>
+
+                            <div class="social-handle">
+                                @rachitratnammudaliar
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="social-card glass reveal"
+                        href="https://instagram.com/rachitratnam"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span class="social-icon">
+                            📸
+                        </span>
+
+                        <div>
+
+                            <div class="social-name">
+                                Instagram
+                            </div>
+
+                            <div class="social-handle">
+                                @rachitratnam
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="social-card glass reveal"
+                        href="https://youtube.com/@rachitratnam27"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span class="social-icon">
+                            ▶️
+                        </span>
+
+                        <div>
+
+                            <div class="social-name">
+                                YouTube
+                            </div>
+
+                            <div class="social-handle">
+                                @rachitratnam27
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="social-card glass reveal"
+                        href="https://pinterest.com/rachitratnam27"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span class="social-icon">
+                            📌
+                        </span>
+
+                        <div>
+
+                            <div class="social-name">
+                                Pinterest
+                            </div>
+
+                            <div class="social-handle">
+                                @rachitratnam27
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        class="social-card glass reveal"
+                        href="https://reddit.com/user/rachitratnam27"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <span class="social-icon">
+                            👽
+                        </span>
+
+                        <div>
+
+                            <div class="social-name">
+                                Reddit
+                            </div>
+
+                            <div class="social-handle">
+                                u/rachitratnam27
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- CONTACT CARD -->
+
+                <div
+                    class="contact glass reveal"
+                    style="margin-top: 20px;">
+
+                    <div class="contact-grid">
+
+
+                        <div>
+
+                            <h2>
+                                Let's talk.
+                            </h2>
+
+                            <p>
+
+                                Have an interesting idea,
+                                project, question or just want to
+                                say hello?
+
+                                My inbox is open.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="contact-actions">
+
+                            <a
+                                class="button button-primary"
+                                href="mailto:rachit.work@protonmail.com">
+
+                                ✉️
+                                Email me
+
+                            </a>
+
+
+                            <button
+                                class="button button-secondary"
+                                id="copyEmail">
+
+                                📋
+                                Copy email
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="site-shell">
+
+            <div class="footer-inner">
 
                 <div>
-
-                    <div class="identity-name">
-
-                        Rachit Ratnam Mudaliar
-
-                    </div>
-
-
-                    <div class="identity-alias">
-
-                        Rachit Ratnam • Rachit Mudaliar
-
-                    </div>
-
+                    © <span id="year"></span>
+                    Rachit Ratnam Mudaliar
                 </div>
 
+                <div>
+                    Built with curiosity & caffeine ☕
+                </div>
+
+                <div class="footer-clock">
+                    Local time:
+                    <span id="clock">
+                        --:--
+                    </span>
+                </div>
 
             </div>
-
-
-        </article>
-
-
-        <article
-            class="system-card glass tilt">
-
-
-            <div class="system-header">
-
-
-                <span class="system-header-title">
-
-                    SYSTEM PROFILE
-
-                </span>
-
-
-                <span class="system-version">
-
-                    v1.0
-
-                </span>
-
-
-            </div>
-
-
-            <div class="system-list">
-
-
-                <div class="system-item">
-
-                    <span class="system-item-label">
-                        STATUS
-                    </span>
-
-                    <span class="system-online">
-                        ● ONLINE
-                    </span>
-
-                </div>
-
-
-                <div class="system-item">
-
-                    <span class="system-item-label">
-                        LOCATION
-                    </span>
-
-                    <span class="system-value">
-                        Kaunas, Lithuania
-                    </span>
-
-                </div>
-
-
-                <div class="system-item">
-
-                    <span class="system-item-label">
-                        ROLE
-                    </span>
-
-                    <span class="system-value">
-                        Student
-                    </span>
-
-                </div>
-
-
-                <div class="system-item">
-
-                    <span class="system-item-label">
-                        FOCUS
-                    </span>
-
-                    <span class="system-value">
-                        AI + Systems
-                    </span>
-
-                </div>
-
-
-                <div class="system-item">
-
-                    <span class="system-item-label">
-                        COFFEE
-                    </span>
-
-                    <span class="system-value">
-                        REQUIRED ☕
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </article>
-
-
-    </div>
-
-
-</section>
-
-
-<!-- =======================================================
-     EXPERTISE
-     ======================================================= -->
-
-<section
-    id="expertise"
-    class="reveal">
-
-
-    <div class="section-heading">
-
-
-        <div>
-
-            <div class="section-label">
-                02 — Expertise
-            </div>
-
-            <h2 class="section-title">
-                Things I explore.
-            </h2>
 
         </div>
 
+    </footer>
 
-        <p class="section-description">
 
-            Areas that currently occupy my curiosity,
-            experiments and learning.
+    <!-- =========================================================
+         BACK TO TOP
+         ========================================================= -->
 
-        </p>
+    <button
+        class="back-top"
+        id="backTop"
+        aria-label="Back to top">
 
+        ↑
 
-    </div>
+    </button>
 
 
-    <div class="skills-grid">
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
 
+    <script>
 
-        <article
-            class="skill-card glass tilt">
 
-            <div class="skill-number">
-                01
-            </div>
+        /* ========================================================
+           01. ELEMENTS
+           ======================================================== */
 
+        const html =
+            document.documentElement;
 
-            <div>
+        const themeButton =
+            document.getElementById("themeButton");
 
-                <div class="skill-icon">
-                    ✦
-                </div>
+        const themePanel =
+            document.getElementById("themePanel");
 
+        const menuButton =
+            document.getElementById("menuButton");
 
-                <h3>
-                    Generative AI
-                </h3>
+        const navLinks =
+            document.getElementById("navLinks");
 
+        const backTop =
+            document.getElementById("backTop");
 
-                <p>
+        const cursorLight =
+            document.getElementById("cursorLight");
 
-                    Exploring modern AI systems,
-                    generation and practical applications.
+        const copyEmail =
+            document.getElementById("copyEmail");
 
-                </p>
+        const clock =
+            document.getElementById("clock");
 
-            </div>
+        const year =
+            document.getElementById("year");
 
-        </article>
 
+        /* ========================================================
+           02. YEAR
+           ======================================================== */
 
-        <article
-            class="skill-card glass tilt">
+        year.textContent =
+            new Date().getFullYear();
 
-            <div class="skill-number">
-                02
-            </div>
 
+        /* ========================================================
+           03. THEME
+           ======================================================== */
 
-            <div>
+        const savedTheme =
+            localStorage.getItem("rachit-theme");
 
-                <div class="skill-icon">
-                    ◈
-                </div>
 
+        if (
+            savedTheme === "light" ||
+            savedTheme === "dark" ||
+            savedTheme === "system"
+        ) {
 
-                <h3>
-                    Prompt Engineering
-                </h3>
+            html.dataset.theme =
+                savedTheme;
 
+        } else {
 
-                <p>
+            html.dataset.theme =
+                "system";
 
-                    Designing instructions and interactions
-                    for more capable AI systems.
+        }
 
-                </p>
 
-            </div>
+        function updateThemeOptions() {
 
-        </article>
+            const current =
+                html.dataset.theme;
 
+            document
+                .querySelectorAll(".theme-option")
+                .forEach(option => {
 
-        <article
-            class="skill-card glass tilt">
+                    option.classList.toggle(
+                        "selected",
+                        option.dataset.themeChoice === current
+                    );
 
-            <div class="skill-number">
-                03
-            </div>
+                });
+        }
 
 
-            <div>
+        updateThemeOptions();
 
-                <div class="skill-icon">
-                    ⌁
-                </div>
 
+        themeButton.addEventListener(
+            "click",
+            event => {
 
-                <h3>
-                    Reverse Engineering
-                </h3>
+                event.stopPropagation();
 
+                themePanel.classList.toggle(
+                    "open"
+                );
 
-                <p>
+            }
+        );
 
-                    Understanding software behaviour
-                    by examining systems from the inside.
 
-                </p>
+        document
+            .querySelectorAll(".theme-option")
+            .forEach(option => {
 
-            </div>
+                option.addEventListener(
+                    "click",
+                    () => {
 
-        </article>
+                        const selected =
+                            option.dataset.themeChoice;
 
+                        html.dataset.theme =
+                            selected;
 
-        <article
-            class="skill-card glass tilt">
+                        localStorage.setItem(
+                            "rachit-theme",
+                            selected
+                        );
 
-            <div class="skill-number">
-                04
-            </div>
+                        updateThemeOptions();
 
+                        themePanel.classList.remove(
+                            "open"
+                        );
 
-            <div>
+                    }
+                );
 
-                <div class="skill-icon">
-                    ◉
-                </div>
+            });
 
 
-                <h3>
-                    System Diagnostics
-                </h3>
+        document.addEventListener(
+            "click",
+            event => {
 
+                if (
+                    !themePanel.contains(event.target) &&
+                    !themeButton.contains(event.target)
+                ) {
 
-                <p>
+                    themePanel.classList.remove(
+                        "open"
+                    );
 
-                    Finding problems, understanding behaviour
-                    and tracing systems logically.
+                }
 
-                </p>
+            }
+        );
 
-            </div>
 
-        </article>
+        /* ========================================================
+           04. MOBILE MENU
+           ======================================================== */
 
+        menuButton.addEventListener(
+            "click",
+            () => {
 
-        <article
-            class="skill-card glass tilt">
+                const open =
+                    navLinks.classList.toggle("open");
 
-            <div class="skill-number">
-                05
-            </div>
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    open
+                );
 
+                menuButton.textContent =
+                    open ? "×" : "☰";
 
-            <div>
+            }
+        );
 
-                <div class="skill-icon">
-                    ⌘
-                </div>
 
+        document
+            .querySelectorAll(".nav-link")
+            .forEach(link => {
 
-                <h3>
-                    Software Systems
-                </h3>
+                link.addEventListener(
+                    "click",
+                    () => {
 
+                        navLinks.classList.remove(
+                            "open"
+                        );
 
-                <p>
+                        menuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-                    Learning how software components
-                    connect, communicate and operate.
+                        menuButton.textContent =
+                            "☰";
 
-                </p>
+                    }
+                );
 
-            </div>
+            });
 
-        </article>
 
+        /* ========================================================
+           05. SCROLL REVEAL
+           ======================================================== */
 
-    </div>
+        const revealElements =
+            document.querySelectorAll(".reveal");
 
 
-</section>
+        const revealObserver =
+            new IntersectionObserver(
+                entries => {
 
+                    entries.forEach(entry => {
 
-<!-- =======================================================
-     PROJECTS
-     ======================================================= -->
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-<section
-    id="projects"
-    class="reveal">
+                            entry.target.classList.add(
+                                "visible"
+                            );
 
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
-    <div class="section-heading">
+                        }
 
+                    });
 
-        <div>
+                },
+                {
+                    threshold: 0.12
+                }
+            );
 
-            <div class="section-label">
-                03 — Projects
-            </div>
 
+        revealElements.forEach(
+            element => {
 
-            <h2 class="section-title">
-                Experiments & work.
-            </h2>
+                revealObserver.observe(
+                    element
+                );
 
-        </div>
+            }
+        );
 
 
-        <p class="section-description">
+        /* ========================================================
+           06. ACTIVE NAVIGATION
+           ======================================================== */
 
-            A space for projects, experiments,
-            research and things worth building.
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
 
-        </p>
 
+        const navObserver =
+            new IntersectionObserver(
+                entries => {
 
-    </div>
+                    entries.forEach(entry => {
 
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-    <div class="projects-grid">
+                            document
+                                .querySelectorAll(".nav-link")
+                                .forEach(link => {
 
+                                    link.classList.remove(
+                                        "active"
+                                    );
 
-        <a
-            class="project-card project-feature glass tilt"
-            href="https://github.com/rachitratnammudaliar"
-            target="_blank"
-            rel="noopener noreferrer">
+                                });
 
 
-            <div class="project-top">
+                            const activeLink =
+                                document.querySelector(
+                                    `.nav-link[href="#${entry.target.id}"]`
+                                );
 
 
-                <span class="project-number">
-                    PROJECT 01
-                </span>
+                            if (activeLink) {
 
+                                activeLink.classList.add(
+                                    "active"
+                                );
 
-                <span class="project-arrow">
-                    ↗
-                </span>
+                            }
 
+                        }
 
-            </div>
+                    });
 
+                },
+                {
+                    threshold: 0.35
+                }
+            );
 
-            <div>
 
+        sections.forEach(
+            section => {
 
-                <h3>
-                    The Laboratory
-                </h3>
+                navObserver.observe(
+                    section
+                );
 
+            }
+        );
 
-                <p>
 
-                    A growing collection of experiments,
-                    software explorations, AI projects,
-                    system experiments and things I'm
-                    currently learning by building.
+        /* ========================================================
+           07. BACK TO TOP
+           ======================================================== */
 
-                </p>
+        window.addEventListener(
+            "scroll",
+            () => {
 
+                if (
+                    window.scrollY > 700
+                ) {
 
-                <div class="project-tags">
+                    backTop.classList.add(
+                        "visible"
+                    );
 
-                    <span>
-                        EXPERIMENTS
-                    </span>
+                } else {
 
-                    <span>
-                        SOFTWARE
-                    </span>
+                    backTop.classList.remove(
+                        "visible"
+                    );
 
-                    <span>
-                        AI
-                    </span>
+                }
 
-                    <span>
-                        SYSTEMS
-                    </span>
+            },
+            {
+                passive: true
+            }
+        );
 
-                </div>
 
+        backTop.addEventListener(
+            "click",
+            () => {
 
-            </div>
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
+            }
+        );
 
-        </a>
 
+        /* ========================================================
+           08. CURSOR LIGHT
+           ======================================================== */
 
-        <a
-            class="project-card glass tilt"
-            href="https://github.com/rachitratnammudaliar"
-            target="_blank"
-            rel="noopener noreferrer">
+        const supportsHover =
+            window.matchMedia(
+                "(hover: hover)"
+            ).matches;
 
 
-            <div class="project-top">
+        if (supportsHover) {
 
-                <span class="project-number">
-                    PROJECT 02
-                </span>
+            window.addEventListener(
+                "pointermove",
+                event => {
 
-                <span class="project-arrow">
-                    ↗
-                </span>
+                    cursorLight.style.left =
+                        event.clientX + "px";
 
-            </div>
+                    cursorLight.style.top =
+                        event.clientY + "px";
 
-
-            <div>
-
-
-                <h3>
-                    AI Experiments
-                </h3>
-
-
-                <p>
-
-                    Exploring what can be built
-                    when Generative AI becomes part
-                    of the development process.
-
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>
-                        GENERATIVE AI
-                    </span>
-
-                    <span>
-                        PROMPTS
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </a>
-
-
-        <a
-            class="project-card glass tilt"
-            href="https://github.com/rachitratnammudaliar"
-            target="_blank"
-            rel="noopener noreferrer">
-
-
-            <div class="project-top">
-
-                <span class="project-number">
-                    PROJECT 03
-                </span>
-
-
-                <span class="project-arrow">
-                    ↗
-                </span>
-
-            </div>
-
-
-            <div>
-
-
-                <h3>
-                    System Exploration
-                </h3>
-
-
-                <p>
-
-                    Investigating software behaviour,
-                    diagnostics and the relationships
-                    between system components.
-
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>
-                        SYSTEMS
-                    </span>
-
-                    <span>
-                        DIAGNOSTICS
-                    </span>
-
-                    <span>
-                        REVERSE ENGINEERING
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-        </a>
-
-
-    </div>
-
-
-</section>
-
-
-<!-- =======================================================
-     CONNECT
-     ======================================================= -->
-
-<section
-    id="connect"
-    class="reveal">
-
-
-    <div class="connect-card glass">
-
-
-        <div>
-
-
-            <div class="section-label">
-                04 — Connect
-            </div>
-
-
-            <h2 class="connect-title">
-
-                Find me
-
-                <br>
-
-                <span>
-                    online.
-                </span>
-
-            </h2>
-
-
-            <p class="connect-description">
-
-                Different platforms, different interests,
-                one person behind them.
-
-            </p>
-
-
-        </div>
-
-
-        <div class="social-grid">
-
-
-            <a
-                class="social"
-                href="https://linkedin.com/in/rachitratnammudaliar"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="social-icon">
-                    💼
-                </span>
-
-                <span class="social-name">
-                    LinkedIn
-                </span>
-
-            </a>
-
-
-            <a
-                class="social"
-                href="https://github.com/rachitratnammudaliar"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="social-icon">
-                    ◇
-                </span>
-
-                <span class="social-name">
-                    GitHub
-                </span>
-
-            </a>
-
-
-            <a
-                class="social"
-                href="https://instagram.com/rachitratnam"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="social-icon">
-                    ◎
-                </span>
-
-                <span class="social-name">
-                    Instagram
-                </span>
-
-            </a>
-
-
-            <a
-                class="social"
-                href="https://youtube.com/@rachitratnam27"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="social-icon">
-                    ▶
-                </span>
-
-                <span class="social-name">
-                    YouTube
-                </span>
-
-            </a>
-
-
-            <a
-                class="social"
-                href="https://pinterest.com/rachitratnam27"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="social-icon">
-                    📌
-                </span>
-
-                <span class="social-name">
-                    Pinterest
-                </span>
-
-            </a>
-
-
-            <a
-                class="social"
-                href="https://reddit.com/user/rachitratnam27"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="social-icon">
-                    👽
-                </span>
-
-                <span class="social-name">
-                    Reddit
-                </span>
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-<!-- =======================================================
-     CONTACT
-     ======================================================= -->
-
-<section
-    id="contact"
-    class="reveal">
-
-
-    <div class="contact-card glass">
-
-
-        <div class="section-label">
-            05 — Contact
-        </div>
-
-
-        <h2>
-
-            Let's build
-
-            <br>
-
-            something interesting.
-
-        </h2>
-
-
-        <p>
-
-            Have an idea, question, experiment
-            or interesting system to discuss?
-
-        </p>
-
-
-        <a
-            href="mailto:rachit.work@protonmail.com"
-            class="button button-primary">
-
-            ✉ Contact Rachit
-
-        </a>
-
-
-    </div>
-
-
-</section>
-
-
-</main>
-
-
-<!-- =======================================================
-     FOOTER
-     ======================================================= -->
-
-<footer>
-
-
-    <div class="footer-inner">
-
-
-        <div class="footer-left">
-
-
-            <span class="footer-name">
-
-                Rachit Ratnam Mudaliar
-
-            </span>
-
-
-            <span class="footer-sub">
-
-                Software Systems • AI • Curiosity
-
-            </span>
-
-
-        </div>
-
-
-        <div class="footer-right">
-
-            Built with curiosity & caffeine ☕
-
-            <br>
-
-            ©
-            <span id="year"></span>
-            Rachit Ratnam
-
-        </div>
-
-
-    </div>
-
-
-</footer>
-
-
-<!-- =======================================================
-     JAVASCRIPT
-     ======================================================= -->
-
-<script>
-
-
-/* =========================================================
-   YEAR
-   ========================================================= */
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-const navbar =
-    document.getElementById("navbar");
-
-const navLinks =
-    document.getElementById("navLinks");
-
-const menuButton =
-    document.getElementById("menuButton");
-
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        if (window.scrollY > 30) {
-
-            navbar.classList.add(
-                "scrolled"
+                },
+                {
+                    passive: true
+                }
             );
 
         } else {
 
-            navbar.classList.remove(
-                "scrolled"
-            );
+            cursorLight.style.display =
+                "none";
 
         }
 
-    },
-    { passive: true }
-);
 
+        /* ========================================================
+           09. COPY EMAIL
+           ======================================================== */
 
-menuButton.addEventListener(
-    "click",
-    () => {
-
-        navLinks.classList.toggle(
-            "open"
-        );
-
-
-        menuButton.textContent =
-            navLinks.classList.contains("open")
-                ? "×"
-                : "☰";
-
-    }
-);
-
-
-document.querySelectorAll(
-    ".nav-links a"
-).forEach(
-    link => {
-
-        link.addEventListener(
+        copyEmail.addEventListener(
             "click",
-            () => {
+            async () => {
 
-                navLinks.classList.remove(
-                    "open"
-                );
+                const email =
+                    "rachit.work@protonmail.com";
 
-                menuButton.textContent =
-                    "☰";
 
-            }
-        );
+                try {
 
-    }
-);
-
-
-/* =========================================================
-   CURSOR LIGHT
-   ========================================================= */
-
-const cursorLight =
-    document.getElementById(
-        "cursorLight"
-    );
-
-
-const finePointer =
-    window.matchMedia(
-        "(pointer: fine)"
-    );
-
-
-if (finePointer.matches) {
-
-    document.addEventListener(
-        "mousemove",
-        event => {
-
-            cursorLight.style.left =
-                event.clientX + "px";
-
-            cursorLight.style.top =
-                event.clientY + "px";
-
-            cursorLight.style.opacity =
-                "1";
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   3D GLASS TILT
-   ========================================================= */
-
-const tiltCards =
-    document.querySelectorAll(
-        ".tilt"
-    );
-
-
-if (
-    finePointer.matches &&
-    !window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches
-) {
-
-
-    tiltCards.forEach(
-        card => {
-
-
-            card.addEventListener(
-                "mousemove",
-                event => {
-
-                    const rect =
-                        card.getBoundingClientRect();
-
-
-                    const x =
-                        event.clientX -
-                        rect.left;
-
-
-                    const y =
-                        event.clientY -
-                        rect.top;
-
-
-                    const centerX =
-                        rect.width / 2;
-
-
-                    const centerY =
-                        rect.height / 2;
-
-
-                    const rotateX =
-                        (
-                            (y - centerY)
-                            /
-                            centerY
-                        ) * -2.5;
-
-
-                    const rotateY =
-                        (
-                            (x - centerX)
-                            /
-                            centerX
-                        ) * 2.5;
-
-
-                    card.style.transform =
-
-                        `
-                        perspective(1000px)
-                        rotateX(${rotateX}deg)
-                        rotateY(${rotateY}deg)
-                        translateY(-4px)
-                        `;
-
-                }
-            );
-
-
-            card.addEventListener(
-                "mouseleave",
-                () => {
-
-                    card.style.transform =
-                        "";
-
-                }
-            );
-
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   SCROLL REVEAL
-   ========================================================= */
-
-const revealElements =
-    document.querySelectorAll(
-        ".reveal"
-    );
-
-
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(
-                entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                        revealObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-revealElements.forEach(
-    element => {
-
-        revealObserver.observe(
-            element
-        );
-
-    }
-);
-
-
-/* =========================================================
-   COMMAND PALETTE
-   CTRL + K / CMD + K
-   ========================================================= */
-
-const commandOverlay =
-    document.getElementById(
-        "commandOverlay"
-    );
-
-
-const commandInput =
-    document.getElementById(
-        "commandInput"
-    );
-
-
-function openCommandPalette() {
-
-    commandOverlay.classList.add(
-        "open"
-    );
-
-    setTimeout(
-        () => {
-            commandInput.focus();
-        },
-        100
-    );
-
-}
-
-
-function closeCommandPalette() {
-
-    commandOverlay.classList.remove(
-        "open"
-    );
-
-    commandInput.value =
-        "";
-
-}
-
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-
-        if (
-            (
-                event.ctrlKey ||
-                event.metaKey
-            ) &&
-            event.key.toLowerCase() === "k"
-        ) {
-
-            event.preventDefault();
-
-            openCommandPalette();
-
-        }
-
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            closeCommandPalette();
-
-        }
-
-
-    }
-);
-
-
-commandOverlay.addEventListener(
-    "click",
-    event => {
-
-        if (
-            event.target ===
-            commandOverlay
-        ) {
-
-            closeCommandPalette();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   COMMAND ITEMS
-   ========================================================= */
-
-document.querySelectorAll(
-    ".command-item"
-).forEach(
-    button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                const target =
-                    document.querySelector(
-                        button.dataset.target
+                    await navigator.clipboard.writeText(
+                        email
                     );
 
 
-                closeCommandPalette();
+                    const original =
+                        copyEmail.innerHTML;
 
 
-                if (target) {
+                    copyEmail.innerHTML =
+                        "✓ Copied!";
 
-                    target.scrollIntoView({
-                        behavior:
-                            "smooth"
-                    });
+
+                    setTimeout(
+                        () => {
+
+                            copyEmail.innerHTML =
+                                original;
+
+                        },
+                        1800
+                    );
+
+
+                } catch (error) {
+
+                    window.location.href =
+                        "mailto:" + email;
 
                 }
 
             }
         );
 
-    }
-);
+
+        /* ========================================================
+           10. LIVE CLOCK
+           ======================================================== */
+
+        function updateClock() {
+
+            const now =
+                new Date();
 
 
-/* =========================================================
-   COMMAND SEARCH
-   ========================================================= */
-
-commandInput.addEventListener(
-    "input",
-    () => {
-
-        const query =
-            commandInput.value
-                .toLowerCase()
-                .trim();
-
-
-        document.querySelectorAll(
-            ".command-item"
-        ).forEach(
-            item => {
-
-                const text =
-                    item.textContent
-                        .toLowerCase();
-
-
-                item.style.display =
-                    (
-                        !query ||
-                        text.includes(query)
-                    )
-                    ? "flex"
-                    : "none";
-
-            }
-        );
-
-    }
-);
-
-
-/* =========================================================
-   KONAMI-STYLE SMALL EASTER EGG
-   Type "coffee"
-   ========================================================= */
-
-let secret =
-    "";
-
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        secret +=
-            event.key.toLowerCase();
-
-
-        if (
-            secret.length > 20
-        ) {
-
-            secret =
-                secret.slice(-20);
+            clock.textContent =
+                now.toLocaleTimeString(
+                    [],
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit"
+                    }
+                );
 
         }
 
 
-        if (
-            secret.includes(
-                "coffee"
-            )
-        ) {
+        updateClock();
 
-            console.log(
-                "%c☕ SYSTEM DEPENDENCY FOUND",
-                "color:#7c5ce8;font-size:18px;font-weight:bold;"
+
+        setInterval(
+            updateClock,
+            1000
+        );
+
+
+        /* ========================================================
+           11. PARALLAX GLASS
+           ======================================================== */
+
+        if (supportsHover) {
+
+            document
+                .querySelectorAll(".hero-profile")
+                .forEach(card => {
+
+                    card.addEventListener(
+                        "pointermove",
+                        event => {
+
+                            const rect =
+                                card.getBoundingClientRect();
+
+
+                            const x =
+                                event.clientX -
+                                rect.left;
+
+
+                            const y =
+                                event.clientY -
+                                rect.top;
+
+
+                            const rotateX =
+                                ((y / rect.height) - 0.5) * -5;
+
+
+                            const rotateY =
+                                ((x / rect.width) - 0.5) * 5;
+
+
+                            card.style.transform =
+                                `perspective(1200px)
+                                 rotateX(${rotateX}deg)
+                                 rotateY(${rotateY}deg)
+                                 translateY(-3px)`;
+
+                        }
+                    );
+
+
+                    card.addEventListener(
+                        "pointerleave",
+                        () => {
+
+                            card.style.transform =
+                                "";
+
+                        }
+                    );
+
+                });
+
+        }
+
+
+        /* ========================================================
+           12. KEYBOARD SHORTCUTS
+           ======================================================== */
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "/" &&
+                    document.activeElement.tagName !== "INPUT"
+                ) {
+
+                    event.preventDefault();
+
+                    document
+                        .getElementById("connect")
+                        .scrollIntoView({
+                            behavior: "smooth"
+                        });
+
+                }
+
+
+                if (
+                    event.key.toLowerCase() === "t"
+                ) {
+
+                    themePanel.classList.toggle(
+                        "open"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ========================================================
+           13. SYSTEM THEME CHANGE
+           ======================================================== */
+
+        const systemTheme =
+            window.matchMedia(
+                "(prefers-color-scheme: dark)"
             );
 
 
-            secret =
-                "";
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   EXTERNAL LINK PRESS FEEDBACK
-   ========================================================= */
-
-document.querySelectorAll(
-    'a[target="_blank"]'
-).forEach(
-    link => {
-
-        link.addEventListener(
-            "click",
+        systemTheme.addEventListener(
+            "change",
             () => {
 
-                link.style.transform =
-                    "scale(0.985)";
+                if (
+                    html.dataset.theme === "system"
+                ) {
 
+                    html.style.colorScheme =
+                        systemTheme.matches
+                            ? "dark"
+                            : "light";
 
-                setTimeout(
-                    () => {
-
-                        link.style.transform =
-                            "";
-
-                    },
-                    120
-                );
+                }
 
             }
         );
 
-    }
-);
+
+        /* ========================================================
+           14. SMART TOUCH FEEDBACK
+           ======================================================== */
+
+        document
+            .querySelectorAll(".button, .social-card, .skill-card, .project-card")
+            .forEach(element => {
+
+                element.addEventListener(
+                    "touchstart",
+                    () => {
+
+                        element.style.transform =
+                            "scale(0.98)";
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
 
 
-/* =========================================================
-   MOBILE PERFORMANCE
-   ========================================================= */
+                element.addEventListener(
+                    "touchend",
+                    () => {
 
-if (
-    !finePointer.matches
-) {
+                        element.style.transform =
+                            "";
 
-    document.querySelectorAll(
-        ".tilt"
-    ).forEach(
-        card => {
+                    },
+                    {
+                        passive: true
+                    }
+                );
 
-            card.style.transform =
-                "";
-
-        }
-    );
-
-}
+            });
 
 
-</script>
+        /* ========================================================
+           15. INITIAL PAGE STATE
+           ======================================================== */
+
+        requestAnimationFrame(
+            () => {
+
+                document
+                    .querySelectorAll(".hero .reveal")
+                    .forEach(element => {
+
+                        element.classList.add(
+                            "visible"
+                        );
+
+                    });
+
+            }
+        );
+
+
+    </script>
 
 
 </body>
