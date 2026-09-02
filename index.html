@@ -1,481 +1,3547 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>Rachit Ratnam | Software Systems Student</title>
+<title>Rachit Ratnam Mudaliar — Software Systems • AI • Systems</title>
 
-    <meta name="description"
-        content="Rachit Ratnam — Software Systems student focused on Generative AI, Prompt Engineering, Reverse Engineering, and System Diagnostics.">
+<meta name="description"
+content="Rachit Ratnam Mudaliar — Software Systems student exploring Generative AI, Prompt Engineering, Reverse Engineering, System Diagnostics and intelligent systems.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="theme-color" content="#050509">
 
-        :root {
-            --bg: #050509;
-            --card: rgba(18, 18, 28, 0.75);
-            --border: rgba(255, 255, 255, 0.1);
-            --text: #f5f5f7;
-            --muted: #9b9ba7;
-            --accent: #8b5cf6;
-            --accent2: #06b6d4;
-        }
+<style>
 
-        body {
-            min-height: 100vh;
+/* =========================================================
+   RACHIT RATNAM MUDALIAR
+   SINGLE FILE LIQUID GLASS PORTFOLIO
+   HTML + CSS + JAVASCRIPT
+   ========================================================= */
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            padding: 30px 15px;
+/* =========================================================
+   RESET
+   ========================================================= */
 
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            color: var(--text);
-            background: var(--bg);
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 
-            overflow-x: hidden;
-        }
+body {
+    min-height: 100vh;
 
-        /* Background glow */
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 
-        body::before {
-            content: "";
-            position: fixed;
+    color: var(--text);
+    background: var(--bg);
 
-            width: 500px;
-            height: 500px;
+    overflow-x: hidden;
 
-            background: var(--accent);
-            border-radius: 50%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
 
-            filter: blur(180px);
-            opacity: 0.18;
 
-            top: -200px;
-            left: -150px;
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
 
-            z-index: -2;
-        }
+:root {
 
-        body::after {
-            content: "";
-            position: fixed;
+    --bg: #050509;
+    --bg-soft: #080812;
 
-            width: 450px;
-            height: 450px;
+    --text: #f7f7fb;
+    --text-soft: #d7d7e2;
+    --muted: #9999a8;
+    --muted-dark: #666674;
 
-            background: var(--accent2);
-            border-radius: 50%;
+    --purple: #8b5cf6;
+    --purple-bright: #a78bfa;
 
-            filter: blur(180px);
-            opacity: 0.13;
+    --cyan: #06b6d4;
+    --blue: #3b82f6;
 
-            bottom: -200px;
-            right: -150px;
+    --pink: #ec4899;
 
-            z-index: -2;
-        }
+    --glass: rgba(255,255,255,0.055);
+    --glass-hover: rgba(255,255,255,0.085);
 
-        /* Profile Card */
+    --glass-border: rgba(255,255,255,0.11);
+    --glass-border-bright: rgba(255,255,255,0.18);
 
-        .card {
-            width: 100%;
-            max-width: 470px;
+    --shadow:
+        0 25px 80px rgba(0,0,0,0.45);
 
-            padding: 38px 32px;
+    --radius-xl: 30px;
+    --radius-lg: 22px;
+    --radius-md: 16px;
 
-            background: var(--card);
+    --max-width: 1250px;
+}
 
-            border: 1px solid var(--border);
-            border-radius: 28px;
 
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+/* =========================================================
+   AMBIENT BACKGROUND
+   ========================================================= */
 
-            box-shadow:
-                0 30px 80px rgba(0, 0, 0, 0.55),
-                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+.background {
+    position: fixed;
+    inset: 0;
 
-            text-align: center;
+    overflow: hidden;
 
-            animation: cardIn 0.8s ease;
-        }
+    pointer-events: none;
 
-        @keyframes cardIn {
-            from {
-                opacity: 0;
-                transform: translateY(25px) scale(0.97);
-            }
+    z-index: -10;
 
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(139,92,246,0.08),
+            transparent 35%
+        ),
+        #050509;
+}
 
-        /* Profile Image */
 
-        .profile-image {
-            width: 125px;
-            height: 125px;
+/* Aurora blobs */
 
-            margin: 0 auto 20px;
+.aurora {
+    position: absolute;
 
-            display: block;
+    width: 500px;
+    height: 500px;
 
-            object-fit: cover;
+    border-radius: 50%;
 
-            border-radius: 50%;
+    filter: blur(130px);
 
-            border: 3px solid rgba(139, 92, 246, 0.7);
+    opacity: 0.17;
 
-            box-shadow:
-                0 0 25px rgba(139, 92, 246, 0.35),
-                0 0 60px rgba(6, 182, 212, 0.12);
+    animation:
+        floatAurora 18s ease-in-out infinite alternate;
+}
 
-            transition: 0.3s ease;
-        }
+.aurora.one {
+    background: var(--purple);
 
-        .profile-image:hover {
-            transform: scale(1.05);
+    top: -220px;
+    left: -150px;
+}
 
-            border-color: var(--accent2);
+.aurora.two {
+    background: var(--cyan);
 
-            box-shadow:
-                0 0 30px rgba(6, 182, 212, 0.4),
-                0 0 70px rgba(139, 92, 246, 0.2);
-        }
+    right: -180px;
+    bottom: -220px;
 
-        /* Name */
+    animation-delay: -7s;
+}
 
-        h1 {
-            font-size: 30px;
-            letter-spacing: -0.8px;
+.aurora.three {
+    background: var(--pink);
 
-            margin-bottom: 8px;
-        }
+    width: 350px;
+    height: 350px;
 
-        /* Role */
+    top: 42%;
+    left: 42%;
 
-        .role {
-            color: var(--accent2);
+    opacity: 0.055;
 
-            font-size: 14px;
-            font-weight: 600;
+    animation-delay: -12s;
+}
 
-            letter-spacing: 0.5px;
 
-            margin-bottom: 18px;
-        }
+@keyframes floatAurora {
 
-        /* Location */
+    from {
+        transform:
+            translate3d(-20px, -10px, 0)
+            scale(1);
+    }
 
-        .location {
-            display: inline-flex;
+    to {
+        transform:
+            translate3d(40px, 35px, 0)
+            scale(1.12);
+    }
+}
 
-            align-items: center;
-            gap: 7px;
 
-            padding: 8px 14px;
+/* Grid */
 
-            border-radius: 50px;
+.background-grid {
+    position: absolute;
+    inset: 0;
 
-            background: rgba(255, 255, 255, 0.05);
+    opacity: 0.12;
 
-            border: 1px solid rgba(255, 255, 255, 0.07);
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
 
-            color: #c7c7d0;
+    background-size: 70px 70px;
 
-            font-size: 13px;
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 20%,
+            transparent 80%
+        );
+}
 
-            margin-bottom: 25px;
-        }
 
-        /* Bio */
+/* Noise */
 
-        .bio {
-            color: var(--muted);
+.background::after {
+    content: "";
 
-            line-height: 1.65;
+    position: absolute;
+    inset: 0;
 
-            font-size: 14px;
+    opacity: 0.025;
 
-            margin-bottom: 22px;
-        }
+    pointer-events: none;
 
-        .bio strong {
-            color: #dddde5;
-        }
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
 
-        /* Skills */
 
-        .skills {
-            display: flex;
+/* =========================================================
+   CURSOR GLOW
+   ========================================================= */
 
-            flex-wrap: wrap;
+.cursor-glow {
+    position: fixed;
 
-            justify-content: center;
+    width: 280px;
+    height: 280px;
 
-            gap: 8px;
+    border-radius: 50%;
 
-            margin-bottom: 28px;
-        }
+    pointer-events: none;
 
-        .skill {
-            padding: 7px 11px;
+    background:
+        radial-gradient(
+            circle,
+            rgba(139,92,246,0.11),
+            transparent 70%
+        );
 
-            border-radius: 8px;
+    transform: translate(-50%, -50%);
 
-            background: rgba(139, 92, 246, 0.09);
+    z-index: -1;
 
-            border: 1px solid rgba(139, 92, 246, 0.2);
+    opacity: 0;
 
-            color: #c9b9ff;
+    transition: opacity 0.3s ease;
+}
 
-            font-size: 11px;
 
-            font-weight: 600;
-        }
+/* =========================================================
+   GLASS SYSTEM
+   ========================================================= */
 
-        /* Social Links */
+.glass {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.075),
+            rgba(255,255,255,0.025)
+        );
 
-        .socials {
-            display: grid;
+    border: 1px solid var(--glass-border);
 
-            grid-template-columns: repeat(2, 1fr);
+    box-shadow:
+        var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,0.08);
 
-            gap: 10px;
+    backdrop-filter:
+        blur(28px)
+        saturate(150%);
 
-            margin-bottom: 22px;
-        }
+    -webkit-backdrop-filter:
+        blur(28px)
+        saturate(150%);
 
-        .social {
-            text-decoration: none;
+    position: relative;
 
-            color: #dddde5;
+    overflow: hidden;
+}
 
-            padding: 12px;
 
-            border-radius: 12px;
+/* Glass reflection */
 
-            background: rgba(255, 255, 255, 0.04);
+.glass::before {
+    content: "";
 
-            border: 1px solid rgba(255, 255, 255, 0.07);
+    position: absolute;
 
-            font-size: 13px;
+    inset: 0;
 
-            font-weight: 500;
+    pointer-events: none;
 
-            transition: all 0.25s ease;
-        }
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255,255,255,0.08),
+            transparent 25%,
+            transparent 70%,
+            rgba(255,255,255,0.025)
+        );
 
-        .social:hover {
-            transform: translateY(-3px);
+    opacity: 0.7;
+}
 
-            background: rgba(255, 255, 255, 0.08);
 
-            border-color: rgba(139, 92, 246, 0.45);
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
-            color: white;
+.nav-wrapper {
+    position: fixed;
 
-            box-shadow:
-                0 8px 25px rgba(139, 92, 246, 0.12);
-        }
+    top: 18px;
+    left: 50%;
 
-        /* Email Button */
+    transform: translateX(-50%);
 
-        .email {
-            display: block;
+    width: min(
+        calc(100% - 30px),
+        1100px
+    );
 
-            text-decoration: none;
+    z-index: 1000;
+}
 
-            padding: 13px;
+.nav {
+    min-height: 62px;
 
-            border-radius: 13px;
+    padding: 8px 10px 8px 20px;
 
-            color: white;
+    border-radius: 20px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--accent),
-                    #6366f1
-                );
+    display: flex;
 
-            font-size: 13px;
+    align-items: center;
+    justify-content: space-between;
 
-            font-weight: 600;
+    transition:
+        background 0.3s ease,
+        border 0.3s ease,
+        transform 0.3s ease;
+}
 
-            transition: 0.25s ease;
+.nav.scrolled {
+    background:
+        rgba(8,8,14,0.78);
 
-            box-shadow:
-                0 10px 25px rgba(139, 92, 246, 0.2);
-        }
+    border-color:
+        rgba(255,255,255,0.16);
 
-        .email:hover {
-            transform: translateY(-3px);
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.5);
+}
 
-            box-shadow:
-                0 15px 35px rgba(139, 92, 246, 0.3);
-        }
 
-        /* Footer */
+.logo {
+    color: white;
 
-        .footer {
-            margin-top: 22px;
+    text-decoration: none;
 
-            color: #62626d;
+    font-size: 14px;
 
-            font-size: 11px;
-        }
+    font-weight: 800;
 
-        /* Mobile */
+    letter-spacing: 1.5px;
+}
 
-        @media (max-width: 480px) {
+.logo span {
+    color: var(--purple-bright);
+}
 
-            .card {
-                padding: 32px 22px;
 
-                border-radius: 24px;
-            }
+.nav-links {
+    display: flex;
 
-            h1 {
-                font-size: 26px;
-            }
+    align-items: center;
 
-            .profile-image {
-                width: 105px;
-                height: 105px;
-            }
-        }
-    </style>
+    gap: 5px;
+}
+
+.nav-links a {
+    color: var(--muted);
+
+    text-decoration: none;
+
+    padding: 10px 13px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: white;
+
+    background:
+        rgba(255,255,255,0.07);
+}
+
+
+.nav-contact {
+    color: white !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #6366f1
+        ) !important;
+
+    box-shadow:
+        0 8px 22px rgba(139,92,246,0.2);
+}
+
+
+/* Mobile menu */
+
+.menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--glass-border);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+    width: min(
+        calc(100% - 32px),
+        var(--max-width)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding:
+        130px 0
+        80px;
+}
+
+
+.hero-content {
+    width: 100%;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* Status pill */
+
+.status-pill {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+
+    color: var(--text-soft);
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border:
+        1px solid rgba(255,255,255,0.09);
+
+    font-size: 11px;
+
+    margin-bottom: 28px;
+
+    animation:
+        fadeUp 0.8s ease both;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 12px #22c55e;
+
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+
+    0%,100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.55;
+        transform: scale(0.75);
+    }
+}
+
+
+/* Hero title */
+
+.hero h1 {
+    font-size:
+        clamp(
+            48px,
+            8vw,
+            110px
+        );
+
+    line-height: 0.95;
+
+    letter-spacing:
+        -0.065em;
+
+    font-weight: 800;
+
+    margin-bottom: 24px;
+
+    animation:
+        fadeUp 0.8s 0.1s ease both;
+}
+
+
+.hero h1 .gradient {
+    background:
+        linear-gradient(
+            110deg,
+            #ffffff 10%,
+            #c4b5fd 45%,
+            #67e8f9 90%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero-subtitle {
+    color: var(--muted);
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            19px
+        );
+
+    line-height: 1.7;
+
+    max-width: 670px;
+
+    margin:
+        0 auto
+        30px;
+
+    animation:
+        fadeUp 0.8s 0.2s ease both;
+}
+
+
+.hero-subtitle strong {
+    color: #e4e4ec;
+}
+
+
+/* Hero buttons */
+
+.hero-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    animation:
+        fadeUp 0.8s 0.3s ease both;
+}
+
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding:
+        0 20px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+
+.button-primary {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            #6366f1
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(139,92,246,0.25);
+}
+
+.button-primary:hover {
+    box-shadow:
+        0 18px 45px
+        rgba(139,92,246,0.38);
+}
+
+
+.button-secondary {
+    color: var(--text-soft);
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border:
+        1px solid var(--glass-border);
+}
+
+.button-secondary:hover {
+    background:
+        rgba(255,255,255,0.09);
+
+    color: white;
+}
+
+
+/* Scroll indicator */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #555563;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 35px;
+
+    margin: 8px auto 0;
+
+    background:
+        linear-gradient(
+            white,
+            transparent
+        );
+
+    opacity: 0.35;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+section {
+    padding:
+        110px 0;
+}
+
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: var(--cyan);
+
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 9px;
+}
+
+.section-title {
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            54px
+        );
+
+    letter-spacing: -0.045em;
+
+    line-height: 1;
+}
+
+.section-description {
+    max-width: 420px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        0.7fr;
+
+    gap: 16px;
+}
+
+
+.about-card {
+    min-height: 330px;
+
+    padding: 35px;
+
+    border-radius: var(--radius-xl);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease;
+}
+
+.about-card:hover {
+    border-color:
+        rgba(139,92,246,0.35);
+}
+
+
+.about-main h3 {
+    font-size: 28px;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 18px;
+}
+
+.about-main p {
+    color: var(--muted);
+
+    max-width: 650px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.about-main p strong {
+    color: #e5e5ed;
+}
+
+
+/* Identity */
+
+.identity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.identity-avatar {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+        2px solid
+        rgba(139,92,246,0.5);
+
+    box-shadow:
+        0 0 25px
+        rgba(139,92,246,0.2);
+}
+
+.identity-name {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.identity-sub {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+
+/* System card */
+
+.system-card {
+    padding: 30px;
+
+    border-radius: var(--radius-xl);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.system-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.system-header span:first-child {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.system-version {
+    color: #666675;
+
+    font-size: 10px;
+}
+
+
+.system-list {
+    display: grid;
+
+    gap: 16px;
+}
+
+.system-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 14px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.06);
+}
+
+.system-item:last-child {
+    border-bottom: 0;
+}
+
+.system-item span:first-child {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.system-online {
+    color: #4ade80;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.system-value {
+    color: #dddde5;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EXPERTISE
+   ========================================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+.skill-card {
+    min-height: 190px;
+
+    padding: 24px;
+
+    border-radius: var(--radius-lg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border 0.35s ease;
+}
+
+.skill-card:hover {
+    transform:
+        translateY(-7px);
+
+    background:
+        rgba(255,255,255,0.075);
+
+    border-color:
+        rgba(139,92,246,0.4);
+}
+
+
+.skill-number {
+    color: #4d4d5a;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.skill-icon {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 7px;
+
+    letter-spacing: -0.02em;
+}
+
+.skill-card p {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOCUS / MARQUEE
+   ========================================================= */
+
+.focus-strip {
+    overflow: hidden;
+
+    padding: 18px 0;
+
+    margin:
+        20px 0 80px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.06);
+}
+
+.marquee {
+    display: flex;
+
+    width: max-content;
+
+    animation:
+        marquee 28s linear infinite;
+}
+
+.marquee span {
+    color: #555562;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-right: 50px;
+
+    white-space: nowrap;
+}
+
+.marquee .dot {
+    color: var(--purple);
+}
+
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform:
+            translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.project-card {
+    min-height: 330px;
+
+    padding: 30px;
+
+    border-radius: var(--radius-xl);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        transform 0.35s ease,
+        border 0.35s ease,
+        background 0.35s ease;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-7px);
+
+    background:
+        rgba(255,255,255,0.075);
+
+    border-color:
+        rgba(6,182,212,0.3);
+}
+
+
+.project-top {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.project-number {
+    color: #555562;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.project-arrow {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+    transform:
+        rotate(45deg);
+
+    background:
+        var(--purple);
+
+    border-color:
+        var(--purple);
+}
+
+
+.project-card h3 {
+    font-size: 28px;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    max-width: 500px;
+}
+
+
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 20px;
+}
+
+.project-tags span {
+    color: #bdb4e8;
+
+    font-size: 9px;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(139,92,246,0.08);
+
+    border:
+        1px solid
+        rgba(139,92,246,0.15);
+}
+
+
+/* Special project */
+
+.project-feature {
+    grid-column:
+        span 2;
+
+    min-height: 260px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(6,182,212,0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(139,92,246,0.08),
+            rgba(255,255,255,0.025)
+        );
+}
+
+
+/* =========================================================
+   SOCIAL / CONNECT
+   ========================================================= */
+
+.connect-container {
+    padding: 35px;
+
+    border-radius:
+        var(--radius-xl);
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.2fr;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+
+.connect-title {
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            48px
+        );
+
+    letter-spacing: -0.05em;
+
+    line-height: 1;
+}
+
+.connect-title span {
+    color: var(--purple-bright);
+}
+
+
+.connect-description {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-top: 15px;
+
+    max-width: 420px;
+}
+
+
+.social-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 9px;
+}
+
+
+.social {
+    min-height: 85px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: #dddde5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    transition:
+        0.25s ease;
+}
+
+.social:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-color:
+        rgba(139,92,246,0.35);
+
+    color: white;
+}
+
+.social-icon {
+    font-size: 17px;
+}
+
+.social-name {
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-card {
+    text-align: center;
+
+    padding:
+        80px 30px;
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(139,92,246,0.12),
+            transparent 55%
+        ),
+        rgba(255,255,255,0.035);
+}
+
+.contact-card h2 {
+    font-size:
+        clamp(
+            34px,
+            6vw,
+            65px
+        );
+
+    letter-spacing:
+        -0.055em;
+
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding:
+        35px 0 45px;
+
+    color: #555561;
+
+    font-size: 10px;
+}
+
+.footer-inner {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.footer-name {
+    color: #888895;
+
+    font-weight: 600;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TILT EFFECT
+   ========================================================= */
+
+.tilt {
+    transform-style: preserve-3d;
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   COMMAND PALETTE
+   ========================================================= */
+
+.command-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding-top: 15vh;
+
+    background:
+        rgba(0,0,0,0.58);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        0.25s ease;
+}
+
+.command-overlay.open {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.command-box {
+    width:
+        min(
+            calc(100% - 30px),
+            570px
+        );
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transform:
+        translateY(-15px)
+        scale(0.98);
+
+    transition:
+        0.25s ease;
+}
+
+.command-overlay.open .command-box {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+.command-input-wrap {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 18px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+.command-search-icon {
+    color: #777785;
+}
+
+#commandInput {
+    width: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+#commandInput::placeholder {
+    color: #666674;
+}
+
+
+.command-items {
+    padding: 8px;
+}
+
+.command-item {
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #c9c9d4;
+
+    padding: 13px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.command-item:hover {
+    background:
+        rgba(255,255,255,0.07);
+
+    color: white;
+}
+
+.command-key {
+    color: #555562;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+        right: 0;
+
+        padding: 10px;
+
+        border-radius: 18px;
+
+        background:
+            rgba(8,8,14,0.92);
+
+        border:
+            1px solid
+            rgba(255,255,255,0.1);
+
+        backdrop-filter:
+            blur(25px);
+
+        -webkit-backdrop-filter:
+            blur(25px);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 13px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .connect-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(55px, 10vw, 90px);
+    }
+}
+
+
+/* =========================================================
+   SMARTPHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 85px;
+    }
+
+    main {
+        width:
+            min(
+                calc(100% - 22px),
+                1250px
+            );
+    }
+
+    .nav-wrapper {
+        width:
+            calc(100% - 20px);
+
+        top: 10px;
+    }
+
+    .nav {
+        min-height: 58px;
+
+        padding-left: 15px;
+
+        border-radius: 17px;
+    }
+
+    .hero {
+        min-height:
+            100svh;
+
+        padding:
+            120px 0 100px;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                47px,
+                15vw,
+                75px
+            );
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    section {
+        padding:
+            75px 0;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-description {
+        margin-top: 15px;
+    }
+
+    .about-card {
+        min-height: 310px;
+
+        padding: 24px;
+    }
+
+    .system-card {
+        padding: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 9px;
+    }
+
+    .skill-card {
+        min-height: 175px;
+
+        padding: 18px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-feature {
+        grid-column:
+            span 1;
+    }
+
+    .project-card {
+        min-height: 300px;
+
+        padding: 24px;
+    }
+
+    .project-card h3 {
+        font-size: 24px;
+    }
+
+    .connect-container {
+        padding: 25px;
+
+        border-radius: 24px;
+    }
+
+    .social-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contact-card {
+        padding:
+            60px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        text-align: left;
+    }
+
+    .cursor-glow {
+        display: none;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP / TV
+   ========================================================= */
+
+@media (min-width: 1800px) {
+
+    :root {
+        --max-width: 1450px;
+    }
+
+    main {
+        width:
+            min(
+                calc(100% - 100px),
+                1450px
+            );
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                90px,
+                7vw,
+                145px
+            );
+    }
+
+    .hero-subtitle {
+        font-size: 21px;
+
+        max-width: 800px;
+    }
+
+    section {
+        padding:
+            140px 0;
+    }
+
+    .skill-card {
+        min-height: 230px;
+    }
+
+    .project-card {
+        min-height: 380px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .marquee {
+        animation: none;
+    }
+}
+
+
+/* =========================================================
+   SAFE AREA
+   ========================================================= */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+
+    body {
+        padding-bottom:
+            env(safe-area-inset-bottom);
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-    <main class="card">
 
-        <!-- Profile Image -->
-        <img
-            class="profile-image"
-            src="file_00000000cdd8821187205670d2649ead(1).png"
-            alt="Rachit Ratnam"
-        >
+<!-- =======================================================
+     BACKGROUND
+     ======================================================= -->
 
-        <!-- Name -->
-        <h1>Rachit Ratnam</h1>
+<div class="background">
 
-        <!-- Role -->
-        <div class="role">
-            Software Systems Student • AI Enthusiast
+    <div class="aurora one"></div>
+    <div class="aurora two"></div>
+    <div class="aurora three"></div>
+
+    <div class="background-grid"></div>
+
+</div>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+
+<!-- =======================================================
+     NAVIGATION
+     ======================================================= -->
+
+<div class="nav-wrapper">
+
+    <nav class="nav glass" id="navbar">
+
+        <a href="#top" class="logo">
+            RACHIT<span>.</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#about">About</a>
+
+            <a href="#expertise">Expertise</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#connect">Connect</a>
+
+            <a href="#contact" class="nav-contact">
+                Contact
+            </a>
+
         </div>
 
-        <!-- Location -->
-        <div class="location">
-            📍 Kaunas, Lithuania
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation menu">
+            ☰
+        </button>
+
+    </nav>
+
+</div>
+
+
+<!-- =======================================================
+     COMMAND PALETTE
+     ======================================================= -->
+
+<div class="command-overlay" id="commandOverlay">
+
+    <div class="command-box glass">
+
+        <div class="command-input-wrap">
+
+            <span class="command-search-icon">
+                ⌕
+            </span>
+
+            <input
+                id="commandInput"
+                type="text"
+                placeholder="Search portfolio..."
+                autocomplete="off">
+
+            <span class="command-key">
+                ESC
+            </span>
+
         </div>
 
-        <!-- About -->
-        <p class="bio">
-            Curious Software Systems student at
-            <strong>Kauno Kolegija</strong>, focused on understanding
-            complex systems from the inside out.
+        <div class="command-items">
 
-            <br><br>
+            <button
+                class="command-item"
+                data-target="#about">
+                <span>About Rachit</span>
+                <span class="command-key">01</span>
+            </button>
 
-            Exploring Generative AI, Prompt Engineering,
-            Reverse Engineering, and System Diagnostics.
-            Always looking for interesting systems to build,
-            break down, understand, and improve.
+            <button
+                class="command-item"
+                data-target="#expertise">
+                <span>Explore Expertise</span>
+                <span class="command-key">02</span>
+            </button>
+
+            <button
+                class="command-item"
+                data-target="#projects">
+                <span>View Projects</span>
+                <span class="command-key">03</span>
+            </button>
+
+            <button
+                class="command-item"
+                data-target="#connect">
+                <span>Social Connections</span>
+                <span class="command-key">04</span>
+            </button>
+
+            <button
+                class="command-item"
+                data-target="#contact">
+                <span>Contact</span>
+                <span class="command-key">05</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =======================================================
+     MAIN
+     ======================================================= -->
+
+<main id="top">
+
+
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="status-pill">
+
+            <span class="status-dot"></span>
+
+            Currently exploring intelligent systems
+
+        </div>
+
+
+        <h1>
+
+            Rachit
+
+            <span class="gradient">
+                Ratnam
+            </span>
+
+        </h1>
+
+
+        <p class="hero-subtitle">
+
+            Software Systems student exploring the intersection of
+
+            <strong>
+                Generative AI
+            </strong>,
+
+            intelligent systems,
+
+            <strong>
+                reverse engineering
+            </strong>
+
+            and system diagnostics.
+
         </p>
 
-        <!-- Skills -->
-        <div class="skills">
-            <span class="skill">Generative AI</span>
-            <span class="skill">Prompt Engineering</span>
-            <span class="skill">Reverse Engineering</span>
-            <span class="skill">System Diagnostics</span>
-            <span class="skill">Software Systems</span>
+
+        <div class="hero-actions">
+
+            <a
+                href="#about"
+                class="button button-primary">
+
+                Explore Portfolio
+                <span>↘</span>
+
+            </a>
+
+
+            <a
+                href="mailto:rachit.work@protonmail.com"
+                class="button button-secondary">
+
+                Get In Touch
+                <span>↗</span>
+
+            </a>
+
         </div>
 
-        <!-- Social Links -->
-        <div class="socials">
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        Scroll
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FOCUS STRIP
+     ======================================================= -->
+
+<div class="focus-strip">
+
+    <div class="marquee">
+
+        <span>
+            GENERATIVE AI
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            PROMPT ENGINEERING
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            REVERSE ENGINEERING
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            SYSTEM DIAGNOSTICS
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            SOFTWARE SYSTEMS
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            GENERATIVE AI
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            PROMPT ENGINEERING
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            REVERSE ENGINEERING
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            SYSTEM DIAGNOSTICS
+            <b class="dot">•</b>
+        </span>
+
+        <span>
+            SOFTWARE SYSTEMS
+            <b class="dot">•</b>
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =======================================================
+     ABOUT
+     ======================================================= -->
+
+<section id="about" class="reveal">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-label">
+                01 — About
+            </div>
+
+            <h2 class="section-title">
+                Curious by default.
+            </h2>
+
+        </div>
+
+        <p class="section-description">
+
+            I enjoy understanding what happens beneath
+            the surface of software and intelligent systems.
+
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <article class="about-card about-main glass tilt">
+
+            <div>
+
+                <h3>
+                    Understanding systems
+                    from the inside out.
+                </h3>
+
+                <p>
+
+                    I'm <strong>Rachit Ratnam Mudaliar</strong>,
+                    casually known as Rachit Ratnam or Rachit Mudaliar.
+
+                    <br><br>
+
+                    I'm a Software Systems student at
+                    <strong>Kauno Kolegija</strong>,
+                    interested in how software, artificial intelligence
+                    and complex systems work beneath the interface.
+
+                    <br><br>
+
+                    My curiosity moves between Generative AI,
+                    Prompt Engineering, Reverse Engineering,
+                    System Diagnostics and the broader world
+                    of software systems.
+
+                </p>
+
+            </div>
+
+
+            <div class="identity">
+
+                <img
+                    class="identity-avatar"
+                    src="file_00000000cdd8821187205670d2649ead(1).png"
+                    alt="Rachit Ratnam Mudaliar">
+
+                <div>
+
+                    <div class="identity-name">
+                        Rachit Ratnam Mudaliar
+                    </div>
+
+                    <div class="identity-sub">
+                        Rachit Ratnam • Rachit Mudaliar
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="system-card glass tilt">
+
+            <div class="system-header">
+
+                <span>
+                    SYSTEM PROFILE
+                </span>
+
+                <span class="system-version">
+                    v1.0
+                </span>
+
+            </div>
+
+
+            <div class="system-list">
+
+                <div class="system-item">
+
+                    <span>
+                        STATUS
+                    </span>
+
+                    <span class="system-online">
+                        ● ONLINE
+                    </span>
+
+                </div>
+
+
+                <div class="system-item">
+
+                    <span>
+                        LOCATION
+                    </span>
+
+                    <span class="system-value">
+                        Kaunas, LT
+                    </span>
+
+                </div>
+
+
+                <div class="system-item">
+
+                    <span>
+                        ROLE
+                    </span>
+
+                    <span class="system-value">
+                        Student
+                    </span>
+
+                </div>
+
+
+                <div class="system-item">
+
+                    <span>
+                        FOCUS
+                    </span>
+
+                    <span class="system-value">
+                        AI + Systems
+                    </span>
+
+                </div>
+
+
+                <div class="system-item">
+
+                    <span>
+                        COFFEE
+                    </span>
+
+                    <span class="system-value">
+                        REQUIRED ☕
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     EXPERTISE
+     ======================================================= -->
+
+<section id="expertise" class="reveal">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-label">
+                02 — Expertise
+            </div>
+
+            <h2 class="section-title">
+                Things I explore.
+            </h2>
+
+        </div>
+
+        <p class="section-description">
+
+            Areas that currently occupy my curiosity,
+            experiments and learning.
+
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <article class="skill-card glass tilt">
+
+            <div class="skill-number">
+                01
+            </div>
+
+            <div>
+
+                <div class="skill-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Generative AI
+                </h3>
+
+                <p>
+                    Exploring modern AI systems,
+                    generation and practical applications.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="skill-card glass tilt">
+
+            <div class="skill-number">
+                02
+            </div>
+
+            <div>
+
+                <div class="skill-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Prompt Engineering
+                </h3>
+
+                <p>
+                    Designing instructions and interactions
+                    for more capable AI systems.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="skill-card glass tilt">
+
+            <div class="skill-number">
+                03
+            </div>
+
+            <div>
+
+                <div class="skill-icon">
+                    ⌁
+                </div>
+
+                <h3>
+                    Reverse Engineering
+                </h3>
+
+                <p>
+                    Understanding software behaviour
+                    by examining systems from the inside.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="skill-card glass tilt">
+
+            <div class="skill-number">
+                04
+            </div>
+
+            <div>
+
+                <div class="skill-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    System Diagnostics
+                </h3>
+
+                <p>
+                    Finding problems, understanding behaviour
+                    and tracing systems logically.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="skill-card glass tilt">
+
+            <div class="skill-number">
+                05
+            </div>
+
+            <div>
+
+                <div class="skill-icon">
+                    ⌘
+                </div>
+
+                <h3>
+                    Software Systems
+                </h3>
+
+                <p>
+                    Learning how software components
+                    connect, communicate and operate.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     PROJECTS
+     ======================================================= -->
+
+<section id="projects" class="reveal">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-label">
+                03 — Projects
+            </div>
+
+            <h2 class="section-title">
+                Experiments & work.
+            </h2>
+
+        </div>
+
+        <p class="section-description">
+
+            A space for projects, experiments,
+            research and things worth building.
+
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <a
+            class="project-card project-feature glass tilt"
+            href="https://github.com/rachitratnammudaliar"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    PROJECT 01
+                </span>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    The Laboratory
+                </h3>
+
+                <p>
+
+                    A growing collection of experiments,
+                    software explorations, AI projects,
+                    system experiments and things I'm
+                    currently learning by building.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        EXPERIMENTS
+                    </span>
+
+                    <span>
+                        SOFTWARE
+                    </span>
+
+                    <span>
+                        AI
+                    </span>
+
+                    <span>
+                        SYSTEMS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a
+            class="project-card glass tilt"
+            href="https://github.com/rachitratnammudaliar"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    PROJECT 02
+                </span>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    AI Experiments
+                </h3>
+
+                <p>
+
+                    Exploring what can be built
+                    when Generative AI becomes part
+                    of the development process.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        GENERATIVE AI
+                    </span>
+
+                    <span>
+                        PROMPTS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a
+            class="project-card glass tilt"
+            href="https://github.com/rachitratnammudaliar"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <div class="project-top">
+
+                <span class="project-number">
+                    PROJECT 03
+                </span>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    System Exploration
+                </h3>
+
+                <p>
+
+                    Investigating software behaviour,
+                    diagnostics and the relationships
+                    between system components.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        SYSTEMS
+                    </span>
+
+                    <span>
+                        DIAGNOSTICS
+                    </span>
+
+                    <span>
+                        REVERSE ENGINEERING
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     CONNECT
+     ======================================================= -->
+
+<section id="connect" class="reveal">
+
+    <div class="connect-container glass">
+
+
+        <div>
+
+            <div class="section-label">
+                04 — Connect
+            </div>
+
+            <h2 class="connect-title">
+
+                Find me
+                <span>
+                    online.
+                </span>
+
+            </h2>
+
+            <p class="connect-description">
+
+                Different platforms, different interests,
+                one person behind them.
+
+            </p>
+
+        </div>
+
+
+        <div class="social-grid">
+
 
             <a
                 class="social"
                 href="https://linkedin.com/in/rachitratnammudaliar"
                 target="_blank"
                 rel="noopener noreferrer">
-                💼 LinkedIn
+
+                <span class="social-icon">
+                    💼
+                </span>
+
+                <span class="social-name">
+                    LinkedIn
+                </span>
+
             </a>
+
+
+            <a
+                class="social"
+                href="https://github.com/rachitratnammudaliar"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <span class="social-icon">
+                    ◇
+                </span>
+
+                <span class="social-name">
+                    GitHub
+                </span>
+
+            </a>
+
 
             <a
                 class="social"
                 href="https://instagram.com/rachitratnam"
                 target="_blank"
                 rel="noopener noreferrer">
-                📸 Instagram
+
+                <span class="social-icon">
+                    ◎
+                </span>
+
+                <span class="social-name">
+                    Instagram
+                </span>
+
             </a>
 
-            <a
-                class="social"
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer">
-                💻 GitHub
-            </a>
 
             <a
                 class="social"
                 href="https://youtube.com/@rachitratnam27"
                 target="_blank"
                 rel="noopener noreferrer">
-                ▶️ YouTube
+
+                <span class="social-icon">
+                    ▶
+                </span>
+
+                <span class="social-name">
+                    YouTube
+                </span>
+
             </a>
+
 
             <a
                 class="social"
                 href="https://pinterest.com/rachitratnam27"
                 target="_blank"
                 rel="noopener noreferrer">
-                📌 Pinterest
+
+                <span class="social-icon">
+                    📌
+                </span>
+
+                <span class="social-name">
+                    Pinterest
+                </span>
+
             </a>
+
 
             <a
                 class="social"
                 href="https://reddit.com/user/rachitratnam27"
                 target="_blank"
                 rel="noopener noreferrer">
-                👽 Reddit
+
+                <span class="social-icon">
+                    👽
+                </span>
+
+                <span class="social-name">
+                    Reddit
+                </span>
+
             </a>
 
+
         </div>
 
-        <!-- Contact -->
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     CONTACT
+     ======================================================= -->
+
+<section id="contact" class="reveal">
+
+    <div class="contact-card glass">
+
+        <div class="section-label">
+            05 — Contact
+        </div>
+
+        <h2>
+            Let's build
+            <br>
+            something interesting.
+        </h2>
+
+        <p>
+            Have an idea, question, experiment or
+            interesting system to discuss?
+        </p>
+
         <a
-            class="email"
-            href="mailto:rachit.work@protonmail.com">
-            ✉️ Contact Me
+            href="mailto:rachit.work@protonmail.com"
+            class="button button-primary">
+
+            ✉ Contact Rachit
+
         </a>
 
-        <!-- Footer -->
-        <div class="footer">
-            Built with curiosity & caffeine ☕
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-left">
+
+            <span class="footer-name">
+                Rachit Ratnam Mudaliar
+            </span>
+
+            <span>
+                Software Systems • AI • Curiosity
+            </span>
+
         </div>
 
-    </main>
+
+        <div class="footer-right">
+
+            Built with curiosity & caffeine ☕
+            <br>
+
+            © <span id="year"></span> Rachit Ratnam
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+     ======================================================= -->
+
+<script>
+
+/* =========================================================
+   YEAR
+   ========================================================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+const navbar =
+    document.getElementById("navbar");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+const menuButton =
+    document.getElementById("menuButton");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (window.scrollY > 30) {
+
+            navbar.classList.add("scrolled");
+
+        } else {
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    },
+    { passive: true }
+);
+
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.toggle("open");
+
+        menuButton.textContent =
+            navLinks.classList.contains("open")
+                ? "×"
+                : "☰";
+
+    }
+);
+
+
+document.querySelectorAll(
+    ".nav-links a"
+).forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            navLinks.classList.remove("open");
+
+            menuButton.textContent = "☰";
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   CURSOR GLOW
+   ========================================================= */
+
+const cursorGlow =
+    document.getElementById("cursorGlow");
+
+
+if (window.matchMedia("(pointer: fine)").matches) {
+
+    document.addEventListener(
+        "mousemove",
+        event => {
+
+            cursorGlow.style.left =
+                event.clientX + "px";
+
+            cursorGlow.style.top =
+                event.clientY + "px";
+
+            cursorGlow.style.opacity = "1";
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   3D CARD TILT
+   ========================================================= */
+
+const tiltCards =
+    document.querySelectorAll(".tilt");
+
+
+if (
+    window.matchMedia("(pointer: fine)").matches &&
+    !window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
+) {
+
+    tiltCards.forEach(card => {
+
+        card.addEventListener(
+            "mousemove",
+            event => {
+
+                const rect =
+                    card.getBoundingClientRect();
+
+                const x =
+                    event.clientX - rect.left;
+
+                const y =
+                    event.clientY - rect.top;
+
+                const centerX =
+                    rect.width / 2;
+
+                const centerY =
+                    rect.height / 2;
+
+                const rotateX =
+                    ((y - centerY) / centerY) * -3;
+
+                const rotateY =
+                    ((x - centerX) / centerX) * 3;
+
+                card.style.transform =
+                    `
+                    perspective(900px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    translateY(-4px)
+                    `;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+                card.style.transform =
+                    "";
+
+            }
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(
+    element => observer.observe(element)
+);
+
+
+/* =========================================================
+   COMMAND PALETTE
+   CTRL + K / CMD + K
+   ========================================================= */
+
+const commandOverlay =
+    document.getElementById(
+        "commandOverlay"
+    );
+
+const commandInput =
+    document.getElementById(
+        "commandInput"
+    );
+
+
+function openCommandPalette() {
+
+    commandOverlay.classList.add("open");
+
+    setTimeout(
+        () => commandInput.focus(),
+        100
+    );
+
+}
+
+
+function closeCommandPalette() {
+
+    commandOverlay.classList.remove("open");
+
+    commandInput.value = "";
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            (event.ctrlKey || event.metaKey) &&
+            event.key.toLowerCase() === "k"
+        ) {
+
+            event.preventDefault();
+
+            openCommandPalette();
+
+        }
+
+
+        if (event.key === "Escape") {
+
+            closeCommandPalette();
+
+        }
+
+    }
+);
+
+
+commandOverlay.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            commandOverlay
+        ) {
+
+            closeCommandPalette();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   COMMAND ITEMS
+   ========================================================= */
+
+document.querySelectorAll(
+    ".command-item"
+).forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const target =
+                document.querySelector(
+                    button.dataset.target
+                );
+
+            closeCommandPalette();
+
+            if (target) {
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   COMMAND SEARCH
+   ========================================================= */
+
+commandInput.addEventListener(
+    "input",
+    () => {
+
+        const query =
+            commandInput.value
+                .toLowerCase()
+                .trim();
+
+
+        document.querySelectorAll(
+            ".command-item"
+        ).forEach(item => {
+
+            const text =
+                item.textContent
+                    .toLowerCase();
+
+
+            item.style.display =
+                !query ||
+                text.includes(query)
+                    ? "flex"
+                    : "none";
+
+        });
+
+    }
+);
+
+
+/* =========================================================
+   EASTER EGGS
+   ========================================================= */
+
+let secretSequence = "";
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        secretSequence +=
+            event.key.toLowerCase();
+
+        if (
+            secretSequence.length > 30
+        ) {
+
+            secretSequence =
+                secretSequence.slice(-30);
+
+        }
+
+
+        if (
+            secretSequence.includes(
+                "coffee"
+            )
+        ) {
+
+            console.log(
+                "%c☕ SYSTEM DEPENDENCY FOUND",
+                "color:#a78bfa;font-size:16px;font-weight:bold;"
+            );
+
+            secretSequence = "";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   SMOOTH EXTERNAL LINK FEEDBACK
+   ========================================================= */
+
+document.querySelectorAll(
+    'a[target="_blank"]'
+).forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            link.style.transform =
+                "scale(0.98)";
+
+            setTimeout(
+                () => {
+                    link.style.transform = "";
+                },
+                120
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   PERFORMANCE
+   ========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if (document.hidden) {
+
+            document.body.style
+                .setProperty(
+                    "--animation-state",
+                    "paused"
+                );
+
+        }
+
+    }
+);
+
+</script>
+
 
 </body>
 </html>
