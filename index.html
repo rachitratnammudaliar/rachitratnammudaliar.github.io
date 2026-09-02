@@ -3,212 +3,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachit Ratnam Mudaliar | Software Systems</title>
-    <meta name="description" content="Software Systems student at Kauno Kolegija focusing on Generative AI, Prompt Engineering, and Systems Troubleshooting.">
-    <style>
-        :root {
-            --bg-start: #e0e7ff;
-            --bg-mid: #fdf2f8;
-            --bg-end: #e0f2fe;
-            --card-bg: rgba(255, 255, 255, 0.75);
-            --card-border: rgba(255, 255, 255, 0.9);
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --accent-primary: #38bdf8;
-            --accent-hover: #0ea5e9;
-            --tag-bg: rgba(241, 245, 249, 0.85);
-            --tag-text: #475569;
-            --pill-bg: #eff6ff;
-            --pill-text: #2563eb;
-            --pill-border: #dbeafe;
-        }
 
+    <title>Rachit Ratnam | Software Systems Student</title>
+
+    <meta name="description"
+        content="Rachit Ratnam — Software Systems student focused on Generative AI, Prompt Engineering, Reverse Engineering, and System Diagnostics.">
+
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        :root {
+            --bg: #050509;
+            --card: rgba(18, 18, 28, 0.75);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #f5f5f7;
+            --muted: #9b9ba7;
+            --accent: #8b5cf6;
+            --accent2: #06b6d4;
         }
 
         body {
-            background: linear-gradient(135deg, var(--bg-start), var(--bg-mid), var(--bg-end));
             min-height: 100vh;
+
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 24px 16px;
-            color: var(--text-main);
+            justify-content: center;
+
+            padding: 30px 15px;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+            background: var(--bg);
+
+            overflow-x: hidden;
         }
+
+        /* Background glow */
+
+        body::before {
+            content: "";
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            background: var(--accent);
+            border-radius: 50%;
+
+            filter: blur(180px);
+            opacity: 0.18;
+
+            top: -200px;
+            left: -150px;
+
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+
+            width: 450px;
+            height: 450px;
+
+            background: var(--accent2);
+            border-radius: 50%;
+
+            filter: blur(180px);
+            opacity: 0.13;
+
+            bottom: -200px;
+            right: -150px;
+
+            z-index: -2;
+        }
+
+        /* Profile Card */
 
         .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1.5px solid var(--card-border);
-            border-radius: 24px;
-            padding: 44px 32px;
-            max-width: 480px;
             width: 100%;
+            max-width: 470px;
+
+            padding: 38px 32px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+            border-radius: 28px;
+
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
             text-align: center;
-            box-shadow: 0 20px 40px -15px rgba(100, 116, 139, 0.15), 0 0 15px rgba(255, 255, 255, 0.6) inset;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            animation: cardIn 0.8s ease;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 48px -12px rgba(100, 116, 139, 0.22);
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
-        .avatar-container {
-            width: 124px;
-            height: 124px;
-            margin: 0 auto 18px;
-            position: relative;
-        }
+        /* Profile Image */
 
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
+        .profile-image {
+            width: 125px;
+            height: 125px;
+
+            margin: 0 auto 20px;
+
+            display: block;
+
             object-fit: cover;
-            border: 3px solid #ffffff;
-            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+
+            border-radius: 50%;
+
+            border: 3px solid rgba(139, 92, 246, 0.7);
+
+            box-shadow:
+                0 0 25px rgba(139, 92, 246, 0.35),
+                0 0 60px rgba(6, 182, 212, 0.12);
+
+            transition: 0.3s ease;
         }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+
+            border-color: var(--accent2);
+
+            box-shadow:
+                0 0 30px rgba(6, 182, 212, 0.4),
+                0 0 70px rgba(139, 92, 246, 0.2);
+        }
+
+        /* Name */
 
         h1 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 4px;
-            letter-spacing: -0.02em;
+            font-size: 30px;
+            letter-spacing: -0.8px;
+
+            margin-bottom: 8px;
         }
 
-        .title {
-            color: #0284c7;
-            font-size: 0.94rem;
+        /* Role */
+
+        .role {
+            color: var(--accent2);
+
+            font-size: 14px;
             font-weight: 600;
-            margin-bottom: 12px;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 18px;
         }
+
+        /* Location */
 
         .location {
             display: inline-flex;
+
             align-items: center;
-            gap: 6px;
-            font-size: 0.76rem;
-            font-weight: 500;
-            color: var(--pill-text);
-            background: var(--pill-bg);
-            border: 1px solid var(--pill-border);
-            padding: 5px 14px;
-            border-radius: 20px;
-            margin-bottom: 20px;
+            gap: 7px;
+
+            padding: 8px 14px;
+
+            border-radius: 50px;
+
+            background: rgba(255, 255, 255, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.07);
+
+            color: #c7c7d0;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
         }
+
+        /* Bio */
 
         .bio {
-            font-size: 0.88rem;
+            color: var(--muted);
+
             line-height: 1.65;
-            color: var(--text-muted);
-            margin-bottom: 24px;
+
+            font-size: 14px;
+
+            margin-bottom: 22px;
         }
 
-        .tags {
+        .bio strong {
+            color: #dddde5;
+        }
+
+        /* Skills */
+
+        .skills {
             display: flex;
+
             flex-wrap: wrap;
-            gap: 8px;
+
             justify-content: center;
+
+            gap: 8px;
+
             margin-bottom: 28px;
         }
 
-        .tag {
-            background: var(--tag-bg);
-            border: 1px solid rgba(203, 213, 225, 0.7);
-            color: var(--tag-text);
-            font-size: 0.74rem;
+        .skill {
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background: rgba(139, 92, 246, 0.09);
+
+            border: 1px solid rgba(139, 92, 246, 0.2);
+
+            color: #c9b9ff;
+
+            font-size: 11px;
+
             font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 12px;
-            transition: all 0.2s ease;
         }
 
-        .tag:hover {
-            background: #ffffff;
-            border-color: #93c5fd;
-            color: #0284c7;
+        /* Social Links */
+
+        .socials {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 22px;
         }
 
-        .links {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
+        .social {
             text-decoration: none;
-            padding: 10px 20px;
+
+            color: #dddde5;
+
+            padding: 12px;
+
             border-radius: 12px;
-            font-size: 0.85rem;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border: 1px solid rgba(255, 255, 255, 0.07);
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            transition: all 0.25s ease;
+        }
+
+        .social:hover {
+            transform: translateY(-3px);
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border-color: rgba(139, 92, 246, 0.45);
+
+            color: white;
+
+            box-shadow:
+                0 8px 25px rgba(139, 92, 246, 0.12);
+        }
+
+        /* Email Button */
+
+        .email {
+            display: block;
+
+            text-decoration: none;
+
+            padding: 13px;
+
+            border-radius: 13px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--accent),
+                    #6366f1
+                );
+
+            font-size: 13px;
+
             font-weight: 600;
-            transition: all 0.2s ease;
+
+            transition: 0.25s ease;
+
+            box-shadow:
+                0 10px 25px rgba(139, 92, 246, 0.2);
         }
 
-        .btn-primary {
-            background: #0284c7;
-            color: #ffffff;
-            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+        .email:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 35px rgba(139, 92, 246, 0.3);
         }
 
-        .btn-primary:hover {
-            background: #0369a1;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
+        /* Footer */
+
+        .footer {
+            margin-top: 22px;
+
+            color: #62626d;
+
+            font-size: 11px;
         }
 
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.9);
-            color: #334155;
-            border: 1px solid #cbd5e1;
-        }
+        /* Mobile */
 
-        .btn-secondary:hover {
-            background: #ffffff;
-            border-color: #94a3b8;
-            color: #0f172a;
-            transform: translateY(-2px);
+        @media (max-width: 480px) {
+
+            .card {
+                padding: 32px 22px;
+
+                border-radius: 24px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .profile-image {
+                width: 105px;
+                height: 105px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="card">
-        <div class="avatar-container">
-            <img src="file_00000000cdd8821187205670d2649ead(1).png" alt="Rachit Ratnam Mudaliar" class="avatar">
-        </div>
-        
-        <h1>Rachit Ratnam Mudaliar</h1>
-        <div class="title">Software Systems @ Kauno Kolegija</div>
-        
-        <div class="location">
-            <span>📍 Kaunas, Lithuania</span>
-            <span>•</span>
-            <span>Origin: Madhya Pradesh, India</span>
-        </div>
-        
-        <p class="bio">
-            Originally from Madhya Pradesh, India, currently pursuing Software Systems in Kaunas, Lithuania. Focused on practical applications of Generative AI, Prompt Engineering, Reverse Engineering, and System Troubleshooting.
-        </p>
-        
-        <div class="tags">
-            <span class="tag">Generative AI</span>
-            <span class="tag">Prompt Engineering</span>
-            <span class="tag">Reverse Engineering</span>
-            <span class="tag">System Diagnostics</span>
+
+    <main class="card">
+
+        <!-- Profile Image -->
+        <img
+            class="profile-image"
+            src="file_00000000cdd8821187205670d2649ead(1).png"
+            alt="Rachit Ratnam"
+        >
+
+        <!-- Name -->
+        <h1>Rachit Ratnam</h1>
+
+        <!-- Role -->
+        <div class="role">
+            Software Systems Student • AI Enthusiast
         </div>
 
-        <div class="links">
-            <a href="https://www.linkedin.com/in/rachitratnammudaliar" target="_blank" class="btn btn-primary">LinkedIn</a>
-            <a href="https://github.com/rachitratnammudaliar" target="_blank" class="btn btn-secondary">GitHub</a>
-            <a href="mailto:rachit.work@protonmail.com" class="btn btn-secondary">Email</a>
+        <!-- Location -->
+        <div class="location">
+            📍 Kaunas, Lithuania
         </div>
-    </div>
+
+        <!-- About -->
+        <p class="bio">
+            Curious Software Systems student at
+            <strong>Kauno Kolegija</strong>, focused on understanding
+            complex systems from the inside out.
+
+            <br><br>
+
+            Exploring Generative AI, Prompt Engineering,
+            Reverse Engineering, and System Diagnostics.
+            Always looking for interesting systems to build,
+            break down, understand, and improve.
+        </p>
+
+        <!-- Skills -->
+        <div class="skills">
+            <span class="skill">Generative AI</span>
+            <span class="skill">Prompt Engineering</span>
+            <span class="skill">Reverse Engineering</span>
+            <span class="skill">System Diagnostics</span>
+            <span class="skill">Software Systems</span>
+        </div>
+
+        <!-- Social Links -->
+        <div class="socials">
+
+            <a
+                class="social"
+                href="https://linkedin.com/in/rachitratnammudaliar"
+                target="_blank"
+                rel="noopener noreferrer">
+                💼 LinkedIn
+            </a>
+
+            <a
+                class="social"
+                href="https://instagram.com/rachitratnam"
+                target="_blank"
+                rel="noopener noreferrer">
+                📸 Instagram
+            </a>
+
+            <a
+                class="social"
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                💻 GitHub
+            </a>
+
+            <a
+                class="social"
+                href="https://youtube.com/@rachitratnam27"
+                target="_blank"
+                rel="noopener noreferrer">
+                ▶️ YouTube
+            </a>
+
+            <a
+                class="social"
+                href="https://pinterest.com/rachitratnam27"
+                target="_blank"
+                rel="noopener noreferrer">
+                📌 Pinterest
+            </a>
+
+            <a
+                class="social"
+                href="https://reddit.com/user/rachitratnam27"
+                target="_blank"
+                rel="noopener noreferrer">
+                👽 Reddit
+            </a>
+
+        </div>
+
+        <!-- Contact -->
+        <a
+            class="email"
+            href="mailto:rachit.work@protonmail.com">
+            ✉️ Contact Me
+        </a>
+
+        <!-- Footer -->
+        <div class="footer">
+            Built with curiosity & caffeine ☕
+        </div>
+
+    </main>
+
 </body>
 </html>
