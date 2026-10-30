@@ -11,7 +11,9 @@ Hand-written HTML, CSS and JavaScript. No framework, no build step, no trackers,
 | `index.html` | The whole page, plus SEO tags and schema.org data |
 | `assets/css/site.css` | All styles. Colours are tokens at the top |
 | `assets/js/theme.js` | Applies the saved light/dark theme before paint |
-| `assets/js/site.js` | Theme switch, copy email, clock, Inspect mode |
+| `assets/js/site.js` | Theme switch, copy email, clock, sticky card, Inspect mode |
+| `rachit-ratnam-mudaliar.vcf` | The "Save contact" card. Keep it in sync with the links |
+| `assets/img/qr-site.svg` | QR code to this page, shown on big screens and in print |
 | `assets/img/` | Photo, share card, app icons |
 | `assets/fonts/` | Self-hosted Inter Display and Lora (OFL) |
 | `404.html` | Not-found page |
@@ -19,11 +21,12 @@ Hand-written HTML, CSS and JavaScript. No framework, no build step, no trackers,
 
 ## Common edits
 
-**Add a project.** In `index.html`, copy one `<article class="project">` block in the Work section and edit it. Use `status--live` or `status--progress` for the badge.
+**Add a journey step.** In `index.html`, copy one `<li>` in `<ol class="journey">`. The last step has `class="journey__now"`; move that class to the newest step.
 
+**Update courses.** Edit the `<ul class="tags">` list in the Education section.
 
 **Change a profile link.** Update it in **two** places in `index.html`:
-1. the Contact section links, and
+1. the `<ul class="links">` list in the profile card, and
 2. `"sameAs"` in the `application/ld+json` block in `<head>`.
 
 Search engines use `sameAs` to connect your profiles to you, so they must match.

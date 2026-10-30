@@ -10,16 +10,16 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>Rachit Ratnam Mudaliar — Software Systems Student</title>
-  <meta name="description" content="Rachit Ratnam Mudaliar is a Software Systems student at Kauno Kolegija in Kaunas, Lithuania, interested in generative AI, reverse engineering and how software systems work.">
+  <meta name="description" content="Rachit Ratnam Mudaliar is a Software Systems student at Kauno Kolegija in Kaunas, Lithuania, originally from Birsinghpur Pali, Madhya Pradesh, India. Curious about the logic behind everything.">
   <meta name="author" content="Rachit Ratnam Mudaliar">
   <link rel="canonical" href="https://rachitratnammudaliar.github.io/">
   <meta name="google-site-verification" content="I8zv3Ss7ijmXvbkM5e4TgNwXdaqT8IaBBaqnhg6hnqc">
 
-  <!-- Share previews (LinkedIn, WhatsApp, X, Slack) -->
+  <!-- Share previews (LinkedIn, WhatsApp, Facebook, X) -->
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Rachit Ratnam Mudaliar">
   <meta property="og:title" content="Rachit Ratnam Mudaliar — Software Systems Student">
-  <meta property="og:description" content="Software Systems student at Kauno Kolegija, Kaunas. I take software apart to see how it works, then build my own.">
+  <meta property="og:description" content="Software Systems student at Kauno Kolegija, Kaunas. From Madhya Pradesh, India. Curious about the logic behind everything.">
   <meta property="og:url" content="https://rachitratnammudaliar.github.io/">
   <meta property="og:image" content="https://rachitratnammudaliar.github.io/assets/img/og-card.jpg">
   <meta property="og:image:width" content="1200">
@@ -29,7 +29,6 @@
   <meta property="profile:last_name" content="Mudaliar">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Icons and theme -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -42,7 +41,7 @@
   <script src="/assets/js/theme.js"></script>
   <script src="/assets/js/site.js" defer></script>
 
-  <!-- Who I am, in the format search engines read. Keep "sameAs" in sync with the Contact section. -->
+  <!-- Who I am, in the format search engines read. Keep "sameAs" in sync with the links on the page. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,19 +62,40 @@
           "caption": "Rachit Ratnam Mudaliar"
         },
         "jobTitle": "Software Systems Student",
-        "description": "Software Systems student at Kauno Kolegija in Kaunas, Lithuania, interested in generative AI, reverse engineering and system diagnostics.",
+        "description": "Software Systems student at Kauno Kolegija in Kaunas, Lithuania, originally from Birsinghpur Pali, Madhya Pradesh, India.",
         "email": "mailto:rachit.work@protonmail.com",
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Kauno kolegija",
-          "alternateName": "Kaunas University of Applied Sciences",
-          "url": "https://www.kaunokolegija.lt/en/"
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Birsinghpur Pali, Madhya Pradesh, India"
         },
+        "nationality": { "@type": "Country", "name": "India" },
         "homeLocation": {
           "@type": "Place",
           "name": "Kaunas, Lithuania",
           "address": { "@type": "PostalAddress", "addressLocality": "Kaunas", "addressCountry": "LT" }
         },
+        "affiliation": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Kauno kolegija",
+            "alternateName": "Kaunas University of Applied Sciences",
+            "url": "https://www.kaunokolegija.lt/en/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Erasmus Student Network",
+            "url": "https://esn.org/"
+          }
+        ],
+        "alumniOf": [
+          { "@type": "HighSchool", "name": "Kendriya Vidyalaya Nowrozabad" },
+          { "@type": "School", "name": "St. Joseph's School" }
+        ],
+        "knowsLanguage": [
+          { "@type": "Language", "name": "English", "alternateName": "en" },
+          { "@type": "Language", "name": "Hindi", "alternateName": "hi" },
+          { "@type": "Language", "name": "Lithuanian", "alternateName": "lt" }
+        ],
         "knowsAbout": [
           "Software engineering",
           "Generative artificial intelligence",
@@ -86,9 +106,9 @@
         ],
         "sameAs": [
           "https://www.linkedin.com/in/rachitratnammudaliar",
+          "https://github.com/rachitratnammudaliar",
           "https://www.instagram.com/rachitratnam/",
           "https://www.facebook.com/share/1CMRGaaPrz/",
-          "https://github.com/rachitratnammudaliar",
           "https://rachitratnammudaliar.blogspot.com/"
         ]
       },
@@ -122,9 +142,10 @@
       <a class="mark" href="#top" aria-label="Rachit Ratnam Mudaliar, back to top">RR</a>
       <nav aria-label="Sections">
         <ul class="nav">
-          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#journey">Journey</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#beyond">Beyond the screen</a></li>
         </ul>
       </nav>
       <div class="tools">
@@ -132,140 +153,198 @@
           <span class="tool__icon" aria-hidden="true"></span><span class="tool__text">Auto</span>
         </button>
         <button class="tool tool--inspect" id="inspectToggle" type="button" aria-pressed="false" title="Show how this page is built (shortcut: I)">
-          <span class="tool__dot" aria-hidden="true"></span>Inspect
+          <span class="tool__dot" aria-hidden="true"></span><span class="tool__text">Inspect</span>
         </button>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top" aria-labelledby="name">
-      <div class="hero__text">
-        <h1 class="hero__name" id="name" data-inspect="&lt;h1&gt; one per page, matches schema.org Person.name">
-          <span>Rachit Ratnam</span>
-          <span>Mudaliar</span>
-        </h1>
-        <p class="hero__lede" data-inspect="&lt;p&gt; also used as the meta description">
-          Software Systems student at Kauno Kolegija in Kaunas, Lithuania.
-          I take software apart to see how it works, then build my own.
-        </p>
-        <ul class="hero__actions">
-          <li><a class="btn btn--solid" href="mailto:rachit.work@protonmail.com">Email me</a></li>
-          <li><a class="btn" href="https://www.linkedin.com/in/rachitratnammudaliar" rel="me noopener" target="_blank">LinkedIn</a></li>
-        </ul>
+  <div class="page" id="top">
+    <!-- ===================== PROFILE CARD ===================== -->
+    <aside class="card" aria-label="Profile">
+      <div class="card__id">
+        <figure class="card__photo" data-inspect="&lt;img&gt; 34 KB WebP, fixed size: no layout shift">
+          <picture>
+            <source srcset="/assets/img/rachit-ratnam-mudaliar.webp" type="image/webp">
+            <img src="/assets/img/rachit-ratnam-mudaliar.jpg" width="480" height="480"
+                 alt="Portrait of Rachit Ratnam Mudaliar" fetchpriority="high" decoding="async">
+          </picture>
+        </figure>
+        <div class="card__title">
+          <h1 class="card__name" data-inspect="&lt;h1&gt; one per page, matches schema.org Person.name">
+            <span>Rachit Ratnam</span> <span>Mudaliar</span>
+          </h1>
+          <p class="card__role">Software Systems student at Kauno Kolegija</p>
+        </div>
       </div>
-      <figure class="hero__photo" data-inspect="&lt;img&gt; 34 KB WebP, fixed size: no layout shift">
-        <picture>
-          <source srcset="/assets/img/rachit-ratnam-mudaliar.webp" type="image/webp">
-          <img src="/assets/img/rachit-ratnam-mudaliar.jpg" width="480" height="480"
-               alt="Portrait of Rachit Ratnam Mudaliar" fetchpriority="high" decoding="async">
-        </picture>
-        <figcaption>Kaunas, Lithuania</figcaption>
+
+      <dl class="facts" data-inspect="&lt;dl&gt; key facts, mirrored in the structured data">
+        <div><dt>Based in</dt><dd>Kaunas, Lithuania</dd></div>
+        <div><dt>From</dt><dd>Birsinghpur Pali, Madhya Pradesh, India</dd></div>
+        <div><dt>Studying</dt><dd>Software Systems, since 2026</dd></div>
+        <div>
+          <dt>Languages</dt>
+          <dd>
+            <ul class="langs">
+              <li>English <span>C1</span></li>
+              <li>Hindi <span>native</span></li>
+              <li>Lithuanian <span>learning</span></li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+
+      <div class="actions">
+        <a class="btn btn--solid" href="mailto:rachit.work@protonmail.com">Email me</a>
+        <a class="btn" href="/rachit-ratnam-mudaliar.vcf" download data-inspect="&lt;a download&gt; a .vcf contact card">Save contact</a>
+      </div>
+      <div class="email">
+        <span class="email__addr">rachit.work@protonmail.com</span>
+        <button class="email__copy" id="copyEmail" type="button" data-email="rachit.work@protonmail.com">Copy</button>
+        <span class="email__status" id="copyStatus" role="status" aria-live="polite"></span>
+      </div>
+
+      <!-- Keep in sync with "sameAs" in the structured data. -->
+      <ul class="links" aria-label="Profiles">
+        <li><a href="https://www.linkedin.com/in/rachitratnammudaliar" rel="me noopener" target="_blank"><span>LinkedIn</span><span class="links__handle">rachitratnammudaliar</span></a></li>
+        <li><a href="https://github.com/rachitratnammudaliar" rel="me noopener" target="_blank"><span>GitHub</span><span class="links__handle">rachitratnammudaliar</span></a></li>
+        <li><a href="https://www.instagram.com/rachitratnam/" rel="me noopener" target="_blank"><span>Instagram</span><span class="links__handle">rachitratnam</span></a></li>
+        <li><a href="https://www.facebook.com/share/1CMRGaaPrz/" rel="me noopener" target="_blank"><span>Facebook</span><span class="links__handle">Rachit Ratnam Mudaliar</span></a></li>
+      </ul>
+
+      <figure class="qr" data-inspect="&lt;svg&gt; QR code, generated by hand, no service">
+        <img src="/assets/img/qr-site.svg" width="132" height="132" alt="QR code linking to rachitratnammudaliar.github.io">
+        <figcaption>Scan to open this page on your phone</figcaption>
       </figure>
-    </section>
+    </aside>
 
-    <!-- NOW -->
-    <section class="block" id="now" aria-labelledby="now-h">
-      <h2 class="block__label" id="now-h">Studies</h2>
-      <div class="block__body" data-inspect="&lt;section&gt; written to stay true without edits">
-        <p class="prose">
-          Studying Software Systems at Kauno Kolegija since 2026: algorithms and data structures,
-          programming in C# and Java, data management and software systems engineering, with real
-          projects built alongside the coursework.
+    <!-- ===================== DETAILS ===================== -->
+    <main class="main" id="main">
+      <section class="intro" id="about" aria-labelledby="about-h">
+        <h2 class="visually-hidden" id="about-h">About</h2>
+        <p class="intro__line" data-inspect="&lt;p&gt; the one big statement on the page">
+          Curious about the logic behind everything.
         </p>
-      </div>
-    </section>
-
-    <!-- WORK -->
-    <section class="block" id="work" aria-labelledby="work-h">
-      <h2 class="block__label" id="work-h">Work</h2>
-      <div class="block__body">
-        <!-- To add a project: copy one <article class="project"> and edit it. Newest first. -->
-        <article class="project" data-inspect="&lt;article&gt; plain HTML; copy one to add a project">
-          <header class="project__head">
-            <h3 class="project__title">PSe-6 Cohort Hub</h3>
-            <span class="status status--progress">Started 2026</span>
-          </header>
-          <p class="prose">
-            A web app for my study group that brings timetables, deadlines and course material
-            from Moodle and calendars into one place. Built for my Software Systems Engineering course,
-            with security designed in from the start.
+        <div class="intro__text">
+          <p>
+            I'm a Software Systems student at Kauno Kolegija in Kaunas, Lithuania. I've wanted to know
+            how things work since I was four, when my mother sat me at a computer and taught me MS Paint
+            and how to type my name. That curiosity never left. I still take a system apart until I
+            find the logic behind it, and then I build something of my own.
           </p>
-          <p class="project__meta">Course project, Kauno Kolegija</p>
-        </article>
-
-        <article class="project">
-          <header class="project__head">
-            <h3 class="project__title">This website</h3>
-            <span class="status status--live">Live</span>
-          </header>
-          <p class="prose">
-            Written by hand in HTML, CSS and JavaScript. No framework, no trackers and no requests to
-            other servers. A strict security policy and structured data tell browsers and search engines
-            exactly what the page is. Press <kbd>Inspect</kbd> at the top to see how it's put together.
+          <p>
+            I grew up in Birsinghpur Pali, a small town in Madhya Pradesh, India, and spent two years at
+            a military school in Dehradun. In 2026 I set out to build a life from scratch, first in
+            Kerala and then in Lithuania.
           </p>
-          <p class="project__links">
-            <a href="https://github.com/rachitratnammudaliar/rachitratnammudaliar.github.io" rel="noopener" target="_blank">View the source</a>
-          </p>
-        </article>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- INTERESTS -->
-    <section class="block" id="interests" aria-labelledby="interests-h">
-      <h2 class="block__label" id="interests-h">Interests</h2>
-      <div class="block__body">
-        <dl class="interests" data-inspect="&lt;dl&gt; a definition list: term, then what it means to me">
-          <div><dt>Generative AI</dt><dd>How models behave, and how to instruct them well.</dd></div>
-          <div><dt>Reverse engineering</dt><dd>Working out how a system does what it does, from the outside in.</dd></div>
-          <div><dt>System diagnostics</dt><dd>Tracking a fault down to its cause instead of guessing.</dd></div>
-          <div><dt>Software systems</dt><dd>How the parts connect, talk to each other and fail.</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- JOURNEY -->
-    <section class="block" id="journey" aria-labelledby="journey-h">
-      <h2 class="block__label" id="journey-h">Journey</h2>
-      <div class="block__body">
+      <section class="block" id="journey" aria-labelledby="journey-h">
+        <h2 class="block__title" id="journey-h">Journey</h2>
         <ol class="journey" data-inspect="&lt;ol&gt; an ordered list, because it's a sequence">
           <li>
-            <h3>Dehradun, Uttarakhand</h3>
-            <p>Military school. Where I learned discipline, routine and how to keep going when it gets hard.</p>
+            <p class="journey__when">Childhood</p>
+            <h3>Birsinghpur Pali, Madhya Pradesh</h3>
+            <p>Where I was born and grew up. At four, my mother taught me MS Paint and how to type my name. I wanted to know how the computer did it, and I still ask that question about everything.</p>
           </li>
           <li>
+            <p class="journey__when">Nursery to Class 4</p>
+            <h3>St. Joseph's School</h3>
+            <p>My first school, and my first years of learning.</p>
+          </li>
+          <li>
+            <p class="journey__when">Classes 5 to 10</p>
+            <h3>Kendriya Vidyalaya Nowrozabad</h3>
+            <p>Six years of school, where I completed Class 10.</p>
+          </li>
+          <li>
+            <p class="journey__when">Two months</p>
+            <h3>DDM Public School, Korba, Chhattisgarh</h3>
+            <p>A short stay in a new state and a new school.</p>
+          </li>
+          <li>
+            <p class="journey__when">Two years</p>
+            <h3>Military school, Dehradun, Uttarakhand</h3>
+            <p>A strict routine from morning to night. It taught me self-discipline, resilience and how to hold my ground in any environment.</p>
+          </li>
+          <li>
+            <p class="journey__when">January 2026</p>
             <h3>Kerala</h3>
-            <p>After Class 12, I moved south to prepare my applications to study computing abroad.</p>
+            <p>I moved to a place I had never been, without knowing the language or the culture, to prepare to study abroad and to prove I could build a life from scratch.</p>
           </li>
-          <li>
+          <li class="journey__now">
+            <p class="journey__when">September 2026 to now</p>
             <h3>Kaunas, Lithuania</h3>
-            <p>September 2026. Started Software Systems at Kauno Kolegija.</p>
+            <p>Studying Software Systems at Kauno Kolegija, involved in the Erasmus Student Network and student life, and learning Lithuanian.</p>
           </li>
         </ol>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section class="block block--contact" id="contact" aria-labelledby="contact-h">
-      <h2 class="block__label" id="contact-h">Contact</h2>
-      <div class="block__body">
-        <p class="contact__lead">Have a project, an internship or a question? Email is the fastest way to reach me.</p>
-        <div class="email" data-inspect="&lt;button&gt; copies with the Clipboard API, no library">
-          <a class="email__addr" href="mailto:rachit.work@protonmail.com">rachit.work@protonmail.com</a>
-          <button class="btn btn--small" id="copyEmail" type="button" data-email="rachit.work@protonmail.com">Copy</button>
-          <span class="email__status" id="copyStatus" role="status" aria-live="polite"></span>
-        </div>
-
-        <!-- Keep these in sync with "sameAs" in the structured data at the top. -->
-        <ul class="links" aria-label="Profiles">
-          <li><a href="https://www.linkedin.com/in/rachitratnammudaliar" rel="me noopener" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/rachitratnam/" rel="me noopener" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/share/1CMRGaaPrz/" rel="me noopener" target="_blank">Facebook</a></li>
+      <section class="block" id="education" aria-labelledby="education-h">
+        <h2 class="block__title" id="education-h">Education</h2>
+        <article class="edu" data-inspect="&lt;article&gt; current degree first">
+          <div class="edu__head">
+            <h3>Kauno Kolegija</h3>
+            <p class="edu__when">2026 to present</p>
+          </div>
+          <p class="edu__sub">Software Systems, Kaunas University of Applied Sciences, Lithuania</p>
+          <p class="edu__label">Courses</p>
+          <ul class="tags">
+            <li>Algorithms and Data Structures (C#)</li>
+            <li>Programming (Java)</li>
+            <li>Data Management and Technology</li>
+            <li>Software Systems Engineering</li>
+            <li>Mathematics</li>
+            <li>Professional English</li>
+          </ul>
+        </article>
+        <ul class="edu-past">
+          <li><span>Military school, Dehradun</span><span>Two years</span></li>
+          <li><span>Kendriya Vidyalaya Nowrozabad</span><span>Classes 5 to 10</span></li>
+          <li><span>St. Joseph's School</span><span>Nursery to Class 4</span></li>
         </ul>
-      </div>
-    </section>
-  </main>
+      </section>
+
+      <section class="block" id="skills" aria-labelledby="skills-h">
+        <h2 class="block__title" id="skills-h">Skills and interests</h2>
+        <dl class="rows">
+          <div><dt>Programming</dt><dd>C#, Java, JavaScript, SQL</dd></div>
+          <div><dt>Web</dt><dd>HTML, CSS, accessible and secure static sites</dd></div>
+          <div><dt>Tools</dt><dd>Git, GitHub, GitHub Pages</dd></div>
+          <div><dt>Interested in</dt><dd>Generative AI and prompt engineering, reverse engineering, system diagnostics, and how software systems fit together</dd></div>
+        </dl>
+      </section>
+
+      <section class="block" id="beyond" aria-labelledby="beyond-h">
+        <h2 class="block__title" id="beyond-h">Beyond the screen</h2>
+        <div class="beyond" data-inspect="&lt;section&gt; the person behind the profile">
+          <div>
+            <h3>Faith</h3>
+            <p>I'm a Christian. My faith shapes how I work and how I treat people: work hard, be kind, and stay true to my values.</p>
+          </div>
+          <div>
+            <h3>Discipline</h3>
+            <p>Two years at military school gave me a routine and a work ethic I still rely on every day.</p>
+          </div>
+          <div>
+            <h3>Community</h3>
+            <p>I'm involved in the Erasmus Student Network and student activities at Kauno Kolegija. I like bringing people together across cultures.</p>
+          </div>
+          <div>
+            <h3>Starting over</h3>
+            <p>Twice in one year I moved somewhere I had never been, without knowing the language or the culture. Both times I chose to start from scratch.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block block--open" id="contact" aria-labelledby="contact-h">
+        <h2 class="block__title" id="contact-h">Open to</h2>
+        <p class="open__text">Internships, student projects and collaboration. Email is the fastest way to reach me.</p>
+        <a class="btn btn--solid" href="mailto:rachit.work@protonmail.com">Email rachit.work@protonmail.com</a>
+      </section>
+    </main>
+  </div>
 
   <footer class="foot">
     <p>© <span id="year">2026</span> Rachit Ratnam Mudaliar</p>

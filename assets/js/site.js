@@ -98,6 +98,19 @@
     });
   }
 
+  /* ---------- Profile card: only stick it if it fits the screen ---------- */
+  var card = document.querySelector(".card");
+  function fitCard() {
+    if (!card) return;
+    card.classList.remove("card--tall");
+    var header = document.querySelector(".top");
+    var room = window.innerHeight - (header ? header.offsetHeight : 0);
+    if (card.offsetHeight > room) card.classList.add("card--tall");
+  }
+  fitCard();
+  window.addEventListener("resize", fitCard);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitCard);
+
   /* ---------- Inspect mode ---------- */
   var inspectBtn = document.getElementById("inspectToggle");
   var report = document.getElementById("report");
