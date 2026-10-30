@@ -21,7 +21,6 @@ Hand-written HTML, CSS and JavaScript. No framework, no build step, no trackers,
 
 **Add a project.** In `index.html`, copy one `<article class="project">` block in the Work section and edit it. Use `status--live` or `status--progress` for the badge.
 
-**Add a blog post.** In the Writing section, copy one `<li>` in `<ul class="posts">`. Newest first.
 
 **Change a profile link.** Update it in **two** places in `index.html`:
 1. the Contact section links, and
