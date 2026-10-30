@@ -7,6 +7,14 @@
 
   var root = document.documentElement;
 
+  /* ---------- Clickjacking guard ----------
+     GitHub Pages can't send X-Frame-Options, so if another site
+     loads this page inside a frame, break out to the real page. */
+  if (window.top !== window.self) {
+    try { window.top.location.replace(window.self.location.href); }
+    catch (e) { document.body.textContent = "This page can't be shown inside another site."; return; }
+  }
+
   /* ---------- Theme: Auto -> Light -> Dark ---------- */
   var themeBtn = document.getElementById("themeToggle");
   var THEMES = ["auto", "light", "dark"];

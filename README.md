@@ -1,51 +1,49 @@
-# rachitratnammudaliar.github.io
+# Rachit Ratnam Mudaliar — Personal Website
 
-Personal site of **Rachit Ratnam Mudaliar**, Software Systems student at Kauno Kolegija, Kaunas.
+**Live:** [rachitratnammudaliar.github.io](https://rachitratnammudaliar.github.io)
 
-Hand-written HTML, CSS and JavaScript. No framework, no build step, no trackers, no third-party requests.
+The personal website and portfolio of **Rachit Ratnam Mudaliar**, a Software Systems student at Kauno Kolegija (Kaunas University of Applied Sciences), Lithuania. It is hosted on GitHub Pages and introduces who I am, where I come from, what I study, and how to reach me.
 
-## Files
+## What's on the site
 
-| Path | What it is |
+- **Profile**: a short introduction, with my key details in an engineering-drawing title block
+- **Journey**: my path from Birsinghpur Pali, Madhya Pradesh, India, to Kaunas, Lithuania, plotted on a map from real coordinates
+- **Education**: Kauno Kolegija and my earlier schools
+- **Beyond the screen**: faith, discipline, community and starting over
+- **Contact**: email, a downloadable contact card, LinkedIn, GitHub, Instagram and Facebook
+
+## How it's built
+
+| | |
 |---|---|
-| `index.html` | The whole page, plus SEO tags and schema.org data |
-| `assets/css/site.css` | All styles. Colours are tokens at the top |
-| `assets/js/theme.js` | Applies the saved light/dark theme before paint |
-| `assets/js/site.js` | Theme switch, copy email, clock, sticky card, Inspect mode |
-| `rachit-ratnam-mudaliar.vcf` | The "Save contact" card. Keep it in sync with the links |
-| `assets/img/qr-site.svg` | QR code to this page, shown on big screens and in print |
-| `assets/img/` | Photo, share card, app icons |
-| `assets/fonts/` | Self-hosted Inter Display and Lora (OFL) |
-| `404.html` | Not-found page |
-| `sitemap.xml`, `robots.txt` | For search engines |
+| Stack | Hand-written HTML, CSS and JavaScript. No framework and no build step |
+| Hosting | GitHub Pages |
+| Privacy | No trackers, analytics or cookies. Fonts and images are self-hosted, so the page makes no requests to other servers |
+| Security | A strict Content-Security-Policy that blocks inline and third-party scripts |
+| Search | schema.org `Person`, `WebSite` and `ProfilePage` data, Open Graph share card, `sitemap.xml` and `robots.txt` |
+| Devices | Responsive from smartwatch to phone, tablet, laptop, TV and projector, plus a print layout |
+| Accessibility | Semantic HTML, keyboard and remote-control navigation, visible focus, light and dark themes, reduced-motion support |
 
-## Common edits
+Press **Inspect** on the site (or the **I** key) to see how the page is put together: its size, requests, load time, structured data and security policy.
 
-**Add a journey step.** In `index.html`, copy one `<li>` in `<ol class="journey">`. The last step has `class="journey__now"`; move that class to the newest step.
+## Structure
 
-**Update courses.** Edit the `<ul class="tags">` list in the Education section.
+```
+index.html                 the page, with SEO tags and structured data
+404.html                   not-found page
+assets/css/site.css        styles
+assets/js/theme.js         applies the saved theme before the page paints
+assets/js/site.js          theme switch, copy email, clock, Inspect mode
+assets/img/                photo, share card, icons, QR code
+assets/fonts/              Inter Display and Lora (SIL Open Font License)
+rachit-ratnam-mudaliar.vcf contact card behind "Save contact"
+sitemap.xml, robots.txt    for search engines
+```
 
-**Change a profile link.** Update it in **two** places in `index.html`:
-1. the `<ul class="links">` list in the profile card, and
-2. `"sameAs"` in the `application/ld+json` block in `<head>`.
+## Contact
 
-Search engines use `sameAs` to connect your profiles to you, so they must match.
+[rachit.work@protonmail.com](mailto:rachit.work@protonmail.com) · [LinkedIn](https://www.linkedin.com/in/rachitratnammudaliar) · [GitHub](https://github.com/rachitratnammudaliar)
 
-**After any content change**, update `<lastmod>` in `sitemap.xml` and `"dateModified"` in the schema.
+---
 
-## Security
-
-GitHub Pages can't set HTTP headers, so the Content-Security-Policy is a `<meta>` tag. It allows resources from this site only and blocks inline scripts and styles. If you add an external script, image or font, you must add its host to the policy, or it will be blocked. Check the browser console after changes.
-
-## Moving to a custom domain
-
-1. Add a `CNAME` file with the domain (for example `rachitratnammudaliar.com`).
-2. Set the domain under **Settings → Pages** and tick **Enforce HTTPS**.
-3. Replace `https://rachitratnammudaliar.github.io` everywhere (canonical, og:url, og:image, schema `@id`s, sitemap, robots).
-4. Update the website field on LinkedIn, GitHub, YouTube and Blogger.
-
-## Test
-
-- Rich Results Test: https://search.google.com/test/rich-results
-- Share preview: https://www.linkedin.com/post-inspector/
-- Speed and accessibility: Chrome DevTools → Lighthouse
+© 2026 Rachit Ratnam Mudaliar. Content and photos are not licensed for reuse. Fonts are used under the SIL Open Font License.
