@@ -10,7 +10,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>Rachit Ratnam Mudaliar — Software Systems Student</title>
-  <meta name="description" content="Rachit Ratnam Mudaliar is a Software Systems student at Kauno Kolegija in Kaunas, Lithuania. Born in Birsinghpur Pali, Madhya Pradesh, India, and shaped by two years at a military school in Dehradun.">
+  <meta name="description" content="Rachit Ratnam Mudaliar is a Software Systems student at Kauno Kolegija in Kaunas, Lithuania. Born in Birsinghpur Pali, Madhya Pradesh, India, son of engineer Mr. Ratnam (MPPGCL) and Vandana Ratnam, and shaped by two years at a military school in Dehradun.">
   <meta name="author" content="Rachit Ratnam Mudaliar">
   <link rel="canonical" href="https://rachitratnammudaliar.github.io/">
   <meta name="google-site-verification" content="I8zv3Ss7ijmXvbkM5e4TgNwXdaqT8IaBBaqnhg6hnqc">
@@ -32,8 +32,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#eef0ec" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121519" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#02070a" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#02070a" media="(prefers-color-scheme: dark)">
 
   <link rel="preload" href="/assets/fonts/inter-display-600.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="/assets/fonts/lora-var.woff" as="font" type="font/woff" crossorigin>
@@ -69,6 +69,24 @@
           "name": "Birsinghpur Pali, Madhya Pradesh, India"
         },
         "nationality": { "@type": "Country", "name": "India" },
+        "parent": [
+          {
+            "@type": "Person",
+            "name": "Mr. Ratnam",
+            "jobTitle": "Senior Engineer",
+            "worksFor": { "@type": "Organization", "name": "MPPGCL", "alternateName": "Madhya Pradesh Power Generating Company Limited" }
+          },
+          {
+            "@type": "Person",
+            "name": "Vandana Ratnam",
+            "description": "Former teacher, works with the Department of Women and Child Development"
+          }
+        ],
+        "sibling": { "@type": "Person", "name": "Soumya", "description": "National-level badminton player" },
+        "relatedTo": [
+          { "@type": "Person", "name": "R. Ashish", "description": "Cousin, from Korba, Chhattisgarh" },
+          { "@type": "Person", "name": "R. Avinash", "description": "Cousin, from Korba, Chhattisgarh" }
+        ],
         "homeLocation": {
           "@type": "Place",
           "name": "Kaunas, Lithuania",
@@ -137,19 +155,20 @@
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="ruler-x" aria-hidden="true"></div>
-  <div class="ruler-y" aria-hidden="true"></div>
 
-  <header class="top" data-inspect="&lt;header&gt; sticky, no framework, no dependencies">
+  <header class="top" data-inspect="&lt;header&gt; fixed glass bar, no framework">
     <div class="top__inner">
-      <a class="mark" href="#profile" aria-label="Rachit Ratnam Mudaliar, back to top">RR</a>
+      <a class="brand" href="#profile" aria-label="Rachit Ratnam Mudaliar, back to top">
+        <span class="brand__mark" aria-hidden="true">RR</span>
+        <span class="brand__name">Rachit</span>
+      </a>
       <nav aria-label="Sections">
         <ul class="nav">
-          <li><a href="#profile">Profile</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#family">Family</a></li>
           <li><a href="#journey">Journey</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#beyond">Beyond the screen</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#beyond">Beyond</a></li>
         </ul>
       </nav>
       <div class="tools">
@@ -159,76 +178,139 @@
         <button class="tool tool--inspect" id="inspectToggle" type="button" aria-pressed="false" aria-label="Inspect: show how this page is built" title="Show how this page is built (shortcut: I)">
           <span class="tool__dot" aria-hidden="true"></span><span class="tool__text">Inspect</span>
         </button>
+        <a class="tool tool--cta" href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap" id="main">
+  <main id="main">
 
-    <!-- ============ SHEET 01: PROFILE ============ -->
-    <section class="sheet sheet--profile" id="profile" aria-labelledby="name">
-      <div class="profile">
-        <div class="profile__text">
-          <p class="sheet__no"><b>01</b> Profile</p>
-          <h1 class="profile__name" id="name" data-inspect="&lt;h1&gt; one per page, matches schema.org Person.name">Rachit Ratnam Mudaliar</h1>
-          <p class="profile__lead">is a Software Systems student at Kauno Kolegija in Kaunas, Lithuania.</p>
-          <p class="profile__intro" data-inspect="&lt;p&gt; the story in four sentences">
-            Born in Birsinghpur Pali, Madhya Pradesh, and shaped by two years at a military school in Dehradun,
-            he moved nearly 6,000&nbsp;km from his hometown to study in Europe. Since the age of four he has asked
-            one question of every system he meets: <em>how does this actually work?</em> Today he answers it by
-            taking systems apart, and building his own.
-          </p>
-          <ul class="profile__actions">
-            <li><a class="btn btn--solid" href="mailto:rachit.work@protonmail.com">Email me</a></li>
-            <li><a class="btn" href="/rachit-ratnam-mudaliar.vcf" download>Save contact</a></li>
-            <li><a class="btn" href="https://www.linkedin.com/in/rachitratnammudaliar" rel="me noopener" target="_blank">LinkedIn</a></li>
-            <li><a class="btn" href="https://github.com/rachitratnammudaliar" rel="me noopener" target="_blank">GitHub</a></li>
-          </ul>
-        </div>
-        <figure class="figure" data-inspect="&lt;img&gt; 34 KB WebP, fixed size: no layout shift">
-          <picture>
-            <source srcset="/assets/img/rachit-ratnam-mudaliar.webp" type="image/webp">
-            <img src="/assets/img/rachit-ratnam-mudaliar.jpg" width="480" height="480"
-                 alt="Portrait of Rachit Ratnam Mudaliar" fetchpriority="high" decoding="async">
-          </picture>
-          <span class="crop crop--tl" aria-hidden="true"></span><span class="crop crop--tr" aria-hidden="true"></span>
-          <span class="crop crop--bl" aria-hidden="true"></span><span class="crop crop--br" aria-hidden="true"></span>
-          <span class="dim dim--x" aria-hidden="true"><span>480 px</span></span>
-          <span class="dim dim--y" aria-hidden="true"><span>480 px</span></span>
-        </figure>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="profile" aria-labelledby="name">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__dots" aria-hidden="true"></div>
+
+      <div class="hero__beam" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <ul class="hero__tags" aria-label="Focus areas">
+          <li>Software Systems</li>
+          <li>Applied AI</li>
+          <li>Secure Web</li>
+        </ul>
+        <h1 class="hero__name" id="name" data-inspect="&lt;h1&gt; one per page, matches schema.org Person.name">
+          Rachit Ratnam <em>Mudaliar.</em>
+        </h1>
+        <p class="hero__lead" data-inspect="&lt;p&gt; the story in two sentences">
+          Software Systems student at Kauno Kolegija, Kaunas. Shaped by a military school in Dehradun,
+          curious since age four, now taking systems apart to build my own.
+        </p>
+        <a class="orb" href="mailto:rachit.work@protonmail.com" data-inspect="&lt;a&gt; mailto link, glow drawn in CSS">
+          <span class="orb__icon" aria-hidden="true"></span>
+          <span class="orb__text">Say hi</span>
+        </a>
       </div>
 
-      <dl class="titleblock" data-inspect="&lt;dl&gt; an engineering-drawing title block">
-        <div class="tb-name"><dt>Name</dt><dd>Rachit Ratnam Mudaliar</dd></div>
-        <div><dt>Programme</dt><dd>Software Systems</dd></div>
-        <div><dt>Institution</dt><dd>Kauno Kolegija</dd></div>
-        <div><dt>Based in</dt><dd>Kaunas, Lithuania</dd></div>
-        <div><dt>Origin</dt><dd>Madhya Pradesh, India</dd></div>
-        <div class="tb-rev"><dt>Rev</dt><dd>2026</dd></div>
+      <dl class="hero__stats hero__stats--left" aria-label="Facts">
+        <div><dt>Age I first used a computer</dt><dd>4</dd></div>
+        <div><dt>Schools and colleges</dt><dd>5</dd></div>
       </dl>
-    </section>
+      <dl class="hero__stats hero__stats--right" aria-label="More facts">
+        <div><dt>Languages spoken</dt><dd>3</dd></div>
+        <div><dt>Countries called home</dt><dd>2</dd></div>
+      </dl>
+      <a class="hero__arrow hero__arrow--left" href="#contact" aria-label="Contact">←</a>
+      <a class="hero__arrow hero__arrow--right" href="#about" aria-label="About me">→</a>
 
-    <!-- ============ NUMBERS ============ -->
-    <section class="numbers" aria-label="At a glance">
-      <div><p class="numbers__n">4</p><p class="numbers__l">Age I first used a computer</p></div>
-      <div><p class="numbers__n">5</p><p class="numbers__l">Schools and colleges</p></div>
-      <div><p class="numbers__n">3</p><p class="numbers__l">Languages: English C1, Hindi native, Lithuanian learning</p></div>
-      <div><p class="numbers__n">2</p><p class="numbers__l">Countries called home</p></div>
-    </section>
+      <!-- Floating cards, like a product dashboard -->
+      <div class="hero__cards">
+        <article class="card card--frame" aria-labelledby="lang-h" data-inspect="&lt;article&gt; levels drawn with CSS, no chart library">
+          <h2 class="card__label" id="lang-h"><span class="dot dot--blue" aria-hidden="true"></span>Languages</h2>
+          <ul class="bars">
+            <li><span class="bars__name">English</span><span class="bars__track"><span class="bars__fill bars__fill--90"></span></span><span class="bars__val">C1</span></li>
+            <li><span class="bars__name">Hindi</span><span class="bars__track"><span class="bars__fill bars__fill--100"></span></span><span class="bars__val">Native</span></li>
+            <li><span class="bars__name">Lithuanian</span><span class="bars__track"><span class="bars__fill bars__fill--15"></span></span><span class="bars__val">Learning</span></li>
+          </ul>
+        </article>
 
-    <!-- ============ SHEET 02: JOURNEY ============ -->
-    <section class="sheet" id="journey" aria-labelledby="journey-h">
-      <div class="sheet__head">
-        <div>
-          <p class="sheet__no"><b>02</b> Journey</p>
-          <h2 id="journey-h">From Birsinghpur Pali to Kaunas</h2>
-        </div>
-        <p class="sheet__meta">6 places, 2 countries.<br>Plotted from real coordinates.</p>
+        <figure class="card card--glow card--photo" data-inspect="&lt;img&gt; 34 KB WebP, fixed size: no layout shift">
+          <figcaption class="card__label card__label--light"><span class="dot dot--white" aria-hidden="true"></span>Kaunas, Lithuania</figcaption>
+          <div class="gauge">
+            <picture>
+              <source srcset="/assets/img/rachit-ratnam-mudaliar.webp" type="image/webp">
+              <img src="/assets/img/rachit-ratnam-mudaliar.jpg" width="480" height="480"
+                   alt="Portrait of Rachit Ratnam Mudaliar" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </figure>
+
+        <article class="card card--frame" aria-labelledby="glance-h" data-inspect="&lt;dl&gt; key facts, mirrored in the structured data">
+          <h2 class="card__label" id="glance-h"><span class="dot dot--pink" aria-hidden="true"></span>At a glance</h2>
+          <dl class="glance">
+            <div><dt>Studying</dt><dd>Software Systems</dd></div>
+            <div><dt>Since</dt><dd>2026</dd></div>
+            <div><dt>From</dt><dd>Madhya Pradesh, India</dd></div>
+            <div><dt>Curious since</dt><dd>Age 4</dd></div>
+          </dl>
+        </article>
       </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <p class="eyebrow">About</p>
+      <h2 class="section__title" id="about-h">Curious about the logic behind <em>everything.</em></h2>
+      <div class="about">
+        <p>
+          When I was four, my mother sat me at a computer and taught me MS Paint and how to type my name.
+          I didn't just want to use it. I wanted to know how it worked. That question has followed me ever since.
+        </p>
+        <p>
+          I grew up in Birsinghpur Pali, Madhya Pradesh, India, spent two years at a military school in
+          Dehradun, and in 2026 moved first to Kerala and then to Lithuania to build a life from scratch and study software.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FAMILY ============ -->
+    <section class="section" id="family" aria-labelledby="family-h">
+      <p class="eyebrow">Family</p>
+      <h2 class="section__title" id="family-h">The people behind <em>every step.</em></h2>
+      <div class="beyond beyond--family" data-inspect="&lt;section&gt; one card per person">
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">◆</span>
+          <h3>My father, Mr. Ratnam</h3>
+          <p>Senior Engineer at MPPGCL, Madhya Pradesh Power Generating Company. My passion for engineering comes from him. Watching him work is how I first understood what an engineer does.</p>
+        </div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">●</span>
+          <h3>My mother, Vandana Ratnam</h3>
+          <p>A former teacher who now works with the Department of Women and Child Development. She has been my first teacher for everything, from typing my name on a computer at four to how I treat people.</p>
+        </div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">✦</span>
+          <h3>My grandmother</h3>
+          <p>Her love and blessings are part of every chapter of this story, and they go with me wherever I am.</p>
+        </div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">★</span>
+          <h3>My sister, Soumya</h3>
+          <p>My younger sister and a national-level badminton player. Her dedication on the court reminds me what real hard work looks like.</p>
+        </div>
+        <div class="card card--white beyond__wide">
+          <span class="beyond__icon" aria-hidden="true">▲</span>
+          <h3>My cousins, R. Ashish and R. Avinash</h3>
+          <p>Born and raised in Korba, Chhattisgarh, my cousin brothers have always been my constant support in technology. When I didn't have access to a gadget, they made sure I could use one, and they have never stopped encouraging me.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section" id="journey" aria-labelledby="journey-h">
+      <p class="eyebrow">Journey</p>
+      <h2 class="section__title" id="journey-h">From Birsinghpur Pali to Kaunas</h2>
 
       <div class="journey">
-        <div class="map" data-inspect="&lt;svg&gt; hand-drawn map, no map service">
-          <!-- Full map: tablets and larger -->
+        <div class="card card--white map" data-inspect="&lt;svg&gt; hand-drawn map from real coordinates, no map service">
           <svg class="map__full" viewBox="0 0 760 500" role="img" aria-labelledby="mapTitle">
             <title id="mapTitle">Map of Rachit's journey: Birsinghpur Pali, Nowrozabad and Korba in central India, then Dehradun, Kerala, and Kaunas in Lithuania</title>
             <g class="grat">
@@ -244,7 +326,7 @@
             </g>
             <path class="route" d="M606 316 L576 265"/>
             <path class="route" d="M576 265 Q 530 340 561 409"/>
-            <path class="route" d="M561 409 Q 300 420 116 90"/>
+            <path class="route route--long" d="M561 409 Q 300 420 116 90"/>
             <text class="dist" x="596" y="292">1,000 km</text>
             <text class="dist" x="482" y="350">2,270 km</text>
             <text class="dist" x="262" y="330">6,760 km</text>
@@ -257,8 +339,8 @@
             <text class="lbl" x="545" y="430" text-anchor="end">Kerala</text>
             <circle class="pt pt--now" cx="116" cy="90" r="11"/><text class="num num--now" x="116" y="90">6</text>
             <text class="lbl" x="133" y="86">Kaunas, Lithuania</text><text class="sub" x="133" y="102">54.90°N 23.90°E, now</text>
-            <rect class="inset" x="480" y="30" width="262" height="182"/>
-            <text class="sub" x="490" y="47">Detail A: Madhya Pradesh and Chhattisgarh</text>
+            <rect class="inset" x="480" y="30" width="262" height="182" rx="14"/>
+            <text class="sub" x="492" y="49">Detail A: Madhya Pradesh and Chhattisgarh</text>
             <path class="route" d="M555 108 L552 76 L688 169"/>
             <text class="dist" x="500" y="96">59 km</text>
             <text class="dist" x="626" y="112">240 km</text>
@@ -270,7 +352,6 @@
             <text class="lbl" x="674" y="196" text-anchor="end">Korba</text>
           </svg>
 
-          <!-- Compact map: phones. Numbers match the list. -->
           <svg class="map__compact" viewBox="0 0 360 380" role="img" aria-labelledby="mapTitleS">
             <title id="mapTitleS">Map of Rachit's journey from central India to Kaunas, Lithuania</title>
             <g class="grat">
@@ -284,7 +365,7 @@
             </g>
             <path class="route" d="M302 247 L289 204"/>
             <path class="route" d="M289 204 Q 262 270 282 329"/>
-            <path class="route" d="M282 329 Q 150 330 58 52"/>
+            <path class="route route--long" d="M282 329 Q 150 330 58 52"/>
             <circle class="pt" cx="302" cy="247" r="15"/><text class="num num--lg" x="302" y="247">1–3</text>
             <circle class="pt" cx="289" cy="204" r="14"/><text class="num num--lg" x="289" y="204">4</text>
             <circle class="pt" cx="282" cy="329" r="14"/><text class="num num--lg" x="282" y="329">5</text>
@@ -299,7 +380,7 @@
             <span class="chapters__n" aria-hidden="true">1</span>
             <p class="chapters__when">Born. Nursery to Class 4</p>
             <h3>Birsinghpur Pali, Madhya Pradesh</h3>
-            <p>Where I was born, and where I started school at St. Joseph's. At four, my mother taught me MS Paint and how to type my name. I wanted to know how the computer did it.</p>
+            <p>Where I was born, and where I started school at St. Joseph's.</p>
           </li>
           <li>
             <span class="chapters__n" aria-hidden="true">2</span>
@@ -310,133 +391,132 @@
           <li>
             <span class="chapters__n" aria-hidden="true">3</span>
             <p class="chapters__when">Two months</p>
-            <h3>DDM Public School, Korba, Chhattisgarh</h3>
+            <h3>DDM Public School, Korba</h3>
             <p>A short stay in a new state and a new school.</p>
           </li>
           <li>
             <span class="chapters__n" aria-hidden="true">4</span>
             <p class="chapters__when">Two years</p>
-            <h3>Military school, Dehradun, Uttarakhand</h3>
-            <p>A strict routine from morning to night. It taught me self-discipline, resilience and how to hold my ground in any environment.</p>
+            <h3>Military school, Dehradun</h3>
+            <p>A strict routine that taught me self-discipline and resilience.</p>
           </li>
           <li>
             <span class="chapters__n" aria-hidden="true">5</span>
             <p class="chapters__when">January 2026</p>
             <h3>Kerala</h3>
-            <p>A place I had never been, a language I didn't speak. I went to prepare to study abroad, and to prove I could build a life from scratch.</p>
+            <p>A place I'd never been, a language I didn't speak. Preparing to study abroad.</p>
           </li>
           <li class="chapters__now">
             <span class="chapters__n" aria-hidden="true">6</span>
             <p class="chapters__when">September 2026 to now</p>
             <h3>Kaunas, Lithuania</h3>
-            <p>Studying Software Systems at Kauno Kolegija, involved in the Erasmus Student Network and student life, and learning Lithuanian.</p>
+            <p>Software Systems at Kauno Kolegija, the Erasmus Student Network, and learning Lithuanian.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ============ SHEET 03: EDUCATION AND SKILLS ============ -->
-    <section class="sheet" id="education" aria-labelledby="education-h">
-      <div class="sheet__head">
-        <div>
-          <p class="sheet__no"><b>03</b> Education</p>
-          <h2 id="education-h">Education and skills</h2>
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education" aria-labelledby="education-h">
+      <p class="eyebrow">Education</p>
+      <h2 class="section__title" id="education-h">Education and skills</h2>
+      <div class="edu">
+        <article class="card card--blue degree" data-inspect="&lt;article&gt; current degree first">
+          <p class="degree__when">2026 to present</p>
+          <h3>Software Systems</h3>
+          <p class="degree__where">Kauno Kolegija, Kaunas University of Applied Sciences</p>
+          <ul class="tags">
+            <li>Algorithms and Data Structures (C#)</li>
+            <li>Programming (Java)</li>
+            <li>Data Management and Technology</li>
+            <li>Software Systems Engineering</li>
+            <li>Mathematics</li>
+            <li>Professional English</li>
+          </ul>
+        </article>
+
+        <div class="card card--white">
+          <h3 class="card__label"><span class="dot dot--pink" aria-hidden="true"></span>Skills</h3>
+          <dl class="specs" data-inspect="&lt;dl&gt; skills as a spec sheet">
+            <div><dt>Programming</dt><dd>C#, Java, JavaScript, SQL</dd></div>
+            <div><dt>Web</dt><dd>HTML, CSS, secure static sites</dd></div>
+            <div><dt>Tools</dt><dd>Git, GitHub, GitHub Pages</dd></div>
+            <div><dt>Interests</dt><dd>Generative AI, reverse engineering, system diagnostics</dd></div>
+          </dl>
         </div>
-      </div>
-      <div class="split">
-        <div class="split__main">
-          <article class="degree" data-inspect="&lt;article&gt; current degree first">
-            <p class="degree__when">2026 to present</p>
-            <h3>Software Systems</h3>
-            <p class="degree__where">Kauno Kolegija, Kaunas University of Applied Sciences, Lithuania</p>
-            <p class="label">Courses</p>
-            <ul class="tags">
-              <li>Algorithms and Data Structures (C#)</li>
-              <li>Programming (Java)</li>
-              <li>Data Management and Technology</li>
-              <li>Software Systems Engineering</li>
-              <li>Mathematics</li>
-              <li>Professional English</li>
-            </ul>
-          </article>
+
+        <div class="card card--white">
+          <h3 class="card__label"><span class="dot dot--blue" aria-hidden="true"></span>Earlier schooling</h3>
           <table class="schools">
-            <caption class="label">Earlier schooling</caption>
+            <caption class="visually-hidden">Earlier schooling</caption>
             <thead><tr><th scope="col">School</th><th scope="col">Period</th></tr></thead>
             <tbody>
               <tr><td>Military school, Dehradun</td><td>Two years</td></tr>
               <tr><td>DDM Public School, Korba</td><td>Two months</td></tr>
-              <tr><td>Kendriya Vidyalaya Nowrozabad</td><td>Classes 5 to 10</td></tr>
-              <tr><td>St. Joseph's School</td><td>Nursery to Class 4</td></tr>
+              <tr><td>Kendriya Vidyalaya Nowrozabad</td><td>Classes 5–10</td></tr>
+              <tr><td>St. Joseph's School</td><td>Nursery–4</td></tr>
             </tbody>
           </table>
         </div>
-        <dl class="specs" data-inspect="&lt;dl&gt; skills as a spec sheet">
-          <div><dt>Programming</dt><dd>C#, Java, JavaScript, SQL</dd></div>
-          <div><dt>Web</dt><dd>HTML, CSS, accessible and secure static sites</dd></div>
-          <div><dt>Tools</dt><dd>Git, GitHub, GitHub Pages</dd></div>
-          <div><dt>Interested in</dt><dd>Generative AI and prompt engineering, reverse engineering, system diagnostics</dd></div>
-          <div><dt>Languages</dt><dd>English (C1), Hindi (native), Lithuanian (learning)</dd></div>
-        </dl>
       </div>
     </section>
 
-    <!-- ============ SHEET 04: BEYOND THE SCREEN ============ -->
-    <section class="sheet" id="beyond" aria-labelledby="beyond-h">
-      <div class="sheet__head">
-        <div>
-          <p class="sheet__no"><b>04</b> Beyond the screen</p>
-          <h2 id="beyond-h">The person behind the profile</h2>
-        </div>
-      </div>
-      <div class="beyond" data-inspect="&lt;section&gt; four cells, one per value">
-        <div>
+    <!-- ============ BEYOND ============ -->
+    <section class="section" id="beyond" aria-labelledby="beyond-h">
+      <p class="eyebrow">Beyond the screen</p>
+      <h2 class="section__title" id="beyond-h">The person behind the profile</h2>
+      <div class="beyond" data-inspect="&lt;section&gt; four cards, one per value">
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">✦</span>
           <h3>Faith</h3>
-          <p>I'm a Christian. My faith shapes how I work and how I treat people: work hard, be kind, and stay true to my values.</p>
+          <p>I'm a Christian. My faith shapes how I work and how I treat people: work hard, be kind, stay true to my values.</p>
         </div>
-        <div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">◆</span>
           <h3>Discipline</h3>
-          <p>Two years at military school gave me a routine and a work ethic I still rely on every day.</p>
+          <p>Two years at military school gave me a routine and a work ethic I rely on every day.</p>
         </div>
-        <div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">●</span>
           <h3>Community</h3>
-          <p>I'm involved in the Erasmus Student Network and student activities at Kauno Kolegija. I like bringing people together across cultures.</p>
+          <p>Involved in the Erasmus Student Network and student life at Kauno Kolegija. I like bringing people together.</p>
         </div>
-        <div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">▲</span>
           <h3>Starting over</h3>
-          <p>Twice in one year I moved somewhere I had never been, without knowing the language or the culture. Both times I chose to start from scratch.</p>
+          <p>Twice in one year I moved somewhere new without knowing the language. Both times I chose to start from scratch.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ SHEET 05: CONTACT ============ -->
-    <section class="sheet" id="contact" aria-labelledby="contact-h">
-      <div class="sheet__head">
-        <div>
-          <p class="sheet__no"><b>05</b> Contact</p>
-          <h2 id="contact-h">Get in touch</h2>
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__dots" aria-hidden="true"></div>
+      <div class="contact__inner">
+        <p class="eyebrow eyebrow--light">Contact</p>
+        <h2 class="contact__title" id="contact-h">Let's build <em>something.</em></h2>
+        <p class="contact__lead">Open to internships, student projects and collaboration. Email is the fastest way to reach me.</p>
+        <div class="email" data-inspect="&lt;button&gt; copies with the Clipboard API, no library">
+          <a class="email__addr" href="mailto:rachit.work@protonmail.com">rachit.work@protonmail.com</a>
+          <button class="btn btn--glass btn--small" id="copyEmail" type="button" data-email="rachit.work@protonmail.com">Copy</button>
+          <span class="email__status" id="copyStatus" role="status" aria-live="polite"></span>
         </div>
-      </div>
-      <div class="contact">
-        <div class="contact__main">
-          <p class="contact__lead">Open to internships, student projects and collaboration. Email is the fastest way to reach me.</p>
-          <div class="email" data-inspect="&lt;button&gt; copies with the Clipboard API, no library">
-            <a class="email__addr" href="mailto:rachit.work@protonmail.com">rachit.work@protonmail.com</a>
-            <button class="btn btn--small" id="copyEmail" type="button" data-email="rachit.work@protonmail.com">Copy</button>
-            <span class="email__status" id="copyStatus" role="status" aria-live="polite"></span>
-          </div>
-          <p class="contact__save"><a class="btn" href="/rachit-ratnam-mudaliar.vcf" download data-inspect="&lt;a download&gt; a .vcf contact card">Save contact to your phone</a></p>
-
-          <!-- Keep in sync with "sameAs" in the structured data and with the .vcf file. -->
-          <ul class="links" aria-label="Profiles">
-            <li><a href="https://www.linkedin.com/in/rachitratnammudaliar" rel="me noopener" target="_blank"><span>LinkedIn</span><span class="links__handle">rachitratnammudaliar</span></a></li>
-            <li><a href="https://github.com/rachitratnammudaliar" rel="me noopener" target="_blank"><span>GitHub</span><span class="links__handle">rachitratnammudaliar</span></a></li>
-            <li><a href="https://www.instagram.com/rachitratnam/" rel="me noopener" target="_blank"><span>Instagram</span><span class="links__handle">rachitratnam</span></a></li>
-            <li><a href="https://www.facebook.com/share/1CMRGaaPrz/" rel="me noopener" target="_blank"><span>Facebook</span><span class="links__handle">Rachit Ratnam Mudaliar</span></a></li>
-          </ul>
-        </div>
+        <ul class="hero__actions">
+          <li><a class="btn btn--pink" href="mailto:rachit.work@protonmail.com">Email me</a></li>
+          <li><a class="btn btn--glass" href="/rachit-ratnam-mudaliar.vcf" download data-inspect="&lt;a download&gt; a .vcf contact card">Save contact</a></li>
+        </ul>
+        <!-- Keep in sync with "sameAs" in the structured data and with the .vcf file. -->
+        <ul class="links" aria-label="Profiles">
+          <li><a href="https://www.linkedin.com/in/rachitratnammudaliar" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/rachitratnammudaliar" rel="me noopener" target="_blank">GitHub</a></li>
+          <li><a href="https://www.instagram.com/rachitratnam/" rel="me noopener" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/1CMRGaaPrz/" rel="me noopener" target="_blank">Facebook</a></li>
+          <li><a href="https://rachitratnammudaliar.blogspot.com/" rel="me noopener" target="_blank">Blog</a></li>
+        </ul>
         <figure class="qr" data-inspect="&lt;svg&gt; QR code, encoded by hand, no service">
-          <img src="/assets/img/qr-site.svg" width="168" height="168" alt="QR code linking to rachitratnammudaliar.github.io">
-          <figcaption>Scan to open this page on your phone</figcaption>
+          <img src="/assets/img/qr-site.svg" width="132" height="132" alt="QR code linking to rachitratnammudaliar.github.io">
+          <figcaption>Scan to open on your phone</figcaption>
         </figure>
       </div>
     </section>
