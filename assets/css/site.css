@@ -902,3 +902,7 @@ html.inspecting, .inspecting body { overflow-x: clip; }
 .hero { padding-bottom: 4.5rem; }
 @media (max-width: 640px) { .hero { padding-bottom: 3rem; } .hero__cards { transform: none; } }
 @media (max-width: 300px) { .hero { padding-bottom: 1.5rem; } }
+
+/* Apps section: reuses the education grid and cards */
+.apps__cta { margin-top: 1.4rem; }
+.apps__link { font-weight: 600; color: inherit; text-decoration: underline; text-underline-offset: 3px; }

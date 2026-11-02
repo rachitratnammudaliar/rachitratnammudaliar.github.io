@@ -2,7 +2,7 @@ BEGIN:VCARD
 VERSION:3.0
 N:Mudaliar;Rachit Ratnam;;;
 FN:Rachit Ratnam Mudaliar
-TITLE:Software Systems Student
+TITLE:Software Systems Student and Developer
 ORG:Kauno kolegija
 EMAIL;TYPE=INTERNET,PREF:rachit.work@protonmail.com
 URL:https://rachitratnammudaliar.github.io/
@@ -10,5 +10,5 @@ X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/rachitratnammudaliar
 X-SOCIALPROFILE;TYPE=github:https://github.com/rachitratnammudaliar
 X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/rachitratnam/
 X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/share/1CMRGaaPrz/
-NOTE:Software Systems student at Kauno Kolegija, Kaunas, Lithuania.
+NOTE:Software Systems student and app developer at Kauno Kolegija, Kaunas, Lithuania. Apps: github.com/rachitratnammudaliar.
 END:VCARD
