@@ -169,13 +169,23 @@
         "author": { "@id": "https://rachitratnammudaliar.github.io/#person" }
       },
       {
+        "@type": "SoftwareApplication",
+        "name": "Cohort Hub",
+        "alternateName": "PSe-6 Academic Information Integration and Cohort Hub",
+        "description": "Web app in development that brings Moodle, the class calendar, the student portal and Gmail together for Kauno Kolegija's PSe-6 group. University academic project, launching December 2026.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "creativeWorkStatus": "In development",
+        "author": { "@id": "https://rachitratnammudaliar.github.io/#person" }
+      },
+      {
         "@type": "ProfilePage",
         "@id": "https://rachitratnammudaliar.github.io/#profile",
         "url": "https://rachitratnammudaliar.github.io/",
         "name": "Rachit Ratnam Mudaliar — Software Systems Student and Developer",
         "isPartOf": { "@id": "https://rachitratnammudaliar.github.io/#website" },
         "mainEntity": { "@id": "https://rachitratnammudaliar.github.io/#person" },
-        "dateModified": "2026-11-03T12:00:00+02:00"
+        "dateModified": "2026-11-03T13:30:00+02:00"
       }
     ]
   }
@@ -195,10 +205,10 @@
       <nav aria-label="Sections">
         <ul class="nav">
           <li><a href="#about">About</a></li>
-          <li><a href="#family">Family</a></li>
+          <li><a href="#apps">Apps</a></li>
           <li><a href="#journey">Journey</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#apps">Apps</a></li>
+          <li><a href="#family">Family</a></li>
           <li><a href="#beyond">Beyond</a></li>
         </ul>
       </nav>
@@ -302,36 +312,70 @@
       </div>
     </section>
 
-    <!-- ============ FAMILY ============ -->
-    <section class="section" id="family" aria-labelledby="family-h">
-      <p class="eyebrow">Family</p>
-      <h2 class="section__title" id="family-h">The people behind <em>every step.</em></h2>
-      <div class="beyond beyond--family" data-inspect="&lt;section&gt; one card per person">
+    <!-- ============ APPS ============ -->
+    <section class="section" id="apps" aria-labelledby="apps-h">
+      <p class="eyebrow">Apps and projects</p>
+      <h2 class="section__title" id="apps-h">Apps I build and <em>publish.</em></h2>
+      <div class="edu apps-grid">
+        <article class="card card--blue degree" data-inspect="&lt;article&gt; links straight to the GitHub repositories">
+          <p class="degree__when">Published on GitHub</p>
+          <h3>Offline. Private. Free.</h3>
+          <p class="degree__where">Every app I publish runs fully on your phone, with no account, no ads and no internet permission. Source code and downloads are on my GitHub.</p>
+          <ul class="tags">
+            <li>Android</li>
+            <li>iOS</li>
+            <li>Kotlin</li>
+            <li>Swift</li>
+            <li>Automated tests and releases</li>
+          </ul>
+          <p class="apps__cta"><a class="btn btn--pink" href="https://github.com/rachitratnammudaliar?tab=repositories" rel="noopener" target="_blank">See all my repositories</a></p>
+        </article>
+
         <div class="card card--white">
-          <span class="beyond__icon" aria-hidden="true">◆</span>
-          <h3>My father, Mr. Ratnam</h3>
-          <p>Senior Engineer at MPPGCL, Madhya Pradesh Power Generating Company. My passion for engineering comes from him. Watching him work is how I first understood what an engineer does.</p>
+          <h3 class="card__label"><span class="dot dot--pink" aria-hidden="true"></span>Duedial</h3>
+          <dl class="specs" data-inspect="&lt;dl&gt; each app as a spec sheet">
+            <div><dt>What</dt><dd>Subscription and bill tracker with reminders</dd></div>
+            <div><dt>Runs on</dt><dd>Android and iOS</dd></div>
+            <div><dt>Built with</dt><dd>Kotlin, Jetpack Compose, SwiftUI</dd></div>
+          </dl>
+          <p class="apps__cta"><a class="apps__link" href="/Duedial/">See the app →</a> &nbsp; <a class="apps__link" href="https://github.com/rachitratnammudaliar/Duedial" rel="noopener" target="_blank">Code</a></p>
         </div>
+
         <div class="card card--white">
-          <span class="beyond__icon" aria-hidden="true">●</span>
-          <h3>My mother, Vandana Ratnam</h3>
-          <p>A former teacher who now works with the Department of Women and Child Development. She has been my first teacher for everything, from typing my name on a computer at four to how I treat people.</p>
+          <h3 class="card__label"><span class="dot dot--blue" aria-hidden="true"></span>Kitchtally</h3>
+          <dl class="specs">
+            <div><dt>What</dt><dd>Grocery and pantry tracker with a shopping list</dd></div>
+            <div><dt>Runs on</dt><dd>Android and iOS</dd></div>
+            <div><dt>Built with</dt><dd>Kotlin, Room, SwiftUI</dd></div>
+          </dl>
+          <p class="apps__cta"><a class="apps__link" href="/Kitchtally/">See the app →</a> &nbsp; <a class="apps__link" href="https://github.com/rachitratnammudaliar/Kitchtally" rel="noopener" target="_blank">Code</a></p>
         </div>
+
         <div class="card card--white">
-          <span class="beyond__icon" aria-hidden="true">✦</span>
-          <h3>My grandmother</h3>
-          <p>Her love and blessings are part of every chapter of this story, and they go with me wherever I am.</p>
+          <h3 class="card__label"><span class="dot dot--pink" aria-hidden="true"></span>Target</h3>
+          <dl class="specs">
+            <div><dt>What</dt><dd>Habit and goal tracker with streaks and charts</dd></div>
+            <div><dt>Runs on</dt><dd>Android (with Samsung Health) and iOS</dd></div>
+            <div><dt>Built with</dt><dd>Kotlin, Health Connect, Swift Charts</dd></div>
+          </dl>
+          <p class="apps__cta"><a class="apps__link" href="/Target-Habit-Goal-Tracker/">See the app →</a> &nbsp; <a class="apps__link" href="https://github.com/rachitratnammudaliar/Target-Habit-Goal-Tracker" rel="noopener" target="_blank">Code</a></p>
         </div>
-        <div class="card card--white">
-          <span class="beyond__icon" aria-hidden="true">★</span>
-          <h3>My sister, Soumya</h3>
-          <p>My younger sister and a national-level badminton player. Her dedication on the court reminds me what real hard work looks like.</p>
-        </div>
-        <div class="card card--white beyond__wide">
-          <span class="beyond__icon" aria-hidden="true">▲</span>
-          <h3>My cousins, R. Ashish and R. Avinash</h3>
-          <p>Born and raised in Korba, Chhattisgarh, my cousin brothers have always been my constant support in technology. When I didn't have access to a gadget, they made sure I could use one, and they have never stopped encouraging me.</p>
-        </div>
+
+        <article class="card card--white hub" aria-labelledby="hub-h" data-inspect="&lt;article&gt; work in progress, full width">
+          <p class="hub__when">In development · launching December 2026 · University academic project</p>
+          <h3 id="hub-h">Cohort Hub</h3>
+          <p class="hub__full">PSe-6 Academic Information Integration and Cohort Hub</p>
+          <p class="hub__lead">One place for a student's whole week. Cohort Hub brings Moodle, the class calendar, the student portal and Gmail together, so deadlines, timetable changes, grades and messages for my group, PSe-6 at Kauno Kolegija, are on one screen instead of four.</p>
+          <ul class="tags tags--ink">
+            <li>Moodle</li>
+            <li>Calendar</li>
+            <li>Student portal</li>
+            <li>Gmail</li>
+            <li>Web app</li>
+            <li>Security first</li>
+          </ul>
+          <p class="hub__note">My Software Systems Engineering project at Kauno Kolegija, built from requirements to a working web app.</p>
+        </article>
       </div>
     </section>
 
@@ -493,56 +537,42 @@
       </div>
     </section>
 
-    <!-- ============ APPS ============ -->
-    <section class="section" id="apps" aria-labelledby="apps-h">
-      <p class="eyebrow">Developer</p>
-      <h2 class="section__title" id="apps-h">Apps I build and <em>publish.</em></h2>
-      <div class="edu apps-grid">
-        <article class="card card--blue degree" data-inspect="&lt;article&gt; links straight to the GitHub repositories">
-          <p class="degree__when">Published on GitHub</p>
-          <h3>Offline. Private. Free.</h3>
-          <p class="degree__where">Every app I publish runs fully on your phone, with no account, no ads and no internet permission. Source code and downloads are on my GitHub.</p>
-          <ul class="tags">
-            <li>Android</li>
-            <li>iOS</li>
-            <li>Kotlin</li>
-            <li>Swift</li>
-            <li>Automated tests and releases</li>
-          </ul>
-          <p class="apps__cta"><a class="btn btn--pink" href="https://github.com/rachitratnammudaliar?tab=repositories" rel="noopener" target="_blank">See all my repositories</a></p>
-        </article>
-
+    <!-- ============ FAMILY ============ -->
+    <section class="section" id="family" aria-labelledby="family-h">
+      <p class="eyebrow">Family</p>
+      <h2 class="section__title" id="family-h">The people behind <em>every step.</em></h2>
+      <div class="beyond beyond--family" data-inspect="&lt;section&gt; one card per person">
         <div class="card card--white">
-          <h3 class="card__label"><span class="dot dot--pink" aria-hidden="true"></span>Duedial</h3>
-          <dl class="specs" data-inspect="&lt;dl&gt; each app as a spec sheet">
-            <div><dt>What</dt><dd>Subscription and bill tracker with reminders</dd></div>
-            <div><dt>Runs on</dt><dd>Android and iOS</dd></div>
-            <div><dt>Built with</dt><dd>Kotlin, Jetpack Compose, SwiftUI</dd></div>
-          </dl>
-          <p class="apps__cta"><a class="apps__link" href="/Duedial/">See the app →</a> &nbsp; <a class="apps__link" href="https://github.com/rachitratnammudaliar/Duedial" rel="noopener" target="_blank">Code</a></p>
+          <span class="beyond__icon" aria-hidden="true">◆</span>
+          <h3>My father, Mr. Ratnam</h3>
+          <p>Senior Engineer at MPPGCL, Madhya Pradesh Power Generating Company. My passion for engineering comes from him. Watching him work is how I first understood what an engineer does.</p>
         </div>
-
         <div class="card card--white">
-          <h3 class="card__label"><span class="dot dot--blue" aria-hidden="true"></span>Kitchtally</h3>
-          <dl class="specs">
-            <div><dt>What</dt><dd>Grocery and pantry tracker with a shopping list</dd></div>
-            <div><dt>Runs on</dt><dd>Android and iOS</dd></div>
-            <div><dt>Built with</dt><dd>Kotlin, Room, SwiftUI</dd></div>
-          </dl>
-          <p class="apps__cta"><a class="apps__link" href="/Kitchtally/">See the app →</a> &nbsp; <a class="apps__link" href="https://github.com/rachitratnammudaliar/Kitchtally" rel="noopener" target="_blank">Code</a></p>
+          <span class="beyond__icon" aria-hidden="true">●</span>
+          <h3>My mother, Vandana Ratnam</h3>
+          <p>A former teacher who now works with the Department of Women and Child Development. She has been my first teacher for everything, from typing my name on a computer at four to how I treat people.</p>
         </div>
-
         <div class="card card--white">
-          <h3 class="card__label"><span class="dot dot--pink" aria-hidden="true"></span>Target</h3>
-          <dl class="specs">
-            <div><dt>What</dt><dd>Habit and goal tracker with streaks and charts</dd></div>
-            <div><dt>Runs on</dt><dd>Android (with Samsung Health) and iOS</dd></div>
-            <div><dt>Built with</dt><dd>Kotlin, Health Connect, Swift Charts</dd></div>
-          </dl>
-          <p class="apps__cta"><a class="apps__link" href="/Target-Habit-Goal-Tracker/">See the app →</a> &nbsp; <a class="apps__link" href="https://github.com/rachitratnammudaliar/Target-Habit-Goal-Tracker" rel="noopener" target="_blank">Code</a></p>
+          <span class="beyond__icon" aria-hidden="true">✦</span>
+          <h3>My grandmother</h3>
+          <p>Her love and blessings are part of every chapter of this story, and they go with me wherever I am.</p>
+        </div>
+        <div class="card card--white">
+          <span class="beyond__icon" aria-hidden="true">★</span>
+          <h3>My sister, Soumya</h3>
+          <p>My younger sister and a national-level badminton player. Her dedication on the court reminds me what real hard work looks like.</p>
+        </div>
+        <div class="card card--white beyond__wide">
+          <span class="beyond__icon" aria-hidden="true">▲</span>
+          <h3>My cousins, R. Ashish and R. Avinash</h3>
+          <p>Born and raised in Korba, Chhattisgarh, my cousin brothers have always been my constant support in technology. When I didn't have access to a gadget, they made sure I could use one, and they have never stopped encouraging me.</p>
         </div>
       </div>
     </section>
+
+
+
+
 
     <!-- ============ BEYOND ============ -->
     <section class="section" id="beyond" aria-labelledby="beyond-h">

@@ -910,3 +910,11 @@ html.inspecting, .inspecting body { overflow-x: clip; }
 .edu.apps-grid .degree { grid-column: 1 / -1; }
 @media (max-width: 1100px) { .edu.apps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .edu.apps-grid { grid-template-columns: 1fr; } }
+/* Cohort Hub: the project in progress, across the whole Apps grid */
+.hub { grid-column: 1 / -1; border-style: dashed; }
+.hub__when { font-family: var(--mono); font-size: 0.82rem; color: var(--pink-strong); }
+.hub h3 { margin-top: 0.4rem; font-size: clamp(1.5rem, 2.4vw, 1.9rem); letter-spacing: -0.03em; }
+.hub__full { margin-top: 0.15rem; color: var(--graphite); font-size: 0.95rem; }
+.hub__lead { margin-top: 0.9rem; max-width: 52rem; line-height: 1.6; }
+.hub__note { margin-top: 1rem; color: var(--graphite); font-size: 0.9rem; }
+.tags--ink li { background: var(--blue-soft); border-color: var(--rule); color: var(--ink); }
