@@ -918,3 +918,13 @@ html.inspecting, .inspecting body { overflow-x: clip; }
 .hub__lead { margin-top: 0.9rem; max-width: 52rem; line-height: 1.6; }
 .hub__note { margin-top: 1rem; color: var(--graphite); font-size: 0.9rem; }
 .tags--ink li { background: var(--blue-soft); border-color: var(--rule); color: var(--ink); }
+/* As seen in: Kauno Kolegija's Instagram campaign, loaded only on request */
+.seen { margin-top: 1.25rem; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; }
+.seen__label { font-family: var(--mono); font-size: 0.82rem; color: var(--pink-strong); }
+.seen h3 { margin-top: 0.35rem; font-size: 1.3rem; letter-spacing: -0.02em; }
+.seen p { margin-top: 0.5rem; color: var(--graphite); line-height: 1.6; max-width: 40rem; }
+.seen__actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; }
+.seen__link { font-weight: 600; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.seen__note { font-size: 0.85rem; }
+.seen__frame iframe { width: min(400px, 100%); height: 620px; border: 0; border-radius: 16px; background: #fff; display: block; }
+@media (max-width: 860px) { .seen { grid-template-columns: 1fr; } .seen__frame iframe { width: 100%; } }

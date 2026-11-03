@@ -194,4 +194,21 @@
 
   // Share a link with #inspect to open the page in inspect mode.
   if (location.hash === "#inspect") setInspect(true);
+
+  // Kauno Kolegija's Instagram post: nothing is loaded from Instagram until it's asked for.
+  var igLoad = document.getElementById("igLoad");
+  var igFrame = document.getElementById("igFrame");
+  if (igLoad && igFrame) {
+    igLoad.addEventListener("click", function () {
+      var frame = document.createElement("iframe");
+      frame.src = igLoad.getAttribute("data-src");
+      frame.title = "Kauno Kolegija's Instagram post featuring Rachit";
+      frame.loading = "lazy";
+      frame.setAttribute("allowtransparency", "true");
+      frame.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      igFrame.appendChild(frame);
+      igFrame.hidden = false;
+      igLoad.hidden = true;
+    });
+  }
 })();
