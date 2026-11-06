@@ -934,15 +934,22 @@ html.inspecting, .inspecting body { overflow-x: clip; }
    Only hides things while html.intro-on is set; if the script
    doesn't run, the page is shown normally.
    ============================================================= */
-html.intro-on { overflow: hidden; background: #000; }
-html.intro-on body { background: #000; }
+html.intro-on { overflow: hidden; }
 html.intro-on .top,
 html.intro-on main > section,
-html.intro-on .foot { opacity: 0; }
+html.intro-on .foot {
+  opacity: 0;
+  transform: translateY(26px) scale(0.985);
+  filter: blur(8px);
+}
 html.intro-on .top.intro-in,
 html.intro-on main > section.intro-in,
-html.intro-on .foot.intro-in { opacity: 1; transition: opacity 0.7s ease; }
-body { transition: background-color 0.6s ease; }
+html.intro-on .foot.intro-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.7s ease;
+}
 .intro__canvas {
   position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh;
   z-index: 9999; pointer-events: none;
