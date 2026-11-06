@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://rachitratnammudaliar.github.io/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image>
-      <image:loc>https://rachitratnammudaliar.github.io/assets/img/rachit-ratnam-mudaliar.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://rachitratnammudaliar.github.io/Duedial/</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
-  <url>
-    <loc>https://rachitratnammudaliar.github.io/Kitchtally/</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
-  <url>
-    <loc>https://rachitratnammudaliar.github.io/Target-Habit-Goal-Tracker/</loc>
-    <lastmod>2026-11-03</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://rachitmudaliar.dev/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://rachitmudaliar.dev/Duedial/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://rachitmudaliar.dev/Kitchtally/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://rachitmudaliar.dev/Target-Habit-Goal-Tracker/</loc><lastmod>2026-11-06</lastmod></url>
 </urlset>

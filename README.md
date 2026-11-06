@@ -1,49 +1,22 @@
-# Rachit Ratnam Mudaliar — Personal Website
+# Rachit Ratnam Mudaliar: portfolio
 
-**Live:** [rachitratnammudaliar.github.io](https://rachitratnammudaliar.github.io)
+**Live:** [rachitmudaliar.dev](https://rachitmudaliar.dev)
 
-The personal website and portfolio of **Rachit Ratnam Mudaliar**, a Software Systems student at Kauno Kolegija (Kaunas University of Applied Sciences), Lithuania. It is hosted on GitHub Pages and introduces who I am, where I come from, what I study, and how to reach me.
-
-## What's on the site
-
-- **Profile**: a short introduction, with my key details in an engineering-drawing title block
-- **Journey**: my path from Birsinghpur Pali, Madhya Pradesh, India, to Kaunas, Lithuania, plotted on a map from real coordinates
-- **Education**: Kauno Kolegija and my earlier schools
-- **Beyond the screen**: faith, discipline, community and starting over
-- **Contact**: email, a downloadable contact card, LinkedIn, GitHub, Instagram and Facebook
+The portfolio of Rachit Ratnam Mudaliar, a Software Systems student at Kauno Kolegija in Kaunas, Lithuania. It shows three native Android and iOS apps (Duedial, Kitchtally, Target), the Cohort Hub university project, and how to get in touch.
 
 ## How it's built
 
 | | |
 |---|---|
-| Stack | Hand-written HTML, CSS and JavaScript. No framework and no build step |
-| Hosting | GitHub Pages |
-| Privacy | No trackers, analytics or cookies. Fonts and images are self-hosted, so the page makes no requests to other servers |
-| Security | A strict Content-Security-Policy that blocks inline and third-party scripts |
-| Search | schema.org `Person`, `WebSite` and `ProfilePage` data, Open Graph share card, `sitemap.xml` and `robots.txt` |
-| Devices | Responsive from smartwatch to phone, tablet, laptop, TV and projector, plus a print layout |
-| Accessibility | Semantic HTML, keyboard and remote-control navigation, visible focus, light and dark themes, reduced-motion support |
+| Stack | Hand-written HTML, CSS and a little JavaScript. No framework, no build step |
+| Hosting | GitHub Pages, custom domain `rachitmudaliar.dev` |
+| Privacy | No trackers, analytics or cookies. Fonts and images are self-hosted |
+| Security | Strict Content-Security-Policy: no inline scripts, styles or third-party requests |
+| Search | schema.org `Person`, `WebSite` and `ProfilePage` data, Open Graph card, `sitemap.xml`, `robots.txt` |
+| Accessibility | Semantic HTML, keyboard navigation, visible focus, light and dark themes, reduced-motion support, print layout |
 
-Press **Inspect** on the site (or the **I** key) to see how the page is put together: its size, requests, load time, structured data and security policy.
+The app pages (`/Duedial/`, `/Kitchtally/`, `/Target-Habit-Goal-Tracker/`) are served from each app's own repository.
 
-## Structure
+## Licence
 
-```
-index.html                 the page, with SEO tags and structured data
-404.html                   not-found page
-assets/css/site.css        styles
-assets/js/theme.js         applies the saved theme before the page paints
-assets/js/site.js          theme switch, copy email, clock, Inspect mode
-assets/img/                photo, share card, icons, QR code
-assets/fonts/              Inter Display and Lora (SIL Open Font License)
-rachit-ratnam-mudaliar.vcf contact card behind "Save contact"
-sitemap.xml, robots.txt    for search engines
-```
-
-## Contact
-
-[rachit.work@protonmail.com](mailto:rachit.work@protonmail.com) · [LinkedIn](https://www.linkedin.com/in/rachitratnammudaliar) · [GitHub](https://github.com/rachitratnammudaliar)
-
----
-
-© 2026 Rachit Ratnam Mudaliar. Content and photos are not licensed for reuse. Fonts are used under the SIL Open Font License.
+Code is available for reference. Photos and text are © Rachit Ratnam Mudaliar. Fonts: see `assets/fonts/LICENSE.txt`.
